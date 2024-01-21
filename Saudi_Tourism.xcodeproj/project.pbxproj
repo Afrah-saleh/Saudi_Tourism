@@ -11,6 +11,9 @@
 		94A38A482B5D08E90012280F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A38A472B5D08E90012280F /* ContentView.swift */; };
 		94A38A4A2B5D08EB0012280F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94A38A492B5D08EB0012280F /* Assets.xcassets */; };
 		94A38A4D2B5D08EB0012280F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94A38A4C2B5D08EB0012280F /* Preview Assets.xcassets */; };
+		94A38A5C2B5D09E70012280F /* MissionMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A38A5B2B5D09E70012280F /* MissionMapView.swift */; };
+		94A38A5E2B5D0A0F0012280F /* MissionMapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A38A5D2B5D0A0F0012280F /* MissionMapViewModel.swift */; };
+		94A38A602B5D0A600012280F /* LevelDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A38A5F2B5D0A600012280F /* LevelDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +22,9 @@
 		94A38A472B5D08E90012280F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		94A38A492B5D08EB0012280F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		94A38A4C2B5D08EB0012280F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		94A38A5B2B5D09E70012280F /* MissionMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionMapView.swift; sourceTree = "<group>"; };
+		94A38A5D2B5D0A0F0012280F /* MissionMapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionMapViewModel.swift; sourceTree = "<group>"; };
+		94A38A5F2B5D0A600012280F /* LevelDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +57,8 @@
 		94A38A442B5D08E90012280F /* Saudi_Tourism */ = {
 			isa = PBXGroup;
 			children = (
+				94A38A542B5D09760012280F /* Mession */,
+				94A38A532B5D09700012280F /* Map */,
 				94A38A452B5D08E90012280F /* Saudi_TourismApp.swift */,
 				94A38A472B5D08E90012280F /* ContentView.swift */,
 				94A38A492B5D08EB0012280F /* Assets.xcassets */,
@@ -65,6 +73,55 @@
 				94A38A4C2B5D08EB0012280F /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		94A38A532B5D09700012280F /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				94A38A582B5D098F0012280F /* ModelView */,
+				94A38A572B5D09890012280F /* View */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
+		94A38A542B5D09760012280F /* Mession */ = {
+			isa = PBXGroup;
+			children = (
+				94A38A562B5D09830012280F /* ModelView */,
+				94A38A552B5D097E0012280F /* View */,
+			);
+			path = Mession;
+			sourceTree = "<group>";
+		};
+		94A38A552B5D097E0012280F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				94A38A5F2B5D0A600012280F /* LevelDetailView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		94A38A562B5D09830012280F /* ModelView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ModelView;
+			sourceTree = "<group>";
+		};
+		94A38A572B5D09890012280F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				94A38A5B2B5D09E70012280F /* MissionMapView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		94A38A582B5D098F0012280F /* ModelView */ = {
+			isa = PBXGroup;
+			children = (
+				94A38A5D2B5D0A0F0012280F /* MissionMapViewModel.swift */,
+			);
+			path = ModelView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +194,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94A38A602B5D0A600012280F /* LevelDetailView.swift in Sources */,
+				94A38A5E2B5D0A0F0012280F /* MissionMapViewModel.swift in Sources */,
 				94A38A482B5D08E90012280F /* ContentView.swift in Sources */,
+				94A38A5C2B5D09E70012280F /* MissionMapView.swift in Sources */,
 				94A38A462B5D08E90012280F /* Saudi_TourismApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
