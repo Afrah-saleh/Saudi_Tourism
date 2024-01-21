@@ -14,6 +14,7 @@
 		94A38A5C2B5D09E70012280F /* MissionMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A38A5B2B5D09E70012280F /* MissionMapView.swift */; };
 		94A38A5E2B5D0A0F0012280F /* MissionMapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A38A5D2B5D0A0F0012280F /* MissionMapViewModel.swift */; };
 		94A38A602B5D0A600012280F /* LevelDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A38A5F2B5D0A600012280F /* LevelDetailView.swift */; };
+		94A38A622B5D3BCB0012280F /* LevelIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A38A612B5D3BCB0012280F /* LevelIconView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		94A38A5B2B5D09E70012280F /* MissionMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionMapView.swift; sourceTree = "<group>"; };
 		94A38A5D2B5D0A0F0012280F /* MissionMapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionMapViewModel.swift; sourceTree = "<group>"; };
 		94A38A5F2B5D0A600012280F /* LevelDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelDetailView.swift; sourceTree = "<group>"; };
+		94A38A612B5D3BCB0012280F /* LevelIconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelIconView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				94A38A5B2B5D09E70012280F /* MissionMapView.swift */,
+				94A38A612B5D3BCB0012280F /* LevelIconView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -194,6 +197,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94A38A622B5D3BCB0012280F /* LevelIconView.swift in Sources */,
 				94A38A602B5D0A600012280F /* LevelDetailView.swift in Sources */,
 				94A38A5E2B5D0A0F0012280F /* MissionMapViewModel.swift in Sources */,
 				94A38A482B5D08E90012280F /* ContentView.swift in Sources */,

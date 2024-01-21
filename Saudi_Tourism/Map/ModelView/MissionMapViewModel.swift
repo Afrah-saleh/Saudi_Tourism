@@ -6,35 +6,26 @@
 //
 
 import SwiftUI
-
 class MissionMapViewModel: ObservableObject {
-    @Published var visibleLevels: Set<Int> = [1]
-    var isActive: [Int: Bool] = [:]
+    @Published var activeLevel: Int = 1
 
-    let levelPositions = [
+    let levelPositions = [ //representing level numbers and their positions
         (number: 1, position: CGPoint(x: 282, y: 410)),
         (number: 2, position: CGPoint(x: 170, y: 560)),
         (number: 3, position: CGPoint(x: 30, y: 420)),
         (number: 4, position: CGPoint(x: 220, y: 290)),
-        // ... Add more levels as needed
+        // we can add more levels
     ]
 
-    init() {
-        // Initialize isActive for each level with false
-        levelPositions.forEach { level in
-            isActive[level.number] = false
-        }
+    // Method to unlock a level. It updates the active level to the highest level unlocked.
+    func unlockLevel(_ level: Int) {
+        activeLevel = max(level, activeLevel)
     }
 
-    func levelTapped(_ level: Int) {
-        // Set the isActive for this level to true to trigger navigation
-        isActive[level] = true
+    // Method to check if a level is unlocked by comparing it with the active level.
+    func isLevelUnlocked(_ level: Int) -> Bool {
+        return level <= activeLevel
     }
-    
-    func unlockLevel(_ level: Int) {
-            visibleLevels.insert(level)
-            // You can add additional logic here to update the state of the GameMapView if needed
-        }
 }
 
 

@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct LevelDetailView: View {
-    @ObservedObject var viewModel = MissionMapViewModel()
-    
+    @ObservedObject var viewModel: MissionMapViewModel
+    // The current level number.
     var levelNumber: Int
     @Environment(\.presentationMode) var presentationMode
 
@@ -17,10 +17,9 @@ struct LevelDetailView: View {
         VStack {
             Text("Level \(levelNumber) Details")
                 .font(.largeTitle)
-            
+
             Button("Unlock Next Level") {
                 viewModel.unlockLevel(levelNumber + 1)
-                // Pop back to the GameMapView
                 self.presentationMode.wrappedValue.dismiss()
             }
             .padding()
@@ -32,6 +31,8 @@ struct LevelDetailView: View {
         .navigationBarBackButtonHidden(true)
     }
 }
+
+
 #Preview {
     LevelDetailView(viewModel: MissionMapViewModel(), levelNumber: Int())
 }
