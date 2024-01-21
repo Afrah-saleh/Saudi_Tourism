@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		35CF68182B5D80B3001762B9 /* Onboarding3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CF68142B5D80B3001762B9 /* Onboarding3.swift */; };
+		35CF68192B5D80B3001762B9 /* Onboarding1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CF68152B5D80B3001762B9 /* Onboarding1.swift */; };
+		35CF681A2B5D80B3001762B9 /* Onboarding2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CF68162B5D80B3001762B9 /* Onboarding2.swift */; };
+		35CF681B2B5D80B3001762B9 /* doorAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CF68172B5D80B3001762B9 /* doorAnimation.swift */; };
 		94A38A462B5D08E90012280F /* Saudi_TourismApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A38A452B5D08E90012280F /* Saudi_TourismApp.swift */; };
 		94A38A482B5D08E90012280F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A38A472B5D08E90012280F /* ContentView.swift */; };
 		94A38A4A2B5D08EB0012280F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94A38A492B5D08EB0012280F /* Assets.xcassets */; };
@@ -18,6 +22,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		35CF68142B5D80B3001762B9 /* Onboarding3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Onboarding3.swift; sourceTree = "<group>"; };
+		35CF68152B5D80B3001762B9 /* Onboarding1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Onboarding1.swift; sourceTree = "<group>"; };
+		35CF68162B5D80B3001762B9 /* Onboarding2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Onboarding2.swift; sourceTree = "<group>"; };
+		35CF68172B5D80B3001762B9 /* doorAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = doorAnimation.swift; sourceTree = "<group>"; };
 		94A38A422B5D08E90012280F /* Saudi_Tourism.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Saudi_Tourism.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		94A38A452B5D08E90012280F /* Saudi_TourismApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Saudi_TourismApp.swift; sourceTree = "<group>"; };
 		94A38A472B5D08E90012280F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -63,6 +71,10 @@
 				94A38A532B5D09700012280F /* Map */,
 				94A38A452B5D08E90012280F /* Saudi_TourismApp.swift */,
 				94A38A472B5D08E90012280F /* ContentView.swift */,
+				35CF68172B5D80B3001762B9 /* doorAnimation.swift */,
+				35CF68152B5D80B3001762B9 /* Onboarding1.swift */,
+				35CF68162B5D80B3001762B9 /* Onboarding2.swift */,
+				35CF68142B5D80B3001762B9 /* Onboarding3.swift */,
 				94A38A492B5D08EB0012280F /* Assets.xcassets */,
 				94A38A4B2B5D08EB0012280F /* Preview Content */,
 			);
@@ -197,10 +209,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35CF681A2B5D80B3001762B9 /* Onboarding2.swift in Sources */,
+				35CF68192B5D80B3001762B9 /* Onboarding1.swift in Sources */,
+				35CF681B2B5D80B3001762B9 /* doorAnimation.swift in Sources */,
 				94A38A622B5D3BCB0012280F /* LevelIconView.swift in Sources */,
 				94A38A602B5D0A600012280F /* LevelDetailView.swift in Sources */,
 				94A38A5E2B5D0A0F0012280F /* MissionMapViewModel.swift in Sources */,
 				94A38A482B5D08E90012280F /* ContentView.swift in Sources */,
+				35CF68182B5D80B3001762B9 /* Onboarding3.swift in Sources */,
 				94A38A5C2B5D09E70012280F /* MissionMapView.swift in Sources */,
 				94A38A462B5D08E90012280F /* Saudi_TourismApp.swift in Sources */,
 			);
