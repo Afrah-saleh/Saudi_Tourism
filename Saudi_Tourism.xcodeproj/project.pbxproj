@@ -177,7 +177,6 @@
 		94A38A542B5D09760012280F /* Mession */ = {
 			isa = PBXGroup;
 			children = (
-				94A38A562B5D09830012280F /* ModelView */,
 				94A38A552B5D097E0012280F /* View */,
 			);
 			path = Mession;
@@ -189,13 +188,6 @@
 				94A38A5F2B5D0A600012280F /* LevelDetailView.swift */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		94A38A562B5D09830012280F /* ModelView */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ModelView;
 			sourceTree = "<group>";
 		};
 		94A38A572B5D09890012280F /* View */ = {

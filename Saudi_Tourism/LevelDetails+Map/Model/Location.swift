@@ -16,6 +16,7 @@ struct Location: Identifiable {
     let description: String
     let imageNames: [String]
     let link: String
+    var activeLevel: Int
     
     var id: String{  //identifibale
         //name = "Colosseum"

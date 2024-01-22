@@ -21,7 +21,7 @@ class LocationsDataService {
                 "rome-colosseum-2",
                 "rome-colosseum-3",
             ],
-            link: "https://en.wikipedia.org/wiki/Colosseum"),
+            link: "https://en.wikipedia.org/wiki/Colosseum", activeLevel: 1),
         Location(
             name: "Pantheon",
             cityName: "Rome",
@@ -32,7 +32,7 @@ class LocationsDataService {
                 "rome-pantheon-2",
                 "rome-pantheon-3",
             ],
-            link: "https://en.wikipedia.org/wiki/Pantheon,_Rome"),
+            link: "https://en.wikipedia.org/wiki/Pantheon,_Rome", activeLevel: 2),
         Location(
             name: "Trevi Fountain",
             cityName: "Rome",
@@ -43,7 +43,7 @@ class LocationsDataService {
                 "rome-trevifountain-2",
                 "rome-trevifountain-3",
             ],
-            link: "https://en.wikipedia.org/wiki/Trevi_Fountain"),
+            link: "https://en.wikipedia.org/wiki/Trevi_Fountain", activeLevel: 3),
         Location(
             name: "Eiffel Tower",
             cityName: "Paris",
@@ -53,7 +53,7 @@ class LocationsDataService {
                 "paris-eiffeltower-1",
                 "paris-eiffeltower-2",
             ],
-            link: "https://en.wikipedia.org/wiki/Eiffel_Tower"),
+            link: "https://en.wikipedia.org/wiki/Eiffel_Tower", activeLevel: 4),
         Location(
             name: "Louvre Museum",
             cityName: "Paris",
@@ -64,7 +64,7 @@ class LocationsDataService {
                 "paris-louvre-2",
                 "paris-louvre-3",
             ],
-            link: "https://en.wikipedia.org/wiki/Louvre"),
+            link: "https://en.wikipedia.org/wiki/Louvre", activeLevel: 5),
     ]
     
 }

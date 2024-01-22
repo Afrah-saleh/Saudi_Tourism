@@ -8,6 +8,7 @@
 import SwiftUI
 class MissionMapViewModel: ObservableObject {
     @Published var activeLevel: Int = 1
+    var locations: [Location] = LocationsDataService.locations
 
     let levelPositions = [ //representing level numbers and their positions
         (number: 1, position: CGPoint(x: 282, y: 410)),
@@ -26,6 +27,11 @@ class MissionMapViewModel: ObservableObject {
     func isLevelUnlocked(_ level: Int) -> Bool {
         return level <= activeLevel
     }
+    
+
+       func location(for levelNumber: Int) -> Location? {
+           return locations.first { $0.activeLevel == levelNumber }
+       }
 }
 
 

@@ -82,11 +82,8 @@ extension LocationDetailView{
         Map {
                 Marker(location.name, coordinate: location.coordinates)
                 .tint(.orange)
-            
-    
                }
        // .mapStyle(.hybrid(elevation: .realistic))
-        
         .allowsHitTesting(false) //not moving the map
         .aspectRatio(1, contentMode: .fit)
         .cornerRadius(30)
