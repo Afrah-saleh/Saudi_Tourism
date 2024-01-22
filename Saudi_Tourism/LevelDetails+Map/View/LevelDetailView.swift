@@ -17,9 +17,6 @@ struct LevelDetailView: View {
 
     var body: some View {
         VStack {
-//            Text("Level \(levelNumber) Details")
-//                .font(.largeTitle)
-            
             if location.activeLevel == levelNumber {
                                ScrollView{
                                    VStack{
@@ -38,12 +35,8 @@ struct LevelDetailView: View {
                                    }
                                }
                                .ignoresSafeArea()
-//                           }
                     }
-            
-            
-            
-            
+     
             Button("Unlock Next Level") {
                 viewModel.unlockLevel(levelNumber + 1)
                 self.presentationMode.wrappedValue.dismiss()
@@ -62,6 +55,9 @@ struct LevelDetailView: View {
 #Preview {
     LevelDetailView(viewModel: MissionMapViewModel(), location: LocationsDataService.locations.first!, levelNumber: 1)
 }
+
+
+
 
 extension LevelDetailView{
     private var imageSection: some View{
@@ -108,7 +104,7 @@ extension LevelDetailView{
                 Marker(location.name, coordinate: location.coordinates)
                 .tint(.orange)
                }
-       // .mapStyle(.hybrid(elevation: .realistic))
+        .mapStyle(.hybrid(elevation: .realistic))
         .allowsHitTesting(false) //not moving the map
         .aspectRatio(1, contentMode: .fit)
         .cornerRadius(30)
