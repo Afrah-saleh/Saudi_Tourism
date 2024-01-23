@@ -39,6 +39,7 @@ struct LevelDetailView: View {
      
             Button("Unlock Next Level") {
                 viewModel.unlockLevel(levelNumber + 1)
+                sendNotification()
                 self.presentationMode.wrappedValue.dismiss()
             }
             .padding()
@@ -48,6 +49,26 @@ struct LevelDetailView: View {
         }
         .navigationBarTitle((location.name), displayMode: .inline)
         .navigationBarBackButtonHidden(true)
+    }
+    
+}
+func sendNotification() {
+    let content = UNMutableNotificationContent()
+    content.title = "Embark on a new mission! 🌍"
+    content.body = "Complete your exploration and uncover more surprises. The reward awaits – don't miss out! 🌴✨"
+    content.sound = .default
+   
+    let twelveHoursInSeconds: TimeInterval = 12 * 60 * 60
+    let trigger = UNTimeIntervalNotificationTrigger(timeInterval: twelveHoursInSeconds, repeats: false)
+    
+    let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
+    
+    UNUserNotificationCenter.current().add(request) { error in
+        if let error = error {
+            print("Notification error: \(error)")
+        } else {
+            print("Notification will be sent successfully after 12 hours")
+        }
     }
 }
 

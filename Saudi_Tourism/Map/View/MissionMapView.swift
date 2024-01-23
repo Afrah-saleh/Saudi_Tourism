@@ -75,9 +75,25 @@ struct MissionMapView: View {
                 }
            }
           //  .navigationBarTitle("Game Map", displayMode: .inline)
+        .onAppear(){
+            requestNotificationPermission()
+        }
+        
        
+    }
+    
+    private func requestNotificationPermission() {
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) { granted, error in
+            if granted {
+                print("Notification permission granted")
+            } else {
+                print("Notification permission denied")
+            }
         }
     }
+}
+
+
 
 
         
