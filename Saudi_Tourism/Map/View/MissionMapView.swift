@@ -11,16 +11,19 @@ import SwiftUI
 struct MissionMapView: View {
     @StateObject private var viewModel = MissionMapViewModel()
     @State var selection1: String? = "Riyadh"
+    @State private var showingPopup = false
+
 
     var body: some View {
         NavigationView {
             ZStack(alignment: .top) { // Use ZStack to layer the dropdown over the map
                            Image("Map")
-                               .resizable()
+                               //.resizable()
                                .frame(width: 380, height: 700)
-                               .padding(.leading, 7)
-                               .padding(.top,50)
+                              // .padding(.leading, 7)
+                               .padding(.top,75)
                                .scaledToFill()
+                               .ignoresSafeArea()
                 
                 VStack {
                     HStack {
@@ -40,23 +43,21 @@ struct MissionMapView: View {
                             Image(systemName: "gift")
                                 .font(.title)
                         }
-                        //button 2
+                        .padding(15)
+                                                
+                        //Button
                         Button(action: {
-                            //  self.action2()
-                        }) {
-                            Image(systemName: "map")
-                                .font(.title)
-                        }
-                        //Button3
-                        Button(action: {
-                            //  self.action2()
-                        }) {
-                            Image(systemName: "info.square")
-                                .font(.title)
-                        }
-                    }
+                                    self.showingPopup = true
+                                }) {
+                                    Image(systemName: "info.square")
+                                        .font(.title)
+                                }
+                                .sheet(isPresented: $showingPopup) {
+                                    PopupView(isPresented: self.$showingPopup)
+                                }                    }
                 }.padding(.top)
                     .foregroundColor(.yellow)
+                    .offset(y:-20)
                     
                     ForEach(viewModel.levelPositions, id: \.number) { level in
                         Group {
