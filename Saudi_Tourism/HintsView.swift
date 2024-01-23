@@ -82,7 +82,7 @@ struct HintsView: View {
                                 } label: {
                                     ZStack{
                                         RoundedRectangle(cornerSize: CGSize(width: 20, height: 10))
-                                            .frame(width: 161,height: 70)
+                                            .frame(width: 150,height: 50)
                                             .foregroundColor(Color(red: 0.98, green: 0.96, blue: 0.9))
                                         
                                         Text("Back")
@@ -94,7 +94,7 @@ struct HintsView: View {
                                 
                                 
                                 if Hint == Hints.last {
-                                    NavigationLink(destination: ContentView()){
+                                    NavigationLink(destination: doorAnimation(sheetShowing: .constant(true))){
                                         Image("go")
                                         
                                     } } else{
@@ -113,16 +113,18 @@ struct HintsView: View {
                                         //.disabled(Hint == Hints.last)
                                     }
                             }
-                            .padding(32)
-                            .offset(y:260)
+                            .padding(22)
+                            .offset(x:10,y:267)
                         }
                         
                     }
                 }
+               .navigationBarBackButtonHidden(true)
                 .navigationTitle("Hints")
                 .font(
                 Font.custom("Source Sans Pro", size: 28)
                 .weight(.semibold)
+                
                 )
             }
             
@@ -141,5 +143,4 @@ struct Place: Hashable, Identifiable {
     let image: String
     let desc: String
 }
-
 

@@ -50,6 +50,8 @@ struct doorAnimation: View {
      }
      }
      }
+     .navigationBarBackButtonHidden(true)
+
      }
      }
      }

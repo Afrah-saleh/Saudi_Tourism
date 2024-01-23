@@ -50,6 +50,7 @@ struct Onboarding1: View {
             }//Zstack
             .edgesIgnoringSafeArea(.all)
         }
+        .navigationBarBackButtonHidden(true)
         
         
     }
