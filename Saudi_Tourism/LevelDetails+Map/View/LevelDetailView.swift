@@ -98,17 +98,18 @@ extension LevelDetailView{
         }
     }
     
-    private var mapLayer: some View{
-
+    private var mapLayer: some View {
         Map {
-                Marker(location.name, coordinate: location.coordinates)
+            Marker(location.name, coordinate: location.coordinates)
                 .tint(.orange)
-               }
-        .mapStyle(.hybrid(elevation: .realistic))
-        .allowsHitTesting(false) //not moving the map
+        }
         .aspectRatio(1, contentMode: .fit)
         .cornerRadius(30)
-        
+        .onTapGesture {
+            let destination = MKMapItem(placemark: MKPlacemark(coordinate: location.coordinates))
+            destination.name = location.name
+            destination.openInMaps(launchOptions: [MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeDriving])
+        }
     }
 }
 

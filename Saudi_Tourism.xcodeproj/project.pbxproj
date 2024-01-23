@@ -16,6 +16,7 @@
 		945E3EA02B5E4380004DFC98 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945E3E9F2B5E4380004DFC98 /* Location.swift */; };
 		945E3EA22B5E4384004DFC98 /* LocationDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945E3EA12B5E4384004DFC98 /* LocationDetailView.swift */; };
 		945E3EBE2B5E5F5D004DFC98 /* Dropdownmenue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945E3EBD2B5E5F5D004DFC98 /* Dropdownmenue.swift */; };
+		945E3EC22B5EE864004DFC98 /* SaveImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945E3EC12B5EE864004DFC98 /* SaveImageView.swift */; };
 		94A38A462B5D08E90012280F /* Saudi_TourismApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A38A452B5D08E90012280F /* Saudi_TourismApp.swift */; };
 		94A38A482B5D08E90012280F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A38A472B5D08E90012280F /* ContentView.swift */; };
 		94A38A4A2B5D08EB0012280F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94A38A492B5D08EB0012280F /* Assets.xcassets */; };
@@ -36,6 +37,7 @@
 		945E3E9F2B5E4380004DFC98 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		945E3EA12B5E4384004DFC98 /* LocationDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationDetailView.swift; sourceTree = "<group>"; };
 		945E3EBD2B5E5F5D004DFC98 /* Dropdownmenue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dropdownmenue.swift; sourceTree = "<group>"; };
+		945E3EC12B5EE864004DFC98 /* SaveImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveImageView.swift; sourceTree = "<group>"; };
 		94A38A422B5D08E90012280F /* Saudi_Tourism.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Saudi_Tourism.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		94A38A452B5D08E90012280F /* Saudi_TourismApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Saudi_TourismApp.swift; sourceTree = "<group>"; };
 		94A38A472B5D08E90012280F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -188,6 +190,7 @@
 		94A38A552B5D097E0012280F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				945E3EC12B5EE864004DFC98 /* SaveImageView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -291,6 +294,7 @@
 				94A38A482B5D08E90012280F /* ContentView.swift in Sources */,
 				945E3E9E2B5E437C004DFC98 /* LocationsDataService.swift in Sources */,
 				945E3EBE2B5E5F5D004DFC98 /* Dropdownmenue.swift in Sources */,
+				945E3EC22B5EE864004DFC98 /* SaveImageView.swift in Sources */,
 				945E3EA22B5E4384004DFC98 /* LocationDetailView.swift in Sources */,
 				35CF68182B5D80B3001762B9 /* Onboarding3.swift in Sources */,
 				94A38A5C2B5D09E70012280F /* MissionMapView.swift in Sources */,
@@ -431,6 +435,7 @@
 				DEVELOPMENT_TEAM = 8636WVZV8J;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -460,6 +465,7 @@
 				DEVELOPMENT_TEAM = 8636WVZV8J;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
