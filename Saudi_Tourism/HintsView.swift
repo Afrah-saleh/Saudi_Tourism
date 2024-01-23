@@ -17,6 +17,8 @@ struct HintsView: View {
         var body: some View {
             NavigationView{
                 ZStack{
+                    Color.BB
+                        .ignoresSafeArea()
                     VStack(alignment: .leading) {
                         ZStack{
                             ScrollView(.horizontal, showsIndicators: false) {
