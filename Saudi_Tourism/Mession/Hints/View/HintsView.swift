@@ -21,8 +21,8 @@ struct HintsView: View {
                                 HStack {
                                     ForEach(viewModel.hints) { place in
                             Image(place.image)
-                                .cornerRadius(15)
-                                .frame(width: 340, height: 600)
+                               // .cornerRadius(30)
+                                .frame(width: 400, height: 630)
                                 .scrollTransition(topLeading: .interactive,
                                   bottomTrailing: .interactive,
                                   axis: .horizontal) { effect, phase in effect
@@ -95,7 +95,7 @@ struct HintsView: View {
                                     }
                             }
                             .padding(22)
-                            .offset(x:10,y:267)
+                            .offset(x:10,y:287)
                         }
                         
                     }
