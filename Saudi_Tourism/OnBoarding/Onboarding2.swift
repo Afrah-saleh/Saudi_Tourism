@@ -13,21 +13,14 @@ struct Onboarding2: View {
         ZStack{
             Color.BB
             Image("hintOnboarding")
-                .offset(x:10)
-            Image("hintOnboarding")
-                .offset(x:-10,y:10)
+                .offset(y:30)
+                .shadow(color: Color(red: 0.16, green: 0.09, blue: 0.06).opacity(0.25), radius: 19, x: 0, y: 0)
             
             NavigationLink(destination:ContentView() .navigationBarBackButtonHidden()){
                 Text("Skip")
             }
             .offset(x:154,y:-353)
             
-            
-            Text("???")
-                .font(
-                    Font.custom("Source Sans Pro", size: 44)
-                        .weight(.bold))
-                .offset(x:-10)
             Text("By the Hints")
                 .font(
                     Font.custom("Source Sans Pro", size: 34)
@@ -46,7 +39,7 @@ struct Onboarding2: View {
                   .multilineTextAlignment(.center)
                   .foregroundColor(Color(red: 0.91, green: 0.9, blue: 0.84))
                   .frame(width: 300 , height: 60)
-                  .background(Color(red: 0.95, green: 0.7, blue: 0.05))
+                  .background(Color(red: 0.88, green: 0.29, blue: 0.12))
                   .cornerRadius(13)
                   .shadow(color: Color(red: 0.16, green: 0.09, blue: 0.06).opacity(0.25), radius: 19, x: 0, y: 0)
             }

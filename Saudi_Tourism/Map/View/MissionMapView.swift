@@ -49,15 +49,12 @@ struct MissionMapView: View {
                                 }) {
                                     Image(systemName: "info.square")
                                         .font(.title)
+                                    // The custom popup view
                                 }
-
-                        // The custom popup view
-                        if showPopup {
-                            PopupView(showPopup: $showPopup)
-                        }
                     }
+
                 }.padding(.top, 35)
-                    .foregroundColor(.brown)
+                    .foregroundColor(.black)
                     .offset(x:5)
                     
                     ForEach(viewModel.levelPositions, id: \.number) { level in
@@ -74,6 +71,9 @@ struct MissionMapView: View {
                         }
                         .position(x: level.position.x, y: level.position.y) // Position each level icon
                     }
+                if showPopup {
+                    PopupView(showPopup: $showPopup)
+                }
                 }
            }
           //  .navigationBarTitle("Game Map", displayMode: .inline)
@@ -103,3 +103,4 @@ struct MissionMapView: View {
 #Preview {
     MissionMapView()
 }
+

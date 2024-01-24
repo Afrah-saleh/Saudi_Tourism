@@ -36,7 +36,7 @@ struct Onboarding3: View {
                       .multilineTextAlignment(.center)
                       .foregroundColor(Color(red: 0.91, green: 0.9, blue: 0.84))
                       .frame(width: 300 , height: 60)
-                      .background(Color(red: 0.95, green: 0.7, blue: 0.05))
+                      .background(Color(red: 0.88, green: 0.29, blue: 0.12))
                       .cornerRadius(13)
                       .shadow(color: Color(red: 0.16, green: 0.09, blue: 0.06).opacity(0.25), radius: 19, x: 0, y: 0)
             }
