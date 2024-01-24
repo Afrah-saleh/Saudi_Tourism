@@ -20,6 +20,8 @@ struct Onboarding2: View {
                 Text("Skip")
             }
             .offset(x:154,y:-353)
+            .foregroundColor(.black)
+
             
             Text("By the Hints")
                 .font(

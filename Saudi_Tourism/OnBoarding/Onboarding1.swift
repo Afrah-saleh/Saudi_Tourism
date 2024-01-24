@@ -19,6 +19,7 @@ struct Onboarding1: View {
                         Text("Skip")
                     }
                     .offset(x:154,y:-320)
+                    .foregroundColor(.black)
                     
                     Text("Unlcok the beatuy of the local life")
                         .font(
