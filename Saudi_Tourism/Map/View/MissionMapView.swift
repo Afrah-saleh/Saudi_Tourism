@@ -18,10 +18,7 @@ struct MissionMapView: View {
         NavigationView {
             ZStack(alignment: .top) { // Use ZStack to layer the dropdown over the map
                            Image("Map")
-                               //.resizable()
-                               .frame(width: 380, height: 700)
-                              // .padding(.leading, 7)
-                               .padding(.top,75)
+                                .resizable()
                                .scaledToFill()
                                .ignoresSafeArea()
                 
@@ -59,9 +56,9 @@ struct MissionMapView: View {
                             PopupView(showPopup: $showPopup)
                         }
                     }
-                }.padding(.top)
-                    .foregroundColor(.yellow)
-                    .offset(y:-20)
+                }.padding(.top, 35)
+                    .foregroundColor(.brown)
+                    .offset(x:5)
                     
                     ForEach(viewModel.levelPositions, id: \.number) { level in
                         Group {

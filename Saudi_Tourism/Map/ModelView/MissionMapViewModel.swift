@@ -11,10 +11,10 @@ class MissionMapViewModel: ObservableObject {
     var locations: [Location] = LocationsDataService.locations
 
     let levelPositions = [ //representing level numbers and their positions
-        (number: 1, position: CGPoint(x: 282, y: 450)),
-        (number: 2, position: CGPoint(x: 170, y: 590)),
-        (number: 3, position: CGPoint(x: 40, y: 470)),
-        (number: 4, position: CGPoint(x: 220, y: 330)),
+        (number: 1, position: CGPoint(x: 270, y: 520)),
+        (number: 2, position: CGPoint(x: 100, y: 490)),
+        (number: 3, position: CGPoint(x: 145, y: 325)),
+        (number: 4, position: CGPoint(x: 295, y: 310)),
         // we can add more levels
     ]
 
