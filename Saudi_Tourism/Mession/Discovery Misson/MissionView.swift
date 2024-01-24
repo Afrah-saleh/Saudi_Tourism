@@ -28,7 +28,7 @@ struct MissionView: View {
         }
             //.padding(.top)
         
-        .navigationBarTitle("Discovery Missions", displayMode: .large)
+        .navigationBarTitle("Discovery Missions", displayMode: .inline)
         
     }
 }

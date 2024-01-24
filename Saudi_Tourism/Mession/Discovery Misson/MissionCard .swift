@@ -44,9 +44,9 @@ struct MissionView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
             MissionView(missions: [
-                Mission(id: 1, imageName: "mission1", title: "Crying Kid Mission"),
-                Mission(id: 2, imageName: "mission1", title: "Mud House Mission"),
-                Mission(id: 3, imageName: "mission1", title: "Saudi Coffee Traditions")
+                Mission(id: 1, imageName: "mission1", title: "traditional medicine"),
+                Mission(id: 2, imageName: "mission2", title: "Mud House Mission"),
+                Mission(id: 3, imageName: "mission3", title: "Saudi Coffee Traditions")
             ])
         }
     }
