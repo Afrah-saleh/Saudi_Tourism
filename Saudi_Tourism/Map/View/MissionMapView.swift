@@ -11,7 +11,7 @@ import SwiftUI
 struct MissionMapView: View {
     @StateObject private var viewModel = MissionMapViewModel()
     @State var selection1: String? = "Riyadh"
-    @State private var showingPopup = false
+    @State private var showPopup = false
 
 
     var body: some View {
@@ -44,17 +44,21 @@ struct MissionMapView: View {
                                 .font(.title)
                         }
                         .padding(15)
+                        
                                                 
                         //Button
                         Button(action: {
-                                    self.showingPopup = true
+                             showPopup = true
                                 }) {
                                     Image(systemName: "info.square")
                                         .font(.title)
                                 }
-                                .sheet(isPresented: $showingPopup) {
-                                    PopupView(isPresented: self.$showingPopup)
-                                }                    }
+
+                        // The custom popup view
+                        if showPopup {
+                            PopupView(showPopup: $showPopup)
+                        }
+                    }
                 }.padding(.top)
                     .foregroundColor(.yellow)
                     .offset(y:-20)
