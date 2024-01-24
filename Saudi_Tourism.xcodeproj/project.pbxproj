@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		18A06E932B60ECC800354C70 /* StampsBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A06E922B60ECC800354C70 /* StampsBoard.swift */; };
-		353E168C2B5FFF3E0023D015 /* GuidelinesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353E168B2B5FFF3E0023D015 /* GuidelinesView.swift */; };
-		353E16902B5FFF900023D015 /* Guid2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353E168F2B5FFF900023D015 /* Guid2.swift */; };
 		353E16A62B60E3DC0023D015 /* PopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353E16A52B60E3DC0023D015 /* PopupView.swift */; };
 		35CF68182B5D80B3001762B9 /* Onboarding3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CF68142B5D80B3001762B9 /* Onboarding3.swift */; };
 		35CF68192B5D80B3001762B9 /* Onboarding1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CF68152B5D80B3001762B9 /* Onboarding1.swift */; };
@@ -34,8 +32,6 @@
 
 /* Begin PBXFileReference section */
 		18A06E922B60ECC800354C70 /* StampsBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StampsBoard.swift; sourceTree = "<group>"; };
-		353E168B2B5FFF3E0023D015 /* GuidelinesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuidelinesView.swift; sourceTree = "<group>"; };
-		353E168F2B5FFF900023D015 /* Guid2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Guid2.swift; sourceTree = "<group>"; };
 		353E16A52B60E3DC0023D015 /* PopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupView.swift; sourceTree = "<group>"; };
 		35CF68142B5D80B3001762B9 /* Onboarding3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Onboarding3.swift; sourceTree = "<group>"; };
 		35CF68152B5D80B3001762B9 /* Onboarding1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Onboarding1.swift; sourceTree = "<group>"; };
@@ -184,8 +180,6 @@
 				94A38A452B5D08E90012280F /* Saudi_TourismApp.swift */,
 				94A38A472B5D08E90012280F /* ContentView.swift */,
 				35CF683C2B5F9AED001762B9 /* HintsView.swift */,
-				353E168B2B5FFF3E0023D015 /* GuidelinesView.swift */,
-				353E168F2B5FFF900023D015 /* Guid2.swift */,
 				353E16A52B60E3DC0023D015 /* PopupView.swift */,
 				94A38A492B5D08EB0012280F /* Assets.xcassets */,
 				94A38A4B2B5D08EB0012280F /* Preview Content */,
@@ -323,7 +317,6 @@
 				945E3E9B2B5E436D004DFC98 /* LocationViewModel.swift in Sources */,
 				945E3EA02B5E4380004DFC98 /* Location.swift in Sources */,
 				94A38A5E2B5D0A0F0012280F /* MissionMapViewModel.swift in Sources */,
-				353E168C2B5FFF3E0023D015 /* GuidelinesView.swift in Sources */,
 				94A38A482B5D08E90012280F /* ContentView.swift in Sources */,
 				945E3E9E2B5E437C004DFC98 /* LocationsDataService.swift in Sources */,
 				945E3EBE2B5E5F5D004DFC98 /* Dropdownmenue.swift in Sources */,
@@ -332,7 +325,6 @@
 				945E3EA22B5E4384004DFC98 /* LocationDetailView.swift in Sources */,
 				18A06E932B60ECC800354C70 /* StampsBoard.swift in Sources */,
 				35CF68182B5D80B3001762B9 /* Onboarding3.swift in Sources */,
-				353E16902B5FFF900023D015 /* Guid2.swift in Sources */,
 				94A38A5C2B5D09E70012280F /* MissionMapView.swift in Sources */,
 				94A38A462B5D08E90012280F /* Saudi_TourismApp.swift in Sources */,
 			);

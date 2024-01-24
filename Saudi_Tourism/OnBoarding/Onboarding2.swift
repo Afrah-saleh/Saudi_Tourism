@@ -38,18 +38,17 @@ struct Onboarding2: View {
             
             NavigationLink(destination:Onboarding3().navigationBarBackButtonHidden()){
                 Text("Next")
-                    .font(
-                        Font.custom("Inter", size: 24)
-                            .weight(.medium)
-                    )
-                    .kerning(2.16)
-                    .multilineTextAlignment(.center)
-                    .foregroundColor(Color(red: 0.91, green: 0.9, blue: 0.84))
-                //.padding(.horizontal, 10)
-                    .padding(.vertical, 16)
-                    .frame(width: 300, alignment: .center)
-                    .background(Color(red: 0.16, green: 0.09, blue: 0.06))
-                    .cornerRadius(13)
+                  .font(
+                    Font.custom("Inter", size: 22)
+                      .weight(.medium)
+                  )
+                  .kerning(1.98)
+                  .multilineTextAlignment(.center)
+                  .foregroundColor(Color(red: 0.91, green: 0.9, blue: 0.84))
+                  .frame(width: 300 , height: 60)
+                  .background(Color(red: 0.95, green: 0.7, blue: 0.05))
+                  .cornerRadius(13)
+                  .shadow(color: Color(red: 0.16, green: 0.09, blue: 0.06).opacity(0.25), radius: 19, x: 0, y: 0)
             }
             .offset(y:310)
         }//Zstack
