@@ -7,47 +7,57 @@
 
 import SwiftUI
 
-struct MissionCard: View {
-    let mission: Mission
-    
-    var body: some View {
-        ZStack(alignment: .bottomLeading) {
-            Image(mission.imageName)
-                .resizable()
-                .cornerRadius(10)
-            
-            Text(mission.title)
-                .font(.headline)
-                .padding()
-                .foregroundColor(.white)
-            
-            Button(action: {
-                // Handle start action
-            }) {
-                Text("Start")
-                    .frame(width: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/,height: 30)
-                    .bold()
+    struct MissionCard: View {
+        let mission: Mission
+            var isStarted: Bool
+            var showPopup: (HintPopupModel) -> Void
+        
+        var body: some View {
+            ZStack(alignment: .bottomLeading) {
+                Image(mission.imageName)
+                    .resizable()
+                    .cornerRadius(10)
+                
+                Text(mission.title)
+                    .font(.headline)
+                    .padding()
                     .foregroundColor(.white)
-                    .background(Color(red: 0.88, green: 0.29, blue: 0.12))
-                    .cornerRadius(5)
-                    .padding([.bottom, .trailing])
+                
+                Button(action: {
+                    let popupModel = HintPopupModel(
+                        id: mission.id,
+                        title: mission.title,
+                        image: mission.imageName,
+                        description: mission.description, // Use the unique description from the Mission instance
+                        actionButtonTitle: mission.id < 3 ? "Level Up" : "Complete"
+                    )
+                    showPopup(popupModel)
+                }) {
+                    Text("Start")
+                        .frame(width: 100, height: 30)
+                        .bold()
+                        .foregroundColor(.white)
+                        .background(Color(red: 0.88, green: 0.29, blue: 0.12))
+                        .cornerRadius(5)
+                        .padding([.bottom, .trailing])
+                }
+                .buttonStyle(PlainButtonStyle())
+                .disabled(isStarted) 
+                .offset(x: 230)
             }
-            .buttonStyle(PlainButtonStyle()) // Disable the default button styling
-            .offset(x:230)
+            .frame(width: 350, height: 200)
+            .clipped()
         }
-        .frame(width: 350, height: 200)
-        .clipped()
     }
-}
-
-struct MissionView_Previews: PreviewProvider {
+struct Mission_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
             MissionView(missions: [
-                Mission(id: 1, imageName: "mission1", title: "traditional medicine"),
-                Mission(id: 2, imageName: "mission2", title: "Mud House Mission"),
-                Mission(id: 3, imageName: "mission3", title: "Saudi Coffee Traditions")
+                Mission(id: 1, imageName: "mission1", title: "traditional medicine", description: ""),
+                Mission(id: 2, imageName: "mission2", title: "Mud House Mission", description: ""),
+                Mission(id: 3, imageName: "mission3", title: "Saudi Coffee Traditions", description: "")
             ])
         }
     }
 }
+

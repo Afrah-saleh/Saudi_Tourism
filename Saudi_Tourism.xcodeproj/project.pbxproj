@@ -11,6 +11,8 @@
 		353E16A62B60E3DC0023D015 /* PopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353E16A52B60E3DC0023D015 /* PopupView.swift */; };
 		353E16AB2B60FE5D0023D015 /* MissionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353E16AA2B60FE5D0023D015 /* MissionView.swift */; };
 		353E16AD2B60FE780023D015 /* MissionCard .swift in Sources */ = {isa = PBXBuildFile; fileRef = 353E16AC2B60FE780023D015 /* MissionCard .swift */; };
+		353E16B72B614FE60023D015 /* HintPopupModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353E16B62B614FE60023D015 /* HintPopupModel.swift */; };
+		353E16B92B6150BF0023D015 /* HintPopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353E16B82B6150BF0023D015 /* HintPopupView.swift */; };
 		35CF68182B5D80B3001762B9 /* Onboarding3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CF68142B5D80B3001762B9 /* Onboarding3.swift */; };
 		35CF68192B5D80B3001762B9 /* Onboarding1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CF68152B5D80B3001762B9 /* Onboarding1.swift */; };
 		35CF681A2B5D80B3001762B9 /* Onboarding2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CF68162B5D80B3001762B9 /* Onboarding2.swift */; };
@@ -39,6 +41,8 @@
 		353E16A52B60E3DC0023D015 /* PopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupView.swift; sourceTree = "<group>"; };
 		353E16AA2B60FE5D0023D015 /* MissionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionView.swift; sourceTree = "<group>"; };
 		353E16AC2B60FE780023D015 /* MissionCard .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MissionCard .swift"; sourceTree = "<group>"; };
+		353E16B62B614FE60023D015 /* HintPopupModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HintPopupModel.swift; sourceTree = "<group>"; };
+		353E16B82B6150BF0023D015 /* HintPopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HintPopupView.swift; sourceTree = "<group>"; };
 		35CF68142B5D80B3001762B9 /* Onboarding3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Onboarding3.swift; sourceTree = "<group>"; };
 		35CF68152B5D80B3001762B9 /* Onboarding1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Onboarding1.swift; sourceTree = "<group>"; };
 		35CF68162B5D80B3001762B9 /* Onboarding2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Onboarding2.swift; sourceTree = "<group>"; };
@@ -95,6 +99,8 @@
 			children = (
 				353E16AA2B60FE5D0023D015 /* MissionView.swift */,
 				353E16AC2B60FE780023D015 /* MissionCard .swift */,
+				353E16B62B614FE60023D015 /* HintPopupModel.swift */,
+				353E16B82B6150BF0023D015 /* HintPopupView.swift */,
 			);
 			path = "Discovery Misson";
 			sourceTree = "<group>";
@@ -376,6 +382,7 @@
 				945E3EBE2B5E5F5D004DFC98 /* Dropdownmenue.swift in Sources */,
 				353E16A62B60E3DC0023D015 /* PopupView.swift in Sources */,
 				945E3EC22B5EE864004DFC98 /* SaveImageView.swift in Sources */,
+				353E16B92B6150BF0023D015 /* HintPopupView.swift in Sources */,
 				945E3EA22B5E4384004DFC98 /* LocationDetailView.swift in Sources */,
 				18A06E932B60ECC800354C70 /* StampsBoard.swift in Sources */,
 				35CF68182B5D80B3001762B9 /* Onboarding3.swift in Sources */,
@@ -383,6 +390,7 @@
 				94A38A5C2B5D09E70012280F /* MissionMapView.swift in Sources */,
 				94A38A462B5D08E90012280F /* Saudi_TourismApp.swift in Sources */,
 				94F9732C2B60F12A00F6B395 /* Place.swift in Sources */,
+				353E16B72B614FE60023D015 /* HintPopupModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -95,7 +95,7 @@ struct HintsView: View {
                                     }
                             }
                             .padding(22)
-                            .offset(x:10,y:287)
+                            .offset(x:10,y:283)
                         }
                         
                     }
