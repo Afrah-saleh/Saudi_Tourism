@@ -17,7 +17,7 @@ struct doorAnimation: View {
      
      var body: some View {
      if isActive {
-            Onboarding1()
+            LevelDetailView(viewModel: MissionMapViewModel(), location: LocationsDataService.locations.first!, levelNumber: 1)
          .ignoresSafeArea()
          .tabViewStyle(.automatic)
         // .tabViewStyle(.page)
