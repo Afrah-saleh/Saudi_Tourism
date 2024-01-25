@@ -79,8 +79,10 @@ struct HintsView: View {
                                 
                                 .disabled(viewModel.selectedHint == viewModel.hints.first)
                                                 if viewModel.selectedHint == viewModel.hints.last {
-                                    NavigationLink(destination: doorAnimation(sheetShowing: .constant(true))){
-                                        Image("go")
+                                                    NavigationLink(destination: doorAnimation(sheetShowing: .constant(true), viewModel: HintsViewModel(level: viewModel.level))){
+//                                                    NavigationLink(destination: LevelDetailView(viewModel: MissionMapViewModel(), location: LocationsDataService.locations.first { $0.activeLevel == viewModel.level } ?? LocationsDataService.locations.first!, levelNumber: viewModel.level)){
+//                                                    
+                                       Image("go")
                                         
                                     } } else{
                                         
@@ -100,7 +102,7 @@ struct HintsView: View {
                         
                     }
                 }
-               .navigationBarBackButtonHidden(true)
+               
                 .navigationTitle("Hints")
                 .font(
                 Font.custom("Source Sans Pro", size: 28)
@@ -108,6 +110,7 @@ struct HintsView: View {
                 
                 )
             }
+            .navigationBarBackButtonHidden(true)
             
         }
     }

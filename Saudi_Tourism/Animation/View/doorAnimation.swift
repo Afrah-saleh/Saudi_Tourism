@@ -14,10 +14,15 @@ struct doorAnimation: View {
     @State private var size = 1.0
     @State private var opacity = 0.2
     @Binding var sheetShowing : Bool
-     
+    @ObservedObject var viewModel: HintsViewModel
+
      var body: some View {
      if isActive {
-            LevelDetailView(viewModel: MissionMapViewModel(), location: LocationsDataService.locations.first!, levelNumber: 1)
+//            LevelDetailView(viewModel: MissionMapViewModel(), location: LocationsDataService.locations.first!, levelNumber: 1)
+        LevelDetailView(viewModel: MissionMapViewModel(), location: LocationsDataService.locations.first { $0.activeLevel == viewModel.level } ?? LocationsDataService.locations.first!, levelNumber: viewModel.level)
+             
+     
+         
          .ignoresSafeArea()
          .tabViewStyle(.automatic)
         // .tabViewStyle(.page)
@@ -57,6 +62,6 @@ struct doorAnimation: View {
      }
      }
 
-#Preview {
-    doorAnimation(sheetShowing: .constant(true))
-}
+//#Preview {
+//    doorAnimation(sheetShowing: .constant(true))
+//}

@@ -26,6 +26,8 @@ class HintsViewModel: ObservableObject {
             Place(level: 2, name: "Ntty", image: "Hint", desc: "Hint 1 Description for Level 2"),
             Place(level: 2, name: "IOOP", image: "Hint", desc: "Hint 2 Description for Level 2"),
             Place(level: 2, name: "Dont", image: "Hint", desc: "Hint 3 Description for Level 2"),
+            Place(level: 3, name: "IOOP", image: "Hint", desc: "Hint 2 Description for Level 3"),
+            Place(level: 3, name: "Dont", image: "Hint", desc: "Hint 3 Description for Level 3"),
             // ... Add more hints for additional levels
         ]
         selectedHint = hints.first

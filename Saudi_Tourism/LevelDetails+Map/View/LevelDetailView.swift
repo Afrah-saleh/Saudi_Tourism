@@ -13,65 +13,61 @@ struct LevelDetailView: View {
     let location: Location
     @EnvironmentObject private var vm: LocationViewModel
     var levelNumber: Int
-    @Environment(\.presentationMode) var presentationMode
-
+   // @Environment(\.presentationMode) var presentationMode
+    
     var body: some View {
-        VStack {
-            if location.activeLevel == levelNumber {
-                               ScrollView{
-                                   VStack{
-                                       imageSection
-                                           .shadow(color: .black.opacity(0.3), radius: 20, x:0, y:10)
-                                       
-                                       VStack (alignment: .leading, spacing: 16){
-                                          titleSection
-                                           Divider()
-                                           descriptionSection
-                                           Divider()
-                                           mapLayer
-                                       }
-                                       .frame(maxWidth: .infinity, alignment: .leading)
-                                       .padding()
-                                   }
-                               }
-                               .ignoresSafeArea()
+        NavigationView{
+            VStack {
+                if location.activeLevel == levelNumber {
+                    ScrollView{
+                        VStack{
+                            imageSection
+                                .shadow(color: .black.opacity(0.3), radius: 20, x:0, y:10)
+                            
+                            VStack (alignment: .leading, spacing: 16){
+                                titleSection
+                                Divider()
+                                descriptionSection
+                                Divider()
+                                mapLayer
+                            }
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                            .padding()
+                        }
                     }
-     
-            Button("Unlock Next Level") {
-                viewModel.unlockLevel(levelNumber + 1)
-                sendNotification()
-                self.presentationMode.wrappedValue.dismiss()
+                    .ignoresSafeArea()
+                }
+                NavigationLink(destination: test_button()){
+                    
+                    Image("go")
+                }
             }
-            .padding()
-            .background(Color.green)
-            .foregroundColor(.white)
-            .clipShape(Capsule())
+            .navigationBarTitle((location.name), displayMode: .inline)
+           // .navigationBarBackButtonHidden(true)
         }
-        .navigationBarTitle((location.name), displayMode: .inline)
         .navigationBarBackButtonHidden(true)
+
     }
-    
-}
-func sendNotification() {
-    let content = UNMutableNotificationContent()
-    content.title = "Embark on a new mission! 🌍"
-    content.body = "Complete your exploration and uncover more surprises. The reward awaits – don't miss out! 🌴✨"
-    content.sound = .default
-   
-    let twelveHoursInSeconds: TimeInterval = 12 * 60 * 60
-    let trigger = UNTimeIntervalNotificationTrigger(timeInterval: twelveHoursInSeconds, repeats: false)
-    
-    let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
-    
-    UNUserNotificationCenter.current().add(request) { error in
-        if let error = error {
-            print("Notification error: \(error)")
-        } else {
-            print("Notification will be sent successfully after 12 hours")
+    func sendNotification() {
+        let content = UNMutableNotificationContent()
+        content.title = "Embark on a new mission! 🌍"
+        content.body = "Complete your exploration and uncover more surprises. The reward awaits – don't miss out! 🌴✨"
+        content.sound = .default
+        
+        let twelveHoursInSeconds: TimeInterval = 12 * 60 * 60
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: twelveHoursInSeconds, repeats: false)
+        
+        let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
+        
+        UNUserNotificationCenter.current().add(request) { error in
+            if let error = error {
+                print("Notification error: \(error)")
+            } else {
+                print("Notification will be sent successfully after 12 hours")
+            }
         }
     }
 }
-
 
 #Preview {
     LevelDetailView(viewModel: MissionMapViewModel(), location: LocationsDataService.locations.first!, levelNumber: 1)

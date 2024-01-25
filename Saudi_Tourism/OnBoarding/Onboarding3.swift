@@ -26,7 +26,7 @@ struct Onboarding3: View {
                     .frame(width: 353, alignment: .top)
                     .offset(y:180)
                 
-                NavigationLink(destination:MissionMapView().navigationBarBackButtonHidden()){
+                NavigationLink(destination:MissionMapView(viewModel: MissionMapViewModel()).navigationBarBackButtonHidden()){
                     Text("Get Started")
                       .font(
                         Font.custom("Inter", size: 22)

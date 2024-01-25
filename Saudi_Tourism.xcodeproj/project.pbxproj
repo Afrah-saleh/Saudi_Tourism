@@ -34,6 +34,7 @@
 		94F9732C2B60F12A00F6B395 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F9732B2B60F12A00F6B395 /* Place.swift */; };
 		94F9732E2B60F13B00F6B395 /* HintsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F9732D2B60F13B00F6B395 /* HintsView.swift */; };
 		94F973302B60F14200F6B395 /* HintsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F9732F2B60F14200F6B395 /* HintsViewModel.swift */; };
+		94F973352B623C2A00F6B395 /* test button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F973342B623C2A00F6B395 /* test button.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -65,6 +66,7 @@
 		94F9732B2B60F12A00F6B395 /* Place.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
 		94F9732D2B60F13B00F6B395 /* HintsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HintsView.swift; sourceTree = "<group>"; };
 		94F9732F2B60F14200F6B395 /* HintsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HintsViewModel.swift; sourceTree = "<group>"; };
+		94F973342B623C2A00F6B395 /* test button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "test button.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -257,6 +259,7 @@
 			isa = PBXGroup;
 			children = (
 				94A38A5D2B5D0A0F0012280F /* MissionMapViewModel.swift */,
+				94F973342B623C2A00F6B395 /* test button.swift */,
 			);
 			path = ModelView;
 			sourceTree = "<group>";
@@ -400,6 +403,7 @@
 				94F9732E2B60F13B00F6B395 /* HintsView.swift in Sources */,
 				94A38A5E2B5D0A0F0012280F /* MissionMapViewModel.swift in Sources */,
 				353E16AD2B60FE780023D015 /* MissionCard .swift in Sources */,
+				94F973352B623C2A00F6B395 /* test button.swift in Sources */,
 				353E16AB2B60FE5D0023D015 /* MissionView.swift in Sources */,
 				94A38A482B5D08E90012280F /* ContentView.swift in Sources */,
 				945E3E9E2B5E437C004DFC98 /* LocationsDataService.swift in Sources */,

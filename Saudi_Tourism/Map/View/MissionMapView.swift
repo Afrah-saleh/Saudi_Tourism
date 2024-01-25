@@ -9,10 +9,12 @@
 import SwiftUI
 
 struct MissionMapView: View {
-    @StateObject private var viewModel = MissionMapViewModel()
+    @ObservedObject var viewModel: MissionMapViewModel // Now it's an ObservedObject
     @State var selection1: String? = "Riyadh"
     @State private var showPopup = false
-
+    init(viewModel: MissionMapViewModel) {
+           _viewModel = ObservedObject(wrappedValue: viewModel)
+       }
 
     var body: some View {
         NavigationView {
@@ -74,6 +76,8 @@ struct MissionMapView: View {
                 }
                 }
            }
+        .navigationBarBackButtonHidden(true)
+
           //  .navigationBarTitle("Game Map", displayMode: .inline)
         .onAppear(){
             requestNotificationPermission()
@@ -99,6 +103,6 @@ struct MissionMapView: View {
         
 
 #Preview {
-    MissionMapView()
+    MissionMapView(viewModel: MissionMapViewModel())
 }
 
