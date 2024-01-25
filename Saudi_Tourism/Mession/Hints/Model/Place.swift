@@ -6,8 +6,10 @@
 //
 
 import Foundation
+
 struct Place: Hashable, Identifiable {
-    let id = UUID() // Use UUID for unique identification
+    let id = UUID()
+    let level: Int
     let name: String
     let image: String
     let desc: String

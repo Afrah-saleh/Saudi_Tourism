@@ -6,18 +6,32 @@
 //
 
 import Foundation
+
 class HintsViewModel: ObservableObject {
     @Published var selectedHint: Place?
-    let hints: [Place] = [
-        Place(name: "Hint 1 \n The life before \n 297", image: "Hint", desc: "Years Ago"),
-        Place(name: "Hint2", image: "Hint", desc: ""),
-        Place(name: "Hint3 hint 3", image: "Hint", desc: ""),
-    ]
-    
-    init() {
+    @Published var level: Int = 1
+    let allHints: [Place]
+
+    var hints: [Place] {
+        allHints.filter { $0.level == level }
+    }
+
+    init(level: Int) {
+        self.level = level
+        // Populate allHints with hints for all levels
+        allHints = [
+            Place(level: 1, name: "Muna", image: "Hint", desc: "Hint 1 Description for Level 1"),
+            Place(level: 1, name: "Nada", image: "Hint", desc: "Hint 2 Description for Level 1"),
+            Place(level: 1, name: "Noo", image: "Hint", desc: "Hint 3 Description for Level 1"),
+            Place(level: 2, name: "Ntty", image: "Hint", desc: "Hint 1 Description for Level 2"),
+            Place(level: 2, name: "IOOP", image: "Hint", desc: "Hint 2 Description for Level 2"),
+            Place(level: 2, name: "Dont", image: "Hint", desc: "Hint 3 Description for Level 2"),
+            // ... Add more hints for additional levels
+        ]
         selectedHint = hints.first
     }
-    
+
+    // Update the selectedHint logic to account for the new level-based filtering
     func selectPreviousHint() {
         guard let currentHint = selectedHint, let currentIndex = hints.firstIndex(where: { $0.id == currentHint.id }), currentIndex > 0 else { return }
         selectedHint = hints[currentIndex - 1]

@@ -57,20 +57,18 @@ struct MissionMapView: View {
                     .foregroundColor(.black)
                     .offset(x:5)
                     
-                    ForEach(viewModel.levelPositions, id: \.number) { level in
-                        Group {
-                            // If the level is unlocked, show it as a clickable NavigationLink.
-                            if viewModel.isLevelUnlocked(level.number), let location = viewModel.location(for: level.number) {
-                                NavigationLink(destination: LevelDetailView(viewModel: viewModel, location: location, levelNumber: level.number)) {
-                                    LevelIconView(level: level.number, isUnlocked: true)
-                                }
-                            } else {
-                                // If the level is not unlocked, show it as non-clickable and reduce opacity.
-                                LevelIconView(level: level.number, isUnlocked: false)
+                ForEach(viewModel.levelPositions, id: \.number) { level in
+                    Group {
+                        if viewModel.isLevelUnlocked(level.number) {
+                            NavigationLink(destination: HintsView(viewModel: HintsViewModel(level: level.number))) {
+                                LevelIconView(level: level.number, isUnlocked: true)
                             }
+                        } else {
+                            LevelIconView(level: level.number, isUnlocked: false)
                         }
-                        .position(x: level.position.x, y: level.position.y) // Position each level icon
                     }
+                    .position(x: level.position.x, y: level.position.y)
+                }
                 if showPopup {
                     PopupView(showPopup: $showPopup)
                 }

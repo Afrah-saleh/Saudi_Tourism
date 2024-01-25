@@ -7,7 +7,7 @@
 import SwiftUI
 
 struct HintsView: View {
-    @StateObject private var viewModel = HintsViewModel()
+    @ObservedObject var viewModel: HintsViewModel
 
 
         var body: some View {
@@ -113,8 +113,10 @@ struct HintsView: View {
     }
 
 
-#Preview {
-    HintsView()
+struct HintsView_Previews: PreviewProvider {
+    static var previews: some View {
+        HintsView(viewModel: HintsViewModel(level: 1))
+    }
 }
 
 
