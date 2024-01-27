@@ -11,7 +11,8 @@ import MapKit
 struct LocationDetailView: View {
     let location: Location
     @EnvironmentObject private var vm: LocationViewModel
-    
+    @ObservedObject var viewModel: MissionMapViewModel
+
     var body: some View {
         ScrollView{
             VStack{
@@ -34,7 +35,7 @@ struct LocationDetailView: View {
 }
 
 #Preview {
-    LocationDetailView(location: LocationsDataService.locations.first!)
+    LocationDetailView(location: LocationsDataService.locations.first!, viewModel: MissionMapViewModel())
         .environmentObject(LocationViewModel())
 }
 

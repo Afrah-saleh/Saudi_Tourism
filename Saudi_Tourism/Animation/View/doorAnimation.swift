@@ -15,13 +15,14 @@ struct doorAnimation: View {
     @State private var opacity = 0.2
     @Binding var sheetShowing : Bool
     @ObservedObject var viewModel: HintsViewModel
+    @ObservedObject var vm: MissionMapViewModel
 
      var body: some View {
      if isActive {
-//            LevelDetailView(viewModel: MissionMapViewModel(), location: LocationsDataService.locations.first!, levelNumber: 1)
-        LevelDetailView(viewModel: MissionMapViewModel(), location: LocationsDataService.locations.first { $0.activeLevel == viewModel.level } ?? LocationsDataService.locations.first!, levelNumber: viewModel.level)
+//      LevelDetailView(viewModel: MissionMapViewModel(), location: LocationsDataService.locations.first!, levelNumber: 1)
+//        LevelDetailView(viewModel: MissionMapViewModel(), location: LocationsDataService.locations.first { $0.activeLevel == viewModel.level } ?? LocationsDataService.locations.first!, levelNumber: viewModel.level)
              
-     
+         LevelDetailView(viewModel: vm, location: LocationsDataService.locations.first { $0.activeLevel == vm.activeLevel } ?? LocationsDataService.locations.first!, levelNumber: vm.activeLevel)
          
          .ignoresSafeArea()
          .tabViewStyle(.automatic)

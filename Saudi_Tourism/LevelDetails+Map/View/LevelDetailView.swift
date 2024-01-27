@@ -13,8 +13,6 @@ struct LevelDetailView: View {
     let location: Location
     @EnvironmentObject private var vm: LocationViewModel
     var levelNumber: Int
-   // @Environment(\.presentationMode) var presentationMode
-    
     var body: some View {
         NavigationView{
             VStack {
@@ -37,7 +35,7 @@ struct LevelDetailView: View {
                     }
                     .ignoresSafeArea()
                 }
-                NavigationLink(destination: test_button()){
+                NavigationLink(destination: test_button(viewModel: viewModel)){
                     
                     Image("go")
                 }

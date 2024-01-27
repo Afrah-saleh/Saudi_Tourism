@@ -20,13 +20,11 @@ class MissionMapViewModel: ObservableObject {
     ]
     
     // Method to unlock a level. It updates the active level to the highest level unlocked.
-    //    func unlockLevel(_ level: Int) {
-    //        activeLevel = max(level, activeLevel)
-    //    }
-    
     func unlockNextLevel() {
-        if activeLevel < maxLevel { // Assume maxLevel is the maximum level number
+        print("Current level before unlocking: \(activeLevel)")
+        if activeLevel < maxLevel {
             activeLevel += 1
+            print("New level after unlocking: \(activeLevel)")
         }
     }
         //    func unlockLevel(_ level: Int) {

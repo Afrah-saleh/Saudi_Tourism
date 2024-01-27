@@ -10,16 +10,24 @@ import MapKit
 import SwiftUI
 
 class LocationViewModel: ObservableObject {
+    @Published var activeLevel: Int = 1
     
+    let locations: [Location]
+    
+     var locationss: [Location] {
+        self.locations.filter { $0.activeLevel == activeLevel }
+    }
     //All loaded locations
-    @Published var locations: [Location]
+   // @Published var locations: [Location]
     
+
     // Current location on map
     @Published var mapLocation: Location {
         didSet{
             updateMapRegion(location: mapLocation)
         }
     }
+    
     
     @Published var mapRegion: MKCoordinateRegion = MKCoordinateRegion()
     

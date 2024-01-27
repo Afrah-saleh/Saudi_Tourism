@@ -11,7 +11,7 @@ import SwiftUI
 struct Saudi_TourismApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MissionMapView(viewModel: MissionMapViewModel())
         }
         
     }

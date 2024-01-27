@@ -8,28 +8,31 @@
 import SwiftUI
 
 struct test_button: View {
-    @StateObject var viewModel = MissionMapViewModel()
+    @ObservedObject var viewModel: MissionMapViewModel
     @State private var navigateToMissionMap = false // State to control navigation
-    
+    @State private var showMap = false
+
     var body: some View {
         NavigationView {
             VStack {
-                // NavigationLink that will activate when navigateToMissionMap is true.
-                NavigationLink(destination: MissionMapView(viewModel: viewModel), isActive: $navigateToMissionMap) {
-                    EmptyView()
+                Text("Current level: \(viewModel.activeLevel)")
+                Button("Unlock Next Level") {
+                    
+                    viewModel.unlockNextLevel()
+                    
+                    // Show map view
+                    showMap = true
+                    
                 }
-                .hidden()
                 
-                // A button that unlocks the next level and triggers navigation.
-                Button("Unlock Next Level and Go to Mission Map") {
-                    viewModel.unlockNextLevel() // Unlock the next level using the viewModel method.
-                    navigateToMissionMap = true // Set to true to trigger the NavigationLink.
-                }
+            }
+            .fullScreenCover(isPresented: $showMap) {
+                MissionMapView(viewModel: viewModel)
             }
         }
         .navigationBarBackButtonHidden(true)
     }
 }
 #Preview {
-    test_button()
+    test_button(viewModel: MissionMapViewModel())
 }

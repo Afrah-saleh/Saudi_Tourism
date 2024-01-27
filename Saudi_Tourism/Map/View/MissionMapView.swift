@@ -12,9 +12,6 @@ struct MissionMapView: View {
     @ObservedObject var viewModel: MissionMapViewModel // Now it's an ObservedObject
     @State var selection1: String? = "Riyadh"
     @State private var showPopup = false
-    init(viewModel: MissionMapViewModel) {
-           _viewModel = ObservedObject(wrappedValue: viewModel)
-       }
 
     var body: some View {
         NavigationView {
@@ -62,7 +59,7 @@ struct MissionMapView: View {
                 ForEach(viewModel.levelPositions, id: \.number) { level in
                     Group {
                         if viewModel.isLevelUnlocked(level.number) {
-                            NavigationLink(destination: HintsView(viewModel: HintsViewModel(level: level.number))) {
+                            NavigationLink(destination: HintsView(viewModel: HintsViewModel(level: level.number), vm: viewModel)) {
                                 LevelIconView(level: level.number, isUnlocked: true)
                             }
                         } else {

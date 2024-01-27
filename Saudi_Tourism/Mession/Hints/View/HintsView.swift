@@ -8,6 +8,7 @@ import SwiftUI
 
 struct HintsView: View {
     @ObservedObject var viewModel: HintsViewModel
+    @ObservedObject var vm: MissionMapViewModel
 
 
         var body: some View {
@@ -79,7 +80,7 @@ struct HintsView: View {
                                 
                                 .disabled(viewModel.selectedHint == viewModel.hints.first)
                                                 if viewModel.selectedHint == viewModel.hints.last {
-                                                    NavigationLink(destination: doorAnimation(sheetShowing: .constant(true), viewModel: HintsViewModel(level: viewModel.level))){
+                                                    NavigationLink(destination: doorAnimation(sheetShowing: .constant(true), viewModel: HintsViewModel(level: viewModel.level), vm: vm)){
 //                                                    NavigationLink(destination: LevelDetailView(viewModel: MissionMapViewModel(), location: LocationsDataService.locations.first { $0.activeLevel == viewModel.level } ?? LocationsDataService.locations.first!, levelNumber: viewModel.level)){
 //                                                    
                                        Image("go")
@@ -118,7 +119,7 @@ struct HintsView: View {
 
 struct HintsView_Previews: PreviewProvider {
     static var previews: some View {
-        HintsView(viewModel: HintsViewModel(level: 1))
+        HintsView(viewModel: HintsViewModel(level: 1), vm: MissionMapViewModel())
     }
 }
 
