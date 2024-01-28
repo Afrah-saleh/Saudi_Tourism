@@ -1,12 +1,11 @@
 //
-//  HintPopupModel.swift
+//  MissionViewModel.swift
 //  Saudi_Tourism
 //
-//  Created by Muna Aiman Al-hajj on 12/07/1445 AH.
+//  Created by Afrah Saleh on 16/07/1445 AH.
 //
 
-import SwiftUI
-
+import Foundation
 struct HintPopupModel {
     let id: Int
     let title: String
@@ -14,5 +13,3 @@ struct HintPopupModel {
     let description: String
     let actionButtonTitle: String
 }
-
-

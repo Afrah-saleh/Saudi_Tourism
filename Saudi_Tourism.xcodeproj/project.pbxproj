@@ -23,6 +23,10 @@
 		9453ACE02B663DDA00CCA438 /* sound3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9453ACDB2B663DD900CCA438 /* sound3.mp3 */; };
 		9453ACE12B663DDA00CCA438 /* SoundManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9453ACDC2B663DD900CCA438 /* SoundManager.swift */; };
 		9453ACE22B663DDA00CCA438 /* sound4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9453ACDD2B663DD900CCA438 /* sound4.mp3 */; };
+		9453ACEE2B66AB8900CCA438 /* MissionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9453ACED2B66AB8900CCA438 /* MissionViewModel.swift */; };
+		9453ACF02B66AB9900CCA438 /* MissionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9453ACEF2B66AB9900CCA438 /* MissionModel.swift */; };
+		9453ACF42B66AC4900CCA438 /* MissionDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9453ACF32B66AC4900CCA438 /* MissionDataService.swift */; };
+		9453ACF62B66ADFC00CCA438 /* MissionsViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9453ACF52B66ADFC00CCA438 /* MissionsViews.swift */; };
 		945E3E9B2B5E436D004DFC98 /* LocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945E3E9A2B5E436D004DFC98 /* LocationViewModel.swift */; };
 		945E3E9E2B5E437C004DFC98 /* LocationsDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945E3E9D2B5E437C004DFC98 /* LocationsDataService.swift */; };
 		945E3EA02B5E4380004DFC98 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945E3E9F2B5E4380004DFC98 /* Location.swift */; };
@@ -60,6 +64,10 @@
 		9453ACDB2B663DD900CCA438 /* sound3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sound3.mp3; sourceTree = "<group>"; };
 		9453ACDC2B663DD900CCA438 /* SoundManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundManager.swift; sourceTree = "<group>"; };
 		9453ACDD2B663DD900CCA438 /* sound4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sound4.mp3; sourceTree = "<group>"; };
+		9453ACED2B66AB8900CCA438 /* MissionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionViewModel.swift; sourceTree = "<group>"; };
+		9453ACEF2B66AB9900CCA438 /* MissionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionModel.swift; sourceTree = "<group>"; };
+		9453ACF32B66AC4900CCA438 /* MissionDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionDataService.swift; sourceTree = "<group>"; };
+		9453ACF52B66ADFC00CCA438 /* MissionsViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionsViews.swift; sourceTree = "<group>"; };
 		945E3E9A2B5E436D004DFC98 /* LocationViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationViewModel.swift; sourceTree = "<group>"; };
 		945E3E9D2B5E437C004DFC98 /* LocationsDataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationsDataService.swift; sourceTree = "<group>"; };
 		945E3E9F2B5E4380004DFC98 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
@@ -112,7 +120,6 @@
 			isa = PBXGroup;
 			children = (
 				94F973332B6234C600F6B395 /* View */,
-				94F973322B6234C100F6B395 /* Model */,
 				94F973312B6234BB00F6B395 /* ViewModel */,
 			);
 			path = "Discovery Misson";
@@ -137,6 +144,38 @@
 				9453ACDC2B663DD900CCA438 /* SoundManager.swift */,
 			);
 			path = Sounds;
+			sourceTree = "<group>";
+		};
+		9453ACF72B66B63600CCA438 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9453ACEF2B66AB9900CCA438 /* MissionModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9453ACF82B66B63E00CCA438 /* viewModel */ = {
+			isa = PBXGroup;
+			children = (
+				9453ACED2B66AB8900CCA438 /* MissionViewModel.swift */,
+			);
+			path = viewModel;
+			sourceTree = "<group>";
+		};
+		9453ACF92B66B64400CCA438 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9453ACF52B66ADFC00CCA438 /* MissionsViews.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9453ACFA2B66B64900CCA438 /* DataService */ = {
+			isa = PBXGroup;
+			children = (
+				9453ACF32B66AC4900CCA438 /* MissionDataService.swift */,
+			);
+			path = DataService;
 			sourceTree = "<group>";
 		};
 		945E3E932B5E42AE004DFC98 /* OnBoarding */ = {
@@ -334,6 +373,10 @@
 		94F973312B6234BB00F6B395 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				9453ACFA2B66B64900CCA438 /* DataService */,
+				9453ACF92B66B64400CCA438 /* View */,
+				9453ACF82B66B63E00CCA438 /* viewModel */,
+				9453ACF72B66B63600CCA438 /* Model */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -349,6 +392,7 @@
 		94F973332B6234C600F6B395 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				94F973322B6234C100F6B395 /* Model */,
 				353E16AA2B60FE5D0023D015 /* MissionView.swift */,
 				353E16AC2B60FE780023D015 /* MissionCard .swift */,
 				353E16B82B6150BF0023D015 /* HintPopupView.swift */,
@@ -436,6 +480,7 @@
 				35CF681B2B5D80B3001762B9 /* doorAnimation.swift in Sources */,
 				94A38A622B5D3BCB0012280F /* LevelIconView.swift in Sources */,
 				94A38A602B5D0A600012280F /* LevelDetailView.swift in Sources */,
+				9453ACEE2B66AB8900CCA438 /* MissionViewModel.swift in Sources */,
 				9453ACE12B663DDA00CCA438 /* SoundManager.swift in Sources */,
 				945E3E9B2B5E436D004DFC98 /* LocationViewModel.swift in Sources */,
 				945E3EA02B5E4380004DFC98 /* Location.swift in Sources */,
@@ -443,9 +488,11 @@
 				94A38A5E2B5D0A0F0012280F /* MissionMapViewModel.swift in Sources */,
 				353E16AD2B60FE780023D015 /* MissionCard .swift in Sources */,
 				94F973352B623C2A00F6B395 /* test button.swift in Sources */,
+				9453ACF42B66AC4900CCA438 /* MissionDataService.swift in Sources */,
 				353E16AB2B60FE5D0023D015 /* MissionView.swift in Sources */,
 				94A38A482B5D08E90012280F /* ContentView.swift in Sources */,
 				945E3E9E2B5E437C004DFC98 /* LocationsDataService.swift in Sources */,
+				9453ACF62B66ADFC00CCA438 /* MissionsViews.swift in Sources */,
 				945E3EBE2B5E5F5D004DFC98 /* Dropdownmenue.swift in Sources */,
 				353E16A62B60E3DC0023D015 /* PopupView.swift in Sources */,
 				945E3EC22B5EE864004DFC98 /* SaveImageView.swift in Sources */,
@@ -456,6 +503,7 @@
 				35CF68182B5D80B3001762B9 /* Onboarding3.swift in Sources */,
 				94F973302B60F14200F6B395 /* HintsViewModel.swift in Sources */,
 				94A38A5C2B5D09E70012280F /* MissionMapView.swift in Sources */,
+				9453ACF02B66AB9900CCA438 /* MissionModel.swift in Sources */,
 				94A38A462B5D08E90012280F /* Saudi_TourismApp.swift in Sources */,
 				94F9732C2B60F12A00F6B395 /* Place.swift in Sources */,
 				353E16B72B614FE60023D015 /* HintPopupModel.swift in Sources */,
