@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		18A06E932B60ECC800354C70 /* StampsBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A06E922B60ECC800354C70 /* StampsBoard.swift */; };
 		3500B5552B662B9D003C8607 /* CongratsPopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3500B5542B662B9D003C8607 /* CongratsPopupView.swift */; };
+		3500B5E92B66BA4F003C8607 /* MissionDetailSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3500B5E82B66BA4F003C8607 /* MissionDetailSheetView.swift */; };
 		353E16A62B60E3DC0023D015 /* PopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353E16A52B60E3DC0023D015 /* PopupView.swift */; };
 		353E16AB2B60FE5D0023D015 /* MissionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353E16AA2B60FE5D0023D015 /* MissionView.swift */; };
 		353E16AD2B60FE780023D015 /* MissionCard .swift in Sources */ = {isa = PBXBuildFile; fileRef = 353E16AC2B60FE780023D015 /* MissionCard .swift */; };
@@ -50,6 +51,7 @@
 /* Begin PBXFileReference section */
 		18A06E922B60ECC800354C70 /* StampsBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StampsBoard.swift; sourceTree = "<group>"; };
 		3500B5542B662B9D003C8607 /* CongratsPopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CongratsPopupView.swift; sourceTree = "<group>"; };
+		3500B5E82B66BA4F003C8607 /* MissionDetailSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionDetailSheetView.swift; sourceTree = "<group>"; };
 		353E16A52B60E3DC0023D015 /* PopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupView.swift; sourceTree = "<group>"; };
 		353E16AA2B60FE5D0023D015 /* MissionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionView.swift; sourceTree = "<group>"; };
 		353E16AC2B60FE780023D015 /* MissionCard .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MissionCard .swift"; sourceTree = "<group>"; };
@@ -166,6 +168,7 @@
 			isa = PBXGroup;
 			children = (
 				9453ACF52B66ADFC00CCA438 /* MissionsViews.swift */,
+				3500B5E82B66BA4F003C8607 /* MissionDetailSheetView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -478,6 +481,7 @@
 				35CF681A2B5D80B3001762B9 /* Onboarding2.swift in Sources */,
 				35CF68192B5D80B3001762B9 /* Onboarding1.swift in Sources */,
 				35CF681B2B5D80B3001762B9 /* doorAnimation.swift in Sources */,
+				3500B5E92B66BA4F003C8607 /* MissionDetailSheetView.swift in Sources */,
 				94A38A622B5D3BCB0012280F /* LevelIconView.swift in Sources */,
 				94A38A602B5D0A600012280F /* LevelDetailView.swift in Sources */,
 				9453ACEE2B66AB8900CCA438 /* MissionViewModel.swift in Sources */,

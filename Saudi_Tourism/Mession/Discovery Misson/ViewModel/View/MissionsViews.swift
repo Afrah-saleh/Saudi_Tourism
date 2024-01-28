@@ -11,6 +11,8 @@ struct MissionsView: View {
     @ObservedObject var viewModel : MissionMapViewModel
     @ObservedObject var vm: MissionViewModel
     var levelNumber: Int
+    @State private var isShowingDetailSheet = false
+        @State private var selectedMission: MissionModel?
     
     var body: some View {
         NavigationView {
@@ -32,6 +34,8 @@ struct MissionsView: View {
                                         .padding(.top, 120)
                                     Spacer()
                                     Button(action: {
+                                        self.selectedMission = mission
+                                                        self.isShowingDetailSheet = true
                                     }
                                     ) {
                                         Text("Start")
@@ -51,7 +55,8 @@ struct MissionsView: View {
                             .padding(.trailing)
                             .clipped()
                         }
-                    }
+                        
+                                }
                 }
             }
             .navigationTitle("Local Missions \(levelNumber)")
@@ -59,6 +64,11 @@ struct MissionsView: View {
             .onAppear {
                 // Set the active level to match the level number when the view appears
                 self.vm.activeLevel = levelNumber
+            }
+            .sheet(isPresented: $isShowingDetailSheet) {
+                if let selectedMission = selectedMission {
+                    MissionDetailSheetView(mission: selectedMission, isShowing: $isShowingDetailSheet)
+                }
             }
         }
     }

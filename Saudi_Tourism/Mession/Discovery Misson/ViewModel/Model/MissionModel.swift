@@ -13,5 +13,6 @@ struct MissionModel: Identifiable {
     let image: String
     let description: String
     let actionButtonTitle: String
+    var number : Int
     var activeLevel: Int
 }
