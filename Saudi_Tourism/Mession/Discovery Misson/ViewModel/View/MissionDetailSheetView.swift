@@ -1,8 +1,11 @@
 import SwiftUI
 
 struct MissionDetailSheetView: View {
+    @ObservedObject var viewModel : MissionMapViewModel
+    @ObservedObject var vm: MissionViewModel
     let mission: MissionModel
     @Binding var isShowing: Bool
+    
     
     var body: some View {
         VStack {
@@ -67,3 +70,4 @@ struct MissionDetailSheetView: View {
         }
     }
 }
+
