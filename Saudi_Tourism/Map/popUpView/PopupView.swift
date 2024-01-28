@@ -6,10 +6,13 @@
 //
 
 import SwiftUI
+import AVFoundation
 
 struct PopupView: View {
     @Binding var showPopup: Bool
-
+    func playPhraseSound(_ phrase: String) {
+          SoundManager.shared.playSound(soundName: phrase)
+      }
     var body: some View {
         ZStack {
             // Dimmed background
@@ -72,7 +75,12 @@ struct PopupView: View {
                             Text("Locality Phrase")
                                 Spacer()
                             Image(systemName: "speaker.wave.3")
-                        }
+                                    .foregroundColor(Color("BTCOLOR"))
+                            .onTapGesture {
+                                // Call the playPhraseSound method with the correct sound name
+                                self.playPhraseSound("sound1")
+                            }
+                            }
                         HStack {
                             Text("“Ya Hala Ya Hala Yallah, Inik Tahiyyehum”")
                             Spacer()
@@ -83,7 +91,12 @@ struct PopupView: View {
                             Text("Best Reply")
                                 Spacer()
                             Image(systemName: "speaker.wave.3")
-                        }
+                                    .foregroundColor(Color("BTCOLOR"))
+                            .onTapGesture {
+                                // Call the playPhraseSound method with the correct sound name
+                                self.playPhraseSound("sound2")
+                            }
+                            }
                         HStack {
                             Text("“Allah Yahayyik”")
                             Spacer()
@@ -100,7 +113,12 @@ struct PopupView: View {
                             Text("Locality Phrase")
                                 Spacer()
                             Image(systemName: "speaker.wave.3")
-                        }
+                                    .foregroundColor(Color("BTCOLOR"))
+                            .onTapGesture {
+                                // Call the playPhraseSound method with the correct sound name
+                                self.playPhraseSound("sound4")
+                            }
+                            }
                         HStack {
                             Text("“Alaa Kam?”")
                             Spacer()
@@ -110,12 +128,18 @@ struct PopupView: View {
                         HStack{
                             Text("Best Reply")
                                 Spacer()
-                            Image(systemName: "speaker.wave.3")
+                        Image(systemName: "speaker.wave.3")
+                                .foregroundColor(Color("BTCOLOR"))
+                        .onTapGesture {
+                            // Call the playPhraseSound method with the correct sound name
+                            self.playPhraseSound("sound3")
+                        }
                         }
                         HStack {
                             Text("“Kam baad al-khasm?”")
                             Spacer()
                             Text("كم بعد الخصم؟")
+                            
                         }
                         
                         Spacer()

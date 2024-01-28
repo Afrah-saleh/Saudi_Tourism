@@ -19,12 +19,18 @@ struct LevelDetailView: View {
                 if location.activeLevel == levelNumber {
                     ScrollView{
                         VStack{
-                            imageSection
-                                .shadow(color: .black.opacity(0.3), radius: 20, x:0, y:10)
-                            
+                            ZStack{
+                                imageSection
+                                    .shadow(color: .black.opacity(0.3), radius: 20, x:0, y:10)
+                                Text(location.name)
+                                    .foregroundColor(.white)
+                                    .font(.largeTitle)
+                                    .fontWeight(.bold)
+                                    .padding(.top,350)
+                                    .padding(.trailing,160)
+                            }
                             VStack (alignment: .leading, spacing: 16){
                                 titleSection
-                                Divider()
                                 descriptionSection
                                 Divider()
                                 mapLayer
@@ -36,18 +42,19 @@ struct LevelDetailView: View {
                     .ignoresSafeArea()
                 }
                 NavigationLink(destination: test_button(viewModel: viewModel)){
-                    Text("Unlock theMission")
-                    
-                        .padding(.horizontal, 10)
-                        .padding(.vertical, 16)
-                        .frame(width: 340, alignment: .center)
-                        .background(Color(red: 0.88, green: 0.29, blue: 0.12))
-                        .cornerRadius(13)
-                        .foregroundColor(.white)
+                    ZStack{
+                        Rectangle()
+                            .frame(width: 340,height: 57)
+                            .cornerRadius(13)
+                            .tint(Color("BTCOLOR"))
+                        
+                        Text("Let’s Get Local !")
+                            .foregroundColor(.white)
+                            .fontWeight(.semibold)
+                    }
                 }
             }
-            .navigationBarTitle((location.name), displayMode: .inline)
-           // .navigationBarBackButtonHidden(true)
+            .navigationBarTitle(("Place Info"), displayMode: .inline)
         }
         .navigationBarBackButtonHidden(true)
 
@@ -97,13 +104,17 @@ extension LevelDetailView{
     
     private var titleSection: some View{
         VStack(alignment: .leading,spacing: 8) {
-            Text(location.name)
-                .font(.largeTitle)
+            Text("Where I am going ?")
+                .font(.title2)
                 .fontWeight(.semibold)
-            Text(location.cityName)
-                .font(.title3)
-                .foregroundColor(.secondary)
+            HStack{
+                Image(systemName: "mappin.and.ellipse")
+                Text(location.name)
+                    .font(.title3)
+                    .foregroundColor(.black)
+            }
         }
+        .padding(.leading,10)
     }
     
     private var descriptionSection: some View{
@@ -111,25 +122,27 @@ extension LevelDetailView{
             Text(location.description)
                 .font(.subheadline)
                 .foregroundColor(.secondary)
-            if let url = URL(string: location.link){
-                Link("Read more on Wikibidia", destination: url)
-                    .font(.headline)
-                    .tint(.blue)
             }
         }
-    }
     
     private var mapLayer: some View {
-        Map {
-            Marker(location.name, coordinate: location.coordinates)
-                .tint(.orange)
-        }
-        .aspectRatio(1, contentMode: .fit)
-        .cornerRadius(30)
-        .onTapGesture {
-            let destination = MKMapItem(placemark: MKPlacemark(coordinate: location.coordinates))
-            destination.name = location.name
-            destination.openInMaps(launchOptions: [MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeDriving])
+        VStack{
+            Text("Location")
+                .font(.title2)
+                .fontWeight(.semibold)
+                .padding(.trailing,250)
+            Map {
+                Marker(location.name, coordinate: location.coordinates)
+                    .tint(.orange)
+            }
+            .aspectRatio(1, contentMode: .fit)
+            .cornerRadius(30)
+            // .mapStyle(.hybrid(elevation: .realistic))
+            .onTapGesture {
+                let destination = MKMapItem(placemark: MKPlacemark(coordinate: location.coordinates))
+                destination.name = location.name
+                destination.openInMaps(launchOptions: [MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeDriving])
+            }
         }
     }
 }
