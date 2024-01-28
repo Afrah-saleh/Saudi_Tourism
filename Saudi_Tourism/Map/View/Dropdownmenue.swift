@@ -37,21 +37,21 @@ struct Dropdownmenue: View {
                 HStack {
                     Spacer() // Spacer before to push content to center
                     Text(selection == nil ? "Select" : selection!)
-                        .foregroundColor(selection != nil ? .black : .gray)
-                    Image(systemName: state == .top ? "chevron.up" : "chevron.down")
-                        .font(.title3)
-                        .foregroundColor(.gray)
-                        .rotationEffect(.degrees((showDropdown ? -180 : 0)))
-                    Spacer() // Spacer after to ensure centering
-                }
+                           .foregroundColor(selection != nil ? .black : .gray)
+                           .frame(maxWidth: .infinity, alignment: .leading) // Align text to the left
+                       Spacer() // Pushes the chevron to the right
+                       Image(systemName: state == .top ? "chevron.up" : "chevron.down")
+                           .font(.title3)
+                           .foregroundColor(Color("BTCOLOR"))
+                           .rotationEffect(.degrees((showDropdown ? -180 : 0)))
+                   }
                 
                 .frame(width: maxWidth, height: 30) // Use maxWidth for the frame width
-                .background(.white)
-                //.padding(.horizontal, 15)
+                .background(Color("dropColor"))
                 .padding(.all)
                 .frame(width: 200, height: 30)
-                .background(.white)
-                .contentShape(.rect)
+                .background(Color("dropColor"))
+                .contentShape(Rectangle())
                 .onTapGesture {
                     index += 1
                     zindex = index
@@ -59,7 +59,6 @@ struct Dropdownmenue: View {
                         showDropdown.toggle()
                     }
                 }
-                
                 .zIndex(10)
                 
                 if state == .bottom && showDropdown {
@@ -67,11 +66,11 @@ struct Dropdownmenue: View {
                 }
             }
             .clipped()
-            .background(.white)
+            .background(Color("dropColor"))
             .cornerRadius(20)
             .overlay {
                 RoundedRectangle(cornerRadius: 20)
-                    .stroke(.gray)
+                    .stroke(Color("dropColor"))
             }
             .frame(height: size.height, alignment: state == .top ? .bottom : .top)
             
@@ -93,6 +92,7 @@ struct Dropdownmenue: View {
                     Spacer()
                     Image(systemName: "checkmark")
                         .opacity(selection == option ? 1 : 0)
+                        .foregroundColor(Color("BTCOLOR"))
                 }
                 .foregroundStyle(selection == option ? Color.primary : Color.gray)
                 .animation(.none, value: selection)
@@ -111,6 +111,7 @@ struct Dropdownmenue: View {
         .zIndex(1)
     }
 }
+
     
 
 

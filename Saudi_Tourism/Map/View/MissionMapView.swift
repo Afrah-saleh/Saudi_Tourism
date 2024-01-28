@@ -37,6 +37,7 @@ struct MissionMapView: View {
                             //  self.action2()
                         }) {
                             Image(systemName: "gift")
+                                .foregroundColor(Color("BTCOLOR"))
                                 .font(.title)
                         }
                         .padding(15)
@@ -47,13 +48,12 @@ struct MissionMapView: View {
                              showPopup = true
                                 }) {
                                     Image(systemName: "info.square")
+                                        .foregroundColor(Color("BTCOLOR"))
                                         .font(.title)
-                                    // The custom popup view
                                 }
                     }
 
                 }.padding(.top, 35)
-                    .foregroundColor(.black)
                     .offset(x:5)
                     
                 ForEach(viewModel.levelPositions, id: \.number) { level in
