@@ -69,20 +69,7 @@ struct StampsBoard: View {
 
 
             
-            HStack {
-                Text ("Stamps")
-                NavigationLink(destination: ContentView()) {
-                    Image(systemName: "chevron.backward")
-                        .foregroundColor(Color(red: 0.159, green: 0.091, blue: 0.057))
-                        .frame(width: 30.0, height: 24.0)
-
-                }
-                .navigationTitle("First View")
-            }
-            .padding(.top , 44)
-            .padding( .bottom, 772)
-            .padding( .leading, 27)
-            .padding( .trailing, 340)
+            
             
             
             

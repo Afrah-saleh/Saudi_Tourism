@@ -21,6 +21,8 @@ struct MissionView: View {
     @State private var showingPopup = false
     @State private var selectedHint: HintPopupModel?
     @State private var startedMissions = Set<Int>()
+    @State private var showingCongratsPopup = false
+
 
     var body: some View {
         ZStack {
@@ -47,6 +49,25 @@ struct MissionView: View {
                     }
                 )
             }
+            if showingPopup, let hintModel = selectedHint {
+                            HintPopupView(
+                                hintModel: hintModel,
+                                isShowing: $showingPopup,
+                                onComplete: {
+                                    self.startedMissions.insert(hintModel.id)
+                                    if hintModel.actionButtonTitle == "Complete" {
+                                        // Set showingCongratsPopup to true when a mission is completed
+                                        self.showingCongratsPopup = true
+                                    }
+                                }
+                            )
+                        }
+
+                        // Add the following block to show the congratulatory popup
+                        if showingCongratsPopup {
+                            CongratsPopupView(isShowing: $showingCongratsPopup)
+                        }
+                    
         }
         .navigationBarTitle("Discovery Missions", displayMode: .inline)
     }

@@ -49,14 +49,19 @@ import SwiftUI
             .clipped()
         }
     }
-struct Mission_Previews: PreviewProvider {
+
+
+struct MissionView_Previews: PreviewProvider {
     static var previews: some View {
-        NavigationView {
+        Group {
             MissionView(missions: [
-                Mission(id: 1, imageName: "mission1", title: "traditional medicine", description: ""),
-                Mission(id: 2, imageName: "mission2", title: "Mud House Mission", description: ""),
-                Mission(id: 3, imageName: "mission3", title: "Saudi Coffee Traditions", description: "")
+                Mission(id: 1, imageName: "mission1", title: "traditional medicine", description: "Description for Mission 1"),
+                Mission(id: 2, imageName: "mission2", title: "Mud House Mission", description: "Description for Mission 2"),
+                Mission(id: 3, imageName: "mission3", title: "Saudi Coffee Traditions", description: "Description for Mission 3")
             ])
+
+            // Add a preview for the CongratsPopupView
+            CongratsPopupView(isShowing: .constant(true))
         }
     }
 }

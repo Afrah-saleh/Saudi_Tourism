@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+
 struct HintPopupView: View {
     let hintModel: HintPopupModel
         @Binding var isShowing: Bool

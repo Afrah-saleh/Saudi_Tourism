@@ -36,8 +36,14 @@ struct LevelDetailView: View {
                     .ignoresSafeArea()
                 }
                 NavigationLink(destination: test_button(viewModel: viewModel)){
+                    Text("Unlock theMission")
                     
-                    Image("go")
+                        .padding(.horizontal, 10)
+                        .padding(.vertical, 16)
+                        .frame(width: 340, alignment: .center)
+                        .background(Color(red: 0.88, green: 0.29, blue: 0.12))
+                        .cornerRadius(13)
+                        .foregroundColor(.white)
                 }
             }
             .navigationBarTitle((location.name), displayMode: .inline)
