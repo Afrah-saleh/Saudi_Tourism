@@ -1,3 +1,6 @@
+
+
+
 import SwiftUI
 
 struct MissionDetailSheetView: View {
@@ -8,66 +11,76 @@ struct MissionDetailSheetView: View {
     
     
     var body: some View {
-        VStack {
-            Text("\(mission.number)")
-                .font(.largeTitle)
-                .bold()
-                .foregroundColor(.white)
-            // .padding(6)
-                .background(Color.brown)
-            // .cornerRadius(25)
-            HStack {
-                Text(mission.title)
-                    .font(.title2)
-                    .bold()
-                    .foregroundColor(.black)
-                Spacer()
-                Button(action: {
-                    self.isShowing = false
-                }) {
-                    Image(systemName: "xmark")
-                        .foregroundColor(.black)
+        ZStack{
+            Color.BB
+                .ignoresSafeArea()
+            VStack{
+                HStack{
+                    
+                    Text("\(mission.number)")
+                        .font(.largeTitle)
+                        .bold()
+                        .foregroundColor(.white)
+                        .background(Color.brown)
+                    
+                    
+                    Text(mission.title)
+                        .font(.title2)
+                        .bold()
+                    
+                    Spacer()
+                    
+                    Button(action: {
+                        withAnimation {
+                            self.isShowing = false
+                        }
+                    }) {
+                        Image(systemName: "xmark")
+                            .foregroundColor(.black)
+                    }
                 }
-            }
-            .padding()
-            
-            Image(mission.image)
-                .resizable()
-                .scaledToFit()
-                .cornerRadius(10)
-            
-            Spacer()
-            
-            VStack(alignment: .leading, spacing: 8) {
-                Text(mission.description)
-                    .foregroundColor(.gray)
-                    .font(.body)
-            }
-            .padding([.leading, .trailing, .bottom])
-            
-            Spacer()
-            
-            Button(action: {
-                // Perform an action when the button is tapped
-            }) {
-                Text(mission.actionButtonTitle)
-                    .bold()
-                    .frame(maxWidth: .infinity)
-                    .padding()
-                    .background(Color.red)
-                    .foregroundColor(.white)
+                .padding()
+                
+                
+                Image(mission.image)
+                    .resizable()
+                    .scaledToFit()
                     .cornerRadius(10)
-            }
-            .padding()
+                
+                Spacer()
+                
+                
+                Text(mission.description)
+                            .foregroundColor(.gray)
+                            .font(.body)
+                    .padding([.leading, .trailing, .bottom])
+                    
+                    Spacer()
+                
+                Button(action: {
+                    // Handle the button action here
+                    self.isShowing = false
+                    // Perform navigation or other actions based on button title
+                }) {
+                    Text(mission.actionButtonTitle.uppercased())
+                        .bold()
+                        .frame(minWidth: 0, maxWidth: .infinity)
+                        .padding()
+                        .background(Color.red)
+                        .foregroundColor(.white)
+                        .cornerRadius(10)
+                }
+                .padding()
+                
+                }
+          
         }
-        .cornerRadius(25)
-        .shadow(radius: 5)
-        .padding()
         .onTapGesture {
             withAnimation {
                 self.isShowing = false
             }
         }
+        
     }
 }
-
+        

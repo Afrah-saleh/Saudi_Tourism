@@ -15,4 +15,5 @@ struct MissionModel: Identifiable {
     let actionButtonTitle: String
     var number : Int
     var activeLevel: Int
+    var isCompleted: Bool = false
 }
