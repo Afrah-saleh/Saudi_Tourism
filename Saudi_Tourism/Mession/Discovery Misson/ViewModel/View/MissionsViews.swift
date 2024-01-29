@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct MissionsView: View {
-    @ObservedObject var viewModel : MissionMapViewModel
+    @ObservedObject var viewModel: MissionMapViewModel
     @ObservedObject var vm: MissionViewModel
     var levelNumber: Int
     @State private var isShowingDetailSheet = false
@@ -40,7 +40,6 @@ struct MissionsView: View {
                                             .padding(.top, 120)
                                         Spacer()
                                         Button(action: {
-                                            //  self.selectedMission = mission
                                             self.selectedMission = mission
                                         }
                                         ) {
@@ -88,6 +87,8 @@ struct MissionsView: View {
             
                 }
             }
+        .navigationBarBackButtonHidden(true)
+
         }
     }
 

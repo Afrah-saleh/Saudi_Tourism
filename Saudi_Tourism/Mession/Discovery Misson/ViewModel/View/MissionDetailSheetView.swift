@@ -67,7 +67,6 @@ struct MissionDetailSheetView: View {
                           vm.completeMission(missionId: mission.id)
                           advanceLevel() // Call advanceLevel on tap of the action button
                           self.isShowing = false
-                    // Perform navigation or other actions based on button title
                 }) {
                     Text(mission.actionButtonTitle.uppercased())
                         .bold()

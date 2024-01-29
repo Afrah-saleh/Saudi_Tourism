@@ -41,7 +41,9 @@ struct LevelDetailView: View {
                     }
                     .ignoresSafeArea()
                 }
-                NavigationLink(destination: test_button(viewModel: viewModel)){
+                NavigationLink(destination: MissionsView(viewModel: viewModel, vm: MissionViewModel(), levelNumber: levelNumber)) {
+                  //  NavigationLink(destination: test_button(viewModel: viewModel)){
+
                     ZStack{
                         Rectangle()
                             .frame(width: 340,height: 57)
