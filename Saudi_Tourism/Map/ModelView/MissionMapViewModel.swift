@@ -28,9 +28,6 @@ class MissionMapViewModel: ObservableObject {
             print("New level after unlocking: \(activeLevel)")
         }
     }
-        //    func unlockLevel(_ level: Int) {
-        //           activeLevel = max(level, activeLevel)
-        //       }
         
         
         // Method to check if a level is unlocked by comparing it with the active level.

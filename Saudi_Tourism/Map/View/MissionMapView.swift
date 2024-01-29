@@ -7,11 +7,18 @@
 
 
 import SwiftUI
+// Define a wrapper type for your level number that conforms to Identifiable
+struct Level: Identifiable {
+    let id: Int // Conformance to Identifiable
+}
 
 struct MissionMapView: View {
+    
     @ObservedObject var viewModel: MissionMapViewModel // Now it's an ObservedObject
     @State var selection1: String? = "Riyadh"
     @State private var showPopup = false
+    @State private var selectedLevel: Level? // Wrapper type for presenting the sheet
+    @State private var showHintsView = false // Used to trigger navigation
 
     var body: some View {
         NavigationView {
@@ -57,26 +64,33 @@ struct MissionMapView: View {
                     .offset(x:5)
                     
                 ForEach(viewModel.levelPositions, id: \.number) { level in
-                    Group {
-                        if viewModel.isLevelUnlocked(level.number) {
-                            NavigationLink(destination: HintsView(viewModel: HintsViewModel(level: level.number), vm: viewModel)) {
-                                LevelIconView(level: level.number, isUnlocked: true)
-                            }
-                        } else {
-                            LevelIconView(level: level.number, isUnlocked: false)
-                        }
-                    }
-                    .position(x: level.position.x, y: level.position.y)
-                }
-                if showPopup {
-                    PopupView(showPopup: $showPopup)
-                }
-                }
-           }
-        .navigationBarBackButtonHidden(true)
+                                   Group {
+                                       if viewModel.isLevelUnlocked(level.number) {
+                                           Button(action: {
+                                               self.selectedLevel = Level(id: level.number)
+                                           }) {
+                                               LevelIconView(level: level.number, isUnlocked: true)
+                                           }
+                                       } else {
+                                           LevelIconView(level: level.number, isUnlocked: false)
+                                       }
+                                   }
+                                   .position(x: level.position.x, y: level.position.y)
+                               }
 
-          //  .navigationBarTitle("Game Map", displayMode: .inline)
-        .onAppear(){
+                               if showPopup {
+                                   PopupView(showPopup: $showPopup)
+                               }
+                           }
+                           .navigationBarBackButtonHidden(true)
+                           .sheet(item: $selectedLevel, onDismiss: {
+                                          self.selectedLevel = nil
+                                      }) { level in
+                                          InfoSheetView(selectedLevel: $selectedLevel, showHintsView: $showHintsView, viewModel: viewModel, level: level)
+                                              .presentationDetents([.medium])
+                                      }
+                       }
+                       .onAppear {
             requestNotificationPermission()
         }
         
@@ -94,10 +108,6 @@ struct MissionMapView: View {
     }
 }
 
-
-
-
-        
 
 #Preview {
     MissionMapView(viewModel: MissionMapViewModel())

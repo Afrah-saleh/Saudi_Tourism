@@ -71,18 +71,16 @@ struct MissionsView: View {
                         // Set the active level to match the level number when the view appears
                         self.vm.activeLevel = levelNumber
                     }
-                    //            .sheet(isPresented: $isShowingDetailSheet) {
-                    //                if let selectedMission = selectedMission {
-                    //                    MissionDetailSheetView(viewModel: viewModel, vm: vm,mission: selectedMission, isShowing: $isShowingDetailSheet)
-                    //                }
-                    //            }
-                    
+         
                     .sheet(item: $selectedMission, onDismiss: {
                         // Handle the dismiss if needed
                     }) { mission in
                         MissionDetailSheetView(viewModel: viewModel, vm: vm, mission: mission, isShowing: $isShowingDetailSheet, advanceLevel: {
                             vm.advanceLevel()
+                            
                         })
+                        .presentationDetents([.medium])
+
                     }
             
                 }
