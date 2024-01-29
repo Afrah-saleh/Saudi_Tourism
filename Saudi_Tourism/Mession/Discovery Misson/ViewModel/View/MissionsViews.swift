@@ -25,6 +25,8 @@ struct MissionsView: View {
                         VStack {
                             // Use the filteredMissions property to only show missions for the active level
                             ForEach(vm.filteredMissions) { mission in
+                                if mission.activeLevel == levelNumber {
+
                                 ZStack {
                                     Image(mission.image)
                                         .resizable()
@@ -38,6 +40,7 @@ struct MissionsView: View {
                                             .padding(.top, 120)
                                         Spacer()
                                         Button(action: {
+                                            //  self.selectedMission = mission
                                             self.selectedMission = mission
                                         }
                                         ) {
@@ -51,14 +54,14 @@ struct MissionsView: View {
                                                 .padding(.top, 120)
                                         }
                                         .buttonStyle(PlainButtonStyle())
-                                        .disabled(!mission.isCompleted && mission.id != vm.missions.first(where: { !$0.isCompleted })?.id)
-
+                                        .disabled(!mission.isCompleted && mission.number != vm.filteredMissions.first(where: { !$0.isCompleted })?.number)
                                     }
                                 }
-                                    .padding(.leading)
-                                    .padding(.trailing)
-                                    .clipped()
-                                }
+                                .padding(.leading)
+                                .padding(.trailing)
+                                .clipped()
+                            }
+                        }
                                 
                             }
                         }
@@ -78,13 +81,16 @@ struct MissionsView: View {
                     .sheet(item: $selectedMission, onDismiss: {
                         // Handle the dismiss if needed
                     }) { mission in
-                        MissionDetailSheetView(viewModel: viewModel, vm: vm, mission: mission, isShowing: $isShowingDetailSheet)
+                        MissionDetailSheetView(viewModel: viewModel, vm: vm, mission: mission, isShowing: $isShowingDetailSheet, advanceLevel: {
+                            vm.advanceLevel()
+                        })
                     }
             
                 }
             }
         }
     }
+
 
 #Preview {
     MissionsView(viewModel: MissionMapViewModel(), vm: MissionViewModel(), levelNumber: 1)

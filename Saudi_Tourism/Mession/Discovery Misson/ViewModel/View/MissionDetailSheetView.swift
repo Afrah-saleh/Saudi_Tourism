@@ -8,6 +8,8 @@ struct MissionDetailSheetView: View {
     @ObservedObject var vm: MissionViewModel
     let mission: MissionModel
     @Binding var isShowing: Bool
+    var advanceLevel: () -> Void // Add this property
+
     
     
     var body: some View {
@@ -33,6 +35,7 @@ struct MissionDetailSheetView: View {
                     Button(action: {
                         withAnimation {
                             self.isShowing = false
+                
                         }
                     }) {
                         Image(systemName: "xmark")
@@ -60,6 +63,10 @@ struct MissionDetailSheetView: View {
                 Button(action: {
                     // Handle the button action here
                     self.isShowing = false
+                    // Complete the mission and possibly unlock the next level
+                          vm.completeMission(missionId: mission.id)
+                          advanceLevel() // Call advanceLevel on tap of the action button
+                          self.isShowing = false
                     // Perform navigation or other actions based on button title
                 }) {
                     Text(mission.actionButtonTitle.uppercased())
