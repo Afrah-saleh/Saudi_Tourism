@@ -14,6 +14,7 @@ struct MissionsView: View {
     @State private var isShowingDetailSheet = false
     @State private var selectedMission: MissionModel? = nil
     @State private var showingCongratsPopup = false
+    let popup: CongratsModel
     
     var body: some View {
         NavigationView {
@@ -89,9 +90,7 @@ struct MissionsView: View {
 
                             // Add this part to show the CongratsPopupView
                             if showingCongratsPopup {
-                                // Assuming you have an instance of CongratsModel for the popup
-                                let congratsModel = CongratsModel(title: "Congratulations!", desc: "Well done on completing all missions!", image: "mission1", actionButtonTitle: "Awesome",number: 1 , activeLevel: 3)
-                                CongratsPopupView(isShowing: $showingCongratsPopup, popupModel: congratsModel)
+                                CongratsPopupView(isShowing: $showingCongratsPopup, popupModel: popup)
                             }
                         }
                     }
@@ -101,5 +100,5 @@ struct MissionsView: View {
 
 
 #Preview {
-    MissionsView(viewModel: MissionMapViewModel(), vm: MissionViewModel(), levelNumber: 1)
+    MissionsView(viewModel: MissionMapViewModel(), vm: MissionViewModel(), levelNumber: 1, popup: popupDataService.Congrats.first!)
 }

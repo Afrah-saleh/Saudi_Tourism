@@ -5,17 +5,16 @@
 //  Created by Afrah Saleh on 18/07/1445 AH.
 //
 
-/*
 import Foundation
 
-struct popupModel: Identifiable {
+struct CongratsModel: Identifiable {
     let id = UUID()
     let title: String
-    let description: String
-    let buttonText: String
-    let imageName: String
-    var activeLevel: Int
+    let desc: String
+    let image: String
+    let actionButtonTitle: String
     var number : Int
-    
+    var activeLevel: Int
+    var isCompleted: Bool = false
+
 }
-*/

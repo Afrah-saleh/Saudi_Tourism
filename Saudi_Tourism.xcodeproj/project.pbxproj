@@ -10,7 +10,6 @@
 		18A06E932B60ECC800354C70 /* StampsBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A06E922B60ECC800354C70 /* StampsBoard.swift */; };
 		3500B5E92B66BA4F003C8607 /* MissionDetailSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3500B5E82B66BA4F003C8607 /* MissionDetailSheetView.swift */; };
 		353E16A62B60E3DC0023D015 /* PopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353E16A52B60E3DC0023D015 /* PopupView.swift */; };
-		356B77E62B694047003791B9 /* CongratsPopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356B77E52B694047003791B9 /* CongratsPopupView.swift */; };
 		35CF68182B5D80B3001762B9 /* Onboarding3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CF68142B5D80B3001762B9 /* Onboarding3.swift */; };
 		35CF68192B5D80B3001762B9 /* Onboarding1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CF68152B5D80B3001762B9 /* Onboarding1.swift */; };
 		35CF681A2B5D80B3001762B9 /* Onboarding2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CF68162B5D80B3001762B9 /* Onboarding2.swift */; };
@@ -25,9 +24,10 @@
 		9453ACF42B66AC4900CCA438 /* MissionDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9453ACF32B66AC4900CCA438 /* MissionDataService.swift */; };
 		9453ACF62B66ADFC00CCA438 /* MissionsViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9453ACF52B66ADFC00CCA438 /* MissionsViews.swift */; };
 		9453ACFE2B684A9000CCA438 /* InfoSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9453ACFD2B684A9000CCA438 /* InfoSheetView.swift */; };
-		9453AD072B68ED2A00CCA438 /* popupModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9453AD062B68ED2A00CCA438 /* popupModel.swift */; };
+		9453AD072B68ED2A00CCA438 /* CongratsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9453AD062B68ED2A00CCA438 /* CongratsModel.swift */; };
 		9453AD092B68ED9400CCA438 /* popupDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9453AD082B68ED9400CCA438 /* popupDataService.swift */; };
 		9453AD0B2B68EE5C00CCA438 /* popupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9453AD0A2B68EE5C00CCA438 /* popupViewModel.swift */; };
+		9453AD1C2B69432800CCA438 /* CongratsPopupview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9453AD1B2B69432800CCA438 /* CongratsPopupview.swift */; };
 		945E3E9B2B5E436D004DFC98 /* LocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945E3E9A2B5E436D004DFC98 /* LocationViewModel.swift */; };
 		945E3E9E2B5E437C004DFC98 /* LocationsDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945E3E9D2B5E437C004DFC98 /* LocationsDataService.swift */; };
 		945E3EA02B5E4380004DFC98 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945E3E9F2B5E4380004DFC98 /* Location.swift */; };
@@ -51,7 +51,6 @@
 		18A06E922B60ECC800354C70 /* StampsBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StampsBoard.swift; sourceTree = "<group>"; };
 		3500B5E82B66BA4F003C8607 /* MissionDetailSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionDetailSheetView.swift; sourceTree = "<group>"; };
 		353E16A52B60E3DC0023D015 /* PopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupView.swift; sourceTree = "<group>"; };
-		356B77E52B694047003791B9 /* CongratsPopupView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CongratsPopupView.swift; path = "../../Discovry Missions/View/CongratsPopupView.swift"; sourceTree = "<group>"; };
 		35CF68142B5D80B3001762B9 /* Onboarding3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Onboarding3.swift; sourceTree = "<group>"; };
 		35CF68152B5D80B3001762B9 /* Onboarding1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Onboarding1.swift; sourceTree = "<group>"; };
 		35CF68162B5D80B3001762B9 /* Onboarding2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Onboarding2.swift; sourceTree = "<group>"; };
@@ -66,9 +65,10 @@
 		9453ACF32B66AC4900CCA438 /* MissionDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionDataService.swift; sourceTree = "<group>"; };
 		9453ACF52B66ADFC00CCA438 /* MissionsViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionsViews.swift; sourceTree = "<group>"; };
 		9453ACFD2B684A9000CCA438 /* InfoSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoSheetView.swift; sourceTree = "<group>"; };
-		9453AD062B68ED2A00CCA438 /* popupModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = popupModel.swift; sourceTree = "<group>"; };
+		9453AD062B68ED2A00CCA438 /* CongratsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CongratsModel.swift; sourceTree = "<group>"; };
 		9453AD082B68ED9400CCA438 /* popupDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = popupDataService.swift; sourceTree = "<group>"; };
 		9453AD0A2B68EE5C00CCA438 /* popupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = popupViewModel.swift; sourceTree = "<group>"; };
+		9453AD1B2B69432800CCA438 /* CongratsPopupview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CongratsPopupview.swift; sourceTree = "<group>"; };
 		945E3E9A2B5E436D004DFC98 /* LocationViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationViewModel.swift; sourceTree = "<group>"; };
 		945E3E9D2B5E437C004DFC98 /* LocationsDataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationsDataService.swift; sourceTree = "<group>"; };
 		945E3E9F2B5E4380004DFC98 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
@@ -205,20 +205,12 @@
 		9453AD102B69370700CCA438 /* Congrats pop up */ = {
 			isa = PBXGroup;
 			children = (
+				9453AD1A2B69431200CCA438 /* view */,
 				9453AD142B69372D00CCA438 /* Data service */,
 				9453AD132B69372800CCA438 /* Model */,
 				9453AD122B69372100CCA438 /* ViewModel */,
-				9453AD112B69371C00CCA438 /* View */,
 			);
 			path = "Congrats pop up";
-			sourceTree = "<group>";
-		};
-		9453AD112B69371C00CCA438 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				356B77E52B694047003791B9 /* CongratsPopupView.swift */,
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		9453AD122B69372100CCA438 /* ViewModel */ = {
@@ -232,7 +224,7 @@
 		9453AD132B69372800CCA438 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				9453AD062B68ED2A00CCA438 /* popupModel.swift */,
+				9453AD062B68ED2A00CCA438 /* CongratsModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -263,6 +255,14 @@
 				945E3EBD2B5E5F5D004DFC98 /* Dropdownmenue.swift */,
 			);
 			path = "View Elemts";
+			sourceTree = "<group>";
+		};
+		9453AD1A2B69431200CCA438 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				9453AD1B2B69432800CCA438 /* CongratsPopupview.swift */,
+			);
+			path = view;
 			sourceTree = "<group>";
 		};
 		945E3E932B5E42AE004DFC98 /* OnBoarding */ = {
@@ -483,6 +483,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9453AD1C2B69432800CCA438 /* CongratsPopupview.swift in Sources */,
 				35CF681A2B5D80B3001762B9 /* Onboarding2.swift in Sources */,
 				35CF68192B5D80B3001762B9 /* Onboarding1.swift in Sources */,
 				35CF681B2B5D80B3001762B9 /* doorAnimation.swift in Sources */,
@@ -491,13 +492,12 @@
 				94A38A622B5D3BCB0012280F /* LevelIconView.swift in Sources */,
 				94A38A602B5D0A600012280F /* LevelDetailView.swift in Sources */,
 				9453ACEE2B66AB8900CCA438 /* MissionViewModel.swift in Sources */,
-				356B77E62B694047003791B9 /* CongratsPopupView.swift in Sources */,
 				9453ACE12B663DDA00CCA438 /* SoundManager.swift in Sources */,
 				945E3E9B2B5E436D004DFC98 /* LocationViewModel.swift in Sources */,
 				945E3EA02B5E4380004DFC98 /* Location.swift in Sources */,
 				94F9732E2B60F13B00F6B395 /* HintsView.swift in Sources */,
 				94A38A5E2B5D0A0F0012280F /* MissionMapViewModel.swift in Sources */,
-				9453AD072B68ED2A00CCA438 /* popupModel.swift in Sources */,
+				9453AD072B68ED2A00CCA438 /* CongratsModel.swift in Sources */,
 				94F973352B623C2A00F6B395 /* test button.swift in Sources */,
 				9453ACF42B66AC4900CCA438 /* MissionDataService.swift in Sources */,
 				94A38A482B5D08E90012280F /* ContentView.swift in Sources */,

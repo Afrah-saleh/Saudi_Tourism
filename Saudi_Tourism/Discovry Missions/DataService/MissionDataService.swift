@@ -22,29 +22,14 @@ class MissionDataService {
         MissionModel(title: "Mud House Mission2", image: "mission2", description: "Description for Mission 3", actionButtonTitle: "Start", number: 1, activeLevel: 3),
         MissionModel(title: "Saudi Coffee Traditions2", image: "mission3", description: "Description for Mission 4", actionButtonTitle: "Start", number: 2, activeLevel: 3),
         MissionModel(title: "Saudi Coffee Traditions2", image: "mission1", description: "Description for Mission 4", actionButtonTitle: "Start", number: 3, activeLevel: 3),
-
+        
         
         
         MissionModel(title: "Mud House Mission2", image: "mission2", description: "Description for Mission 3", actionButtonTitle: "Start", number: 1, activeLevel: 4),
         MissionModel(title: "Saudi Coffee Traditions2", image: "mission3", description: "Description for Mission 4", actionButtonTitle: "Start", number: 2, activeLevel:4),
         MissionModel(title: "Saudi Coffee Traditions2", image: "mission3", description: "Description for Mission 4", actionButtonTitle: "Start", number: 3, activeLevel: 4),
-
-
+        
+        
     ]
-
-
-static let Congrats: [CongratsModel] = [
-    
-    CongratsModel(title: "traditional medicine", desc: "Description for Mission 1", image: "mission1", actionButtonTitle: "Start", number: 3, activeLevel: 1),
-    
-    
-    CongratsModel(title: "traditional medicine", desc: "Description for Mission 1", image: "mission1", actionButtonTitle: "Start", number: 3, activeLevel: 2),
-    
-    
-    CongratsModel(title: "traditional medicine", desc: "Description for Mission 1", image: "mission1", actionButtonTitle: "Start", number: 3, activeLevel: 3),
-    
-    
-    CongratsModel(title: "traditional medicine", desc: "Description for Mission 1", image: "mission1", actionButtonTitle: "Start", number: 3, activeLevel: 4),
-]
-
 }
+
