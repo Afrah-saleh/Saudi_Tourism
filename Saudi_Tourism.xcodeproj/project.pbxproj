@@ -15,6 +15,12 @@
 		353E16AD2B60FE780023D015 /* MissionCard .swift in Sources */ = {isa = PBXBuildFile; fileRef = 353E16AC2B60FE780023D015 /* MissionCard .swift */; };
 		353E16B72B614FE60023D015 /* HintPopupModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353E16B62B614FE60023D015 /* HintPopupModel.swift */; };
 		353E16B92B6150BF0023D015 /* HintPopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353E16B82B6150BF0023D015 /* HintPopupView.swift */; };
+		356B77D02B68BCF6003791B9 /* SheetContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356B77CF2B68BCF6003791B9 /* SheetContent.swift */; };
+		356B77D22B68BD48003791B9 /* LevelUpSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356B77D12B68BD48003791B9 /* LevelUpSheetView.swift */; };
+		356B77D42B68BE19003791B9 /* ActiveSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356B77D32B68BE19003791B9 /* ActiveSheet.swift */; };
+		356B77D62B68C15D003791B9 /* PopupsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356B77D52B68C15D003791B9 /* PopupsView.swift */; };
+		356B77D82B68C3D5003791B9 /* SheetPopupData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356B77D72B68C3D5003791B9 /* SheetPopupData.swift */; };
+		356B77DA2B68C9A4003791B9 /* BBBB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356B77D92B68C9A4003791B9 /* BBBB.swift */; };
 		35CF68182B5D80B3001762B9 /* Onboarding3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CF68142B5D80B3001762B9 /* Onboarding3.swift */; };
 		35CF68192B5D80B3001762B9 /* Onboarding1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CF68152B5D80B3001762B9 /* Onboarding1.swift */; };
 		35CF681A2B5D80B3001762B9 /* Onboarding2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CF68162B5D80B3001762B9 /* Onboarding2.swift */; };
@@ -57,6 +63,12 @@
 		353E16AC2B60FE780023D015 /* MissionCard .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MissionCard .swift"; sourceTree = "<group>"; };
 		353E16B62B614FE60023D015 /* HintPopupModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HintPopupModel.swift; sourceTree = "<group>"; };
 		353E16B82B6150BF0023D015 /* HintPopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HintPopupView.swift; sourceTree = "<group>"; };
+		356B77CF2B68BCF6003791B9 /* SheetContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetContent.swift; sourceTree = "<group>"; };
+		356B77D12B68BD48003791B9 /* LevelUpSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelUpSheetView.swift; sourceTree = "<group>"; };
+		356B77D32B68BE19003791B9 /* ActiveSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveSheet.swift; sourceTree = "<group>"; };
+		356B77D52B68C15D003791B9 /* PopupsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupsView.swift; sourceTree = "<group>"; };
+		356B77D72B68C3D5003791B9 /* SheetPopupData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetPopupData.swift; sourceTree = "<group>"; };
+		356B77D92B68C9A4003791B9 /* BBBB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBBB.swift; sourceTree = "<group>"; };
 		35CF68142B5D80B3001762B9 /* Onboarding3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Onboarding3.swift; sourceTree = "<group>"; };
 		35CF68152B5D80B3001762B9 /* Onboarding1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Onboarding1.swift; sourceTree = "<group>"; };
 		35CF68162B5D80B3001762B9 /* Onboarding2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Onboarding2.swift; sourceTree = "<group>"; };
@@ -278,6 +290,12 @@
 				94A38A532B5D09700012280F /* Map */,
 				94A38A452B5D08E90012280F /* Saudi_TourismApp.swift */,
 				94A38A472B5D08E90012280F /* ContentView.swift */,
+				356B77CF2B68BCF6003791B9 /* SheetContent.swift */,
+				356B77D12B68BD48003791B9 /* LevelUpSheetView.swift */,
+				356B77D32B68BE19003791B9 /* ActiveSheet.swift */,
+				356B77D52B68C15D003791B9 /* PopupsView.swift */,
+				356B77D72B68C3D5003791B9 /* SheetPopupData.swift */,
+				356B77D92B68C9A4003791B9 /* BBBB.swift */,
 				94A38A492B5D08EB0012280F /* Assets.xcassets */,
 				94A38A4B2B5D08EB0012280F /* Preview Content */,
 			);
@@ -470,13 +488,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				356B77D22B68BD48003791B9 /* LevelUpSheetView.swift in Sources */,
 				35CF681A2B5D80B3001762B9 /* Onboarding2.swift in Sources */,
 				35CF68192B5D80B3001762B9 /* Onboarding1.swift in Sources */,
 				35CF681B2B5D80B3001762B9 /* doorAnimation.swift in Sources */,
 				3500B5E92B66BA4F003C8607 /* MissionDetailSheetView.swift in Sources */,
+				356B77D42B68BE19003791B9 /* ActiveSheet.swift in Sources */,
 				94A38A622B5D3BCB0012280F /* LevelIconView.swift in Sources */,
 				94A38A602B5D0A600012280F /* LevelDetailView.swift in Sources */,
 				9453ACEE2B66AB8900CCA438 /* MissionViewModel.swift in Sources */,
+				356B77DA2B68C9A4003791B9 /* BBBB.swift in Sources */,
 				9453ACE12B663DDA00CCA438 /* SoundManager.swift in Sources */,
 				945E3E9B2B5E436D004DFC98 /* LocationViewModel.swift in Sources */,
 				945E3EA02B5E4380004DFC98 /* Location.swift in Sources */,
@@ -489,12 +510,15 @@
 				94A38A482B5D08E90012280F /* ContentView.swift in Sources */,
 				945E3E9E2B5E437C004DFC98 /* LocationsDataService.swift in Sources */,
 				9453ACF62B66ADFC00CCA438 /* MissionsViews.swift in Sources */,
+				356B77D82B68C3D5003791B9 /* SheetPopupData.swift in Sources */,
 				945E3EBE2B5E5F5D004DFC98 /* Dropdownmenue.swift in Sources */,
 				353E16A62B60E3DC0023D015 /* PopupView.swift in Sources */,
 				353E16B92B6150BF0023D015 /* HintPopupView.swift in Sources */,
 				945E3EA22B5E4384004DFC98 /* LocationDetailView.swift in Sources */,
 				18A06E932B60ECC800354C70 /* StampsBoard.swift in Sources */,
 				3500B5552B662B9D003C8607 /* CongratsPopupView.swift in Sources */,
+				356B77D02B68BCF6003791B9 /* SheetContent.swift in Sources */,
+				356B77D62B68C15D003791B9 /* PopupsView.swift in Sources */,
 				9453ACFE2B684A9000CCA438 /* InfoSheetView.swift in Sources */,
 				35CF68182B5D80B3001762B9 /* Onboarding3.swift in Sources */,
 				94F973302B60F14200F6B395 /* HintsViewModel.swift in Sources */,

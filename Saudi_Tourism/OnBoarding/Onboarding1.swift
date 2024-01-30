@@ -15,7 +15,7 @@ struct Onboarding1: View {
                 Image("onboarding1")
                     .offset(y:200)
                 VStack{
-                    NavigationLink(destination: ContentView().navigationBarBackButtonHidden()){
+                    NavigationLink(destination: BBBB() .navigationBarBackButtonHidden()){
                         Text("Skip")
                     }
                     .offset(x:154,y:-320)
