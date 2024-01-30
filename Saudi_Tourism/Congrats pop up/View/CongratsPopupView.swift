@@ -11,10 +11,10 @@ import SwiftUI
 
 struct CongratsPopupView: View {
     @Binding var isShowing: Bool
-    let title: String = "Congrats!"
-    let description: String = "You have got your First Stamp!"
-    let buttonText: String = "Collect"
-    let imageName: String = "Onboarding33" // Replace with your actual stamp image name
+    @ObservedObject var viewModel: MissionMapViewModel
+    @ObservedObject var vm: popupViewModel
+    let Popup: popupModel
+
 
     var body: some View {
         if isShowing {
@@ -24,14 +24,14 @@ struct CongratsPopupView: View {
                 VStack(spacing: 20) {
                     HStack {
                         Spacer()
-                        Text(title)
+                        Text(Popup.title)
                             .font(.title)
                             .fontWeight(.bold)
                         Spacer()
 
                         Button(action: {
                             withAnimation {
-                                self.isShowing = false
+                            //    self.isShowing = false
                             }
                         }) {
                             Image(systemName: "xmark.circle.fill")
@@ -40,12 +40,12 @@ struct CongratsPopupView: View {
                         }
                     }
                     
-                    Text(description)
+                    Text(Popup.description)
                         .font(.body)
                         .multilineTextAlignment(.center)
                         .padding()
 
-                    Image(imageName)
+                    Image(Popup.description)
                         .resizable()
                         .scaledToFit()
                         .frame(width: 150, height: 150)
@@ -55,7 +55,7 @@ struct CongratsPopupView: View {
                         self.isShowing = false
                         // Perform additional actions if needed
                     }) {
-                        Text(buttonText.uppercased())
+                        Text(Popup.buttonText.uppercased())
                             .bold()
                             .frame(minWidth: 0, maxWidth: .infinity)
                             .padding()
@@ -77,3 +77,5 @@ struct CongratsPopupView: View {
         }
     }
 }
+
+

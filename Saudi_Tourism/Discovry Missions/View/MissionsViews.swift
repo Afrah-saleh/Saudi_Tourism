@@ -68,7 +68,9 @@ struct MissionsView: View {
                         }
                     }
                     .navigationTitle("Local Missions \(levelNumber)")
-                    
+                    .navigationBarBackButtonHidden(false)
+                
+                
                     .onAppear {
                         // Set the active level to match the level number when the view appears
                         self.vm.activeLevel = levelNumber
@@ -83,11 +85,8 @@ struct MissionsView: View {
                     
 
                     }
-            
                 }
             }
-        .navigationBarBackButtonHidden(true)
-
         }
     }
 

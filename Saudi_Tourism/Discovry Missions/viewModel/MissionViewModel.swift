@@ -8,21 +8,6 @@
 import Foundation
 import SwiftUI
 
-/*
-class MissionViewModel: ObservableObject {
-    @Published var activeLevel: Int = 1
-    var missions: [MissionModel]
-    
-    var filteredMissions: [MissionModel] {
-        self.missions.filter { $0.activeLevel == activeLevel }
-    }
-    
-    init(){
-        self.missions = MissionDataService.missions
-    }
-}
-*/
-
 
 class MissionViewModel: ObservableObject {
     @Published var activeLevel: Int = 1 {
@@ -34,6 +19,7 @@ class MissionViewModel: ObservableObject {
     }
     
     var missions: [MissionModel]
+    @Published var completedMissionId: UUID? // Add this property
     
     var filteredMissions: [MissionModel] {
         self.missions.filter { $0.activeLevel <= activeLevel }
@@ -50,6 +36,7 @@ class MissionViewModel: ObservableObject {
     func completeMission(missionId: UUID) {
         if let index = missions.firstIndex(where: { $0.id == missionId }) {
             missions[index].isCompleted = true
+            completedMissionId = missionId // Set the completedMissionId
         }
     }
 }

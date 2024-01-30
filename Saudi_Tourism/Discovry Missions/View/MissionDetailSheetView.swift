@@ -33,6 +33,8 @@ struct MissionDetailSheetView: View {
                         withAnimation {
                             // Close the sheet when the button is clicked
                             self.isShowing = false
+                            self.presentationMode.wrappedValue.dismiss()
+
                         }
                     }) {
                         Image(systemName: "xmark")
@@ -60,7 +62,7 @@ struct MissionDetailSheetView: View {
                     vm.completeMission(missionId: mission.id)
                     advanceLevel() // Call advanceLevel on tap of the action button
                       print("Button tapped, setting isShowing to false")
-                      self.isShowing = false
+                    self.isShowing = false
                     self.presentationMode.wrappedValue.dismiss()
 
                 }) {

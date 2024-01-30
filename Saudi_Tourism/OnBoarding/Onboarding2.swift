@@ -16,7 +16,7 @@ struct Onboarding2: View {
                 .offset(y:30)
                 .shadow(color: Color(red: 0.16, green: 0.09, blue: 0.06).opacity(0.25), radius: 19, x: 0, y: 0)
             
-            NavigationLink(destination: BBBB() .navigationBarBackButtonHidden()){
+            NavigationLink(destination: MissionMapView(viewModel: MissionMapViewModel()) .navigationBarBackButtonHidden()){
                 Text("Skip")
             }
             .offset(x:154,y:-353)
