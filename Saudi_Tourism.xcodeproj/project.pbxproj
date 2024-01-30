@@ -8,9 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		18A06E932B60ECC800354C70 /* StampsBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A06E922B60ECC800354C70 /* StampsBoard.swift */; };
-		3500B5552B662B9D003C8607 /* CongratsPopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3500B5542B662B9D003C8607 /* CongratsPopupView.swift */; };
 		3500B5E92B66BA4F003C8607 /* MissionDetailSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3500B5E82B66BA4F003C8607 /* MissionDetailSheetView.swift */; };
 		353E16A62B60E3DC0023D015 /* PopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353E16A52B60E3DC0023D015 /* PopupView.swift */; };
+		356B77E62B694047003791B9 /* CongratsPopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356B77E52B694047003791B9 /* CongratsPopupView.swift */; };
 		35CF68182B5D80B3001762B9 /* Onboarding3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CF68142B5D80B3001762B9 /* Onboarding3.swift */; };
 		35CF68192B5D80B3001762B9 /* Onboarding1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CF68152B5D80B3001762B9 /* Onboarding1.swift */; };
 		35CF681A2B5D80B3001762B9 /* Onboarding2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CF68162B5D80B3001762B9 /* Onboarding2.swift */; };
@@ -49,9 +49,9 @@
 
 /* Begin PBXFileReference section */
 		18A06E922B60ECC800354C70 /* StampsBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StampsBoard.swift; sourceTree = "<group>"; };
-		3500B5542B662B9D003C8607 /* CongratsPopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CongratsPopupView.swift; sourceTree = "<group>"; };
 		3500B5E82B66BA4F003C8607 /* MissionDetailSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionDetailSheetView.swift; sourceTree = "<group>"; };
 		353E16A52B60E3DC0023D015 /* PopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupView.swift; sourceTree = "<group>"; };
+		356B77E52B694047003791B9 /* CongratsPopupView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CongratsPopupView.swift; path = "../../Discovry Missions/View/CongratsPopupView.swift"; sourceTree = "<group>"; };
 		35CF68142B5D80B3001762B9 /* Onboarding3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Onboarding3.swift; sourceTree = "<group>"; };
 		35CF68152B5D80B3001762B9 /* Onboarding1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Onboarding1.swift; sourceTree = "<group>"; };
 		35CF68162B5D80B3001762B9 /* Onboarding2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Onboarding2.swift; sourceTree = "<group>"; };
@@ -216,7 +216,7 @@
 		9453AD112B69371C00CCA438 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				3500B5542B662B9D003C8607 /* CongratsPopupView.swift */,
+				356B77E52B694047003791B9 /* CongratsPopupView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -491,6 +491,7 @@
 				94A38A622B5D3BCB0012280F /* LevelIconView.swift in Sources */,
 				94A38A602B5D0A600012280F /* LevelDetailView.swift in Sources */,
 				9453ACEE2B66AB8900CCA438 /* MissionViewModel.swift in Sources */,
+				356B77E62B694047003791B9 /* CongratsPopupView.swift in Sources */,
 				9453ACE12B663DDA00CCA438 /* SoundManager.swift in Sources */,
 				945E3E9B2B5E436D004DFC98 /* LocationViewModel.swift in Sources */,
 				945E3EA02B5E4380004DFC98 /* Location.swift in Sources */,
@@ -507,7 +508,6 @@
 				353E16A62B60E3DC0023D015 /* PopupView.swift in Sources */,
 				945E3EA22B5E4384004DFC98 /* LocationDetailView.swift in Sources */,
 				18A06E932B60ECC800354C70 /* StampsBoard.swift in Sources */,
-				3500B5552B662B9D003C8607 /* CongratsPopupView.swift in Sources */,
 				9453ACFE2B684A9000CCA438 /* InfoSheetView.swift in Sources */,
 				35CF68182B5D80B3001762B9 /* Onboarding3.swift in Sources */,
 				94F973302B60F14200F6B395 /* HintsViewModel.swift in Sources */,

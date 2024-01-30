@@ -8,13 +8,9 @@
 
 import SwiftUI
 
-
 struct CongratsPopupView: View {
     @Binding var isShowing: Bool
-    @ObservedObject var viewModel: MissionMapViewModel
-    @ObservedObject var vm: popupViewModel
-    let Popup: popupModel
-
+        var popupModel: CongratsModel
 
     var body: some View {
         if isShowing {
@@ -24,14 +20,14 @@ struct CongratsPopupView: View {
                 VStack(spacing: 20) {
                     HStack {
                         Spacer()
-                        Text(Popup.title)
+                        Text(popupModel.title)
                             .font(.title)
                             .fontWeight(.bold)
                         Spacer()
 
                         Button(action: {
                             withAnimation {
-                            //    self.isShowing = false
+                                self.isShowing = false
                             }
                         }) {
                             Image(systemName: "xmark.circle.fill")
@@ -40,22 +36,22 @@ struct CongratsPopupView: View {
                         }
                     }
                     
-                    Text(Popup.description)
+                    Text(popupModel.desc)
                         .font(.body)
                         .multilineTextAlignment(.center)
                         .padding()
 
-                    Image(Popup.description)
+                    Image(popupModel.image)
                         .resizable()
                         .scaledToFit()
                         .frame(width: 150, height: 150)
 
                     Button(action: {
-                        // Handle the collect button action here
+                        // Here you can call the action associated with the button if you have one in your model
+                        // For example, popupModel.buttonAction?()
                         self.isShowing = false
-                        // Perform additional actions if needed
                     }) {
-                        Text(Popup.buttonText.uppercased())
+                        Text(popupModel.actionButtonTitle.uppercased())
                             .bold()
                             .frame(minWidth: 0, maxWidth: .infinity)
                             .padding()
@@ -77,5 +73,3 @@ struct CongratsPopupView: View {
         }
     }
 }
-
-

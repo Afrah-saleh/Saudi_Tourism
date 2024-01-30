@@ -10,6 +10,7 @@ struct MissionDetailSheetView: View {
     @Binding var isShowing: Bool
     var advanceLevel: () -> Void // Add this property
     @Environment(\.presentationMode) var presentationMode
+    var showCongratsPopup: () -> Void
 
     var body: some View {
         ZStack {
@@ -29,17 +30,6 @@ struct MissionDetailSheetView: View {
 
                     Spacer()
 
-                    Button(action: {
-                        withAnimation {
-                            // Close the sheet when the button is clicked
-                            self.isShowing = false
-                            self.presentationMode.wrappedValue.dismiss()
-
-                        }
-                    }) {
-                        Image(systemName: "xmark")
-                            .foregroundColor(.black)
-                    }
                 }
                 .padding()
 
@@ -58,14 +48,19 @@ struct MissionDetailSheetView: View {
                 Spacer()
 
                 Button(action: {
-                    // Handle the button action here
-                    vm.completeMission(missionId: mission.id)
-                    advanceLevel() // Call advanceLevel on tap of the action button
-                      print("Button tapped, setting isShowing to false")
-                    self.isShowing = false
-                    self.presentationMode.wrappedValue.dismiss()
+                            // Complete the mission
+                            vm.completeMission(missionId: mission.id)
+                            // Check if it's the last mission
+                            if vm.isLastMission(mission) {
+                                showCongratsPopup() // Show congrats popup if it's the last mission
+                            } else {
+                                advanceLevel() // Otherwise, just advance the level
+                            }
+                            // Dismiss the sheet
+                            self.isShowing = false
+                            self.presentationMode.wrappedValue.dismiss()
 
-                }) {
+                        }) {
                     Text(mission.actionButtonTitle.uppercased())
                         .bold()
                         .frame(minWidth: 0, maxWidth: .infinity)

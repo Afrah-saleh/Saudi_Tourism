@@ -17,3 +17,15 @@ struct MissionModel: Identifiable {
     var activeLevel: Int
     var isCompleted: Bool = false
 }
+
+struct CongratsModel: Identifiable {
+    let id = UUID()
+    let title: String
+    let desc: String
+    let image: String
+    let actionButtonTitle: String
+    var number : Int
+    var activeLevel: Int
+    var isCompleted: Bool = false
+
+}

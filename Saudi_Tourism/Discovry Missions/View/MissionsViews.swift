@@ -13,7 +13,7 @@ struct MissionsView: View {
     var levelNumber: Int
     @State private var isShowingDetailSheet = false
     @State private var selectedMission: MissionModel? = nil
-
+    @State private var showingCongratsPopup = false
     
     var body: some View {
         NavigationView {
@@ -76,17 +76,26 @@ struct MissionsView: View {
                         self.vm.activeLevel = levelNumber
                     }
                     .sheet(item: $selectedMission, onDismiss: {
-                        // Handle the dismiss if needed
-                    }) { mission in
-                        MissionDetailSheetView(viewModel: viewModel, vm: vm, mission: mission, isShowing: $isShowingDetailSheet, advanceLevel: {
-                            vm.advanceLevel()
-                        })
-                        .presentationDetents([.medium])
-                    
+                                // Handle the dismiss if needed
+                            }) { mission in
+                                MissionDetailSheetView(viewModel: viewModel, vm: vm, mission: mission, isShowing: $isShowingDetailSheet, advanceLevel: {
+                                    vm.advanceLevel()
+                                }, showCongratsPopup: {
+                                    // This closure will be called when the last mission is completed
+                                    self.showingCongratsPopup = true
+                                })
+                                .presentationDetents([.medium])
+                            }
 
+                            // Add this part to show the CongratsPopupView
+                            if showingCongratsPopup {
+                                // Assuming you have an instance of CongratsModel for the popup
+                                let congratsModel = CongratsModel(title: "Congratulations!", desc: "Well done on completing all missions!", image: "mission1", actionButtonTitle: "Awesome",number: 1 , activeLevel: 3)
+                                CongratsPopupView(isShowing: $showingCongratsPopup, popupModel: congratsModel)
+                            }
+                        }
                     }
-                }
-            }
+
         }
     }
 

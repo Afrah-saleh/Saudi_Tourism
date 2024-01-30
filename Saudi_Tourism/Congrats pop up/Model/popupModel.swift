@@ -5,6 +5,7 @@
 //  Created by Afrah Saleh on 18/07/1445 AH.
 //
 
+/*
 import Foundation
 
 struct popupModel: Identifiable {
@@ -14,4 +15,7 @@ struct popupModel: Identifiable {
     let buttonText: String
     let imageName: String
     var activeLevel: Int
+    var number : Int
+    
 }
+*/

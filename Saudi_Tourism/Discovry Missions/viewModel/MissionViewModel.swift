@@ -18,6 +18,13 @@ class MissionViewModel: ObservableObject {
         }
     }
     
+    func isLastMission(_ mission: MissionModel) -> Bool {
+            guard let lastMission = missions.last(where: { $0.activeLevel == mission.activeLevel }) else {
+                return false
+            }
+            return lastMission.id == mission.id
+        }
+    
     var missions: [MissionModel]
     @Published var completedMissionId: UUID? // Add this property
     

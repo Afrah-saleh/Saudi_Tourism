@@ -31,4 +31,20 @@ class MissionDataService {
 
 
     ]
+
+
+static let Congrats: [CongratsModel] = [
+    
+    CongratsModel(title: "traditional medicine", desc: "Description for Mission 1", image: "mission1", actionButtonTitle: "Start", number: 3, activeLevel: 1),
+    
+    
+    CongratsModel(title: "traditional medicine", desc: "Description for Mission 1", image: "mission1", actionButtonTitle: "Start", number: 3, activeLevel: 2),
+    
+    
+    CongratsModel(title: "traditional medicine", desc: "Description for Mission 1", image: "mission1", actionButtonTitle: "Start", number: 3, activeLevel: 3),
+    
+    
+    CongratsModel(title: "traditional medicine", desc: "Description for Mission 1", image: "mission1", actionButtonTitle: "Start", number: 3, activeLevel: 4),
+]
+
 }
