@@ -90,7 +90,7 @@ struct MissionsView: View {
 
                             // Add this part to show the CongratsPopupView
                             if showingCongratsPopup {
-                                CongratsPopupView(isShowing: $showingCongratsPopup, popupModel: popup)
+                                CongratsPopupView(isShowing: $showingCongratsPopup, popupModel: popup, missionMapViewModel: viewModel)
                             }
                         }
                     }

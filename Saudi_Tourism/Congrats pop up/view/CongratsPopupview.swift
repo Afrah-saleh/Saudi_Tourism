@@ -10,6 +10,7 @@ import SwiftUI
 struct CongratsPopupView: View {
     @Binding var isShowing: Bool
     var popupModel: CongratsModel
+    @ObservedObject var missionMapViewModel: MissionMapViewModel
 
     var body: some View {
         if isShowing {
@@ -49,6 +50,8 @@ struct CongratsPopupView: View {
                         // Here you can call the action associated with the button if you have one in your model
                         // For example, popupModel.buttonAction?()
                         self.isShowing = false
+                        missionMapViewModel.unlockNextLevel()
+
                     }) {
                         Text(popupModel.actionButtonTitle.uppercased())
                             .bold()
