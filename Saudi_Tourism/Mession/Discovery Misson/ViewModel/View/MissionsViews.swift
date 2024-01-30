@@ -12,8 +12,8 @@ struct MissionsView: View {
     @ObservedObject var vm: MissionViewModel
     var levelNumber: Int
     @State private var isShowingDetailSheet = false
-    @State private var selectedMission: MissionModel?
-    
+    @State private var selectedMission: MissionModel? = nil
+
     
     var body: some View {
         NavigationView {
@@ -41,6 +41,8 @@ struct MissionsView: View {
                                         Spacer()
                                         Button(action: {
                                             self.selectedMission = mission
+                                            self.isShowingDetailSheet = true
+
                                         }
                                         ) {
                                             Text("Start")
@@ -71,15 +73,14 @@ struct MissionsView: View {
                         // Set the active level to match the level number when the view appears
                         self.vm.activeLevel = levelNumber
                     }
-         
                     .sheet(item: $selectedMission, onDismiss: {
                         // Handle the dismiss if needed
                     }) { mission in
                         MissionDetailSheetView(viewModel: viewModel, vm: vm, mission: mission, isShowing: $isShowingDetailSheet, advanceLevel: {
                             vm.advanceLevel()
-                            
                         })
                         .presentationDetents([.medium])
+                    
 
                     }
             

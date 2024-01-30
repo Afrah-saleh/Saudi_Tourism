@@ -31,26 +31,25 @@ class MissionViewModel: ObservableObject {
                 activeLevel = missions.count // Prevent it from going beyond available missions
             }
         }
-        
     }
+    
     var missions: [MissionModel]
     
     var filteredMissions: [MissionModel] {
         self.missions.filter { $0.activeLevel <= activeLevel }
     }
     
-    // Add this method to advance the level
     func advanceLevel() {
         activeLevel += 1
     }
     
-    init(){
+    init() {
         self.missions = MissionDataService.missions
     }
     
     func completeMission(missionId: UUID) {
-            if let index = missions.firstIndex(where: { $0.id == missionId }) {
-                missions[index].isCompleted = true
-            }
+        if let index = missions.firstIndex(where: { $0.id == missionId }) {
+            missions[index].isCompleted = true
         }
+    }
 }

@@ -87,7 +87,7 @@ struct MissionMapView: View {
                                           self.selectedLevel = nil
                                       }) { level in
                                           InfoSheetView(selectedLevel: $selectedLevel, showHintsView: $showHintsView, viewModel: viewModel, level: level)
-                                              .presentationDetents([.medium])
+                                              .presentationDetents([.fraction(0.4)])
                                       }
                        }
                        .onAppear {
