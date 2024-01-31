@@ -5,6 +5,7 @@
 //  Created by Sahora on 31/01/2024.
 //
 
+/*
 import Foundation
 import SwiftData
 
@@ -21,5 +22,6 @@ final class Stamps {
     }
     
 }
+ */
 
 
