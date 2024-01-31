@@ -81,6 +81,7 @@ struct HintsView: View {
                                 .disabled(viewModel.selectedHint == viewModel.hints.first)
                                                 if viewModel.selectedHint == viewModel.hints.last {
                                                     NavigationLink(destination: doorAnimation(sheetShowing: .constant(true), viewModel: HintsViewModel(level: viewModel.level), vm: vm)){
+                                                        
 //                                                    NavigationLink(destination: LevelDetailView(viewModel: MissionMapViewModel(), location: LocationsDataService.locations.first { $0.activeLevel == viewModel.level } ?? LocationsDataService.locations.first!, levelNumber: viewModel.level)){
 //                                                    
                                        Image("go")

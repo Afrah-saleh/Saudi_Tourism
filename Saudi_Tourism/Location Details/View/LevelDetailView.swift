@@ -10,11 +10,13 @@ import MapKit
 
 struct LevelDetailView: View {
     @ObservedObject var viewModel: MissionMapViewModel
-    let location: Location
-    @EnvironmentObject private var vm: LocationViewModel
-    var levelNumber: Int
+      let location: Location
+      @EnvironmentObject private var vm: LocationViewModel
+      var levelNumber: Int
+    
     var body: some View {
         NavigationView{
+            
             VStack {
                 if location.activeLevel == levelNumber {
                     ScrollView{

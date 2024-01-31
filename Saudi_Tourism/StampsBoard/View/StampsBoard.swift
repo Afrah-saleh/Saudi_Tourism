@@ -184,7 +184,7 @@ struct StampsBoard: View {
                 
                 Button("Unlock Next Level") {
                     
-                    viewModel.unlockNextLevel()
+                  //  viewModel.unlockNextLevel()
                     
                     // Show map view
                     showMap = true
@@ -197,18 +197,6 @@ struct StampsBoard: View {
             }
         }
         .navigationBarBackButtonHidden(true)
-        
-                /*NavigationLink(destination:MissionMapView(viewModel: MissionMapViewModel())){
-                    Image(systemName: "xmark")
-                        .foregroundColor(.orange)
-                        .bold()
-                    viewModel.unlockNextLevel()
-                    
-                    // Show map view
-                    showMap = true
-                }
-                .offset(x:150 ,y:-370)
-                 */
                
                 
             }

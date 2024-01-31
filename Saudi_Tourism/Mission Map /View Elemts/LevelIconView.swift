@@ -40,7 +40,7 @@ struct LevelIconView: View {
             }
         }
         .frame(width: 150, height: 150, alignment: .center)
-        .opacity(isUnlocked ? 1 : 1) // Change opacity based on whether the level is unlocked or not
+        .opacity(isUnlocked ? 1 : 0) // Change opacity based on whether the level is unlocked or not
     }
 }
 

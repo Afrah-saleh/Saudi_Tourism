@@ -10,7 +10,8 @@ import SwiftUI
 
 
 class MissionViewModel: ObservableObject {
-    @Published var activeLevel: Int = 1 {
+    @Published var activeLevel: Int = 1
+    {
         didSet {
             if activeLevel > missions.count {
                 activeLevel = missions.count // Prevent it from going beyond available missions
@@ -20,9 +21,12 @@ class MissionViewModel: ObservableObject {
     
     func isLastMission(_ mission: MissionModel) -> Bool {
             guard let lastMission = missions.last(where: { $0.activeLevel == mission.activeLevel }) else {
+                
                 return false
+                
             }
             return lastMission.id == mission.id
+        
         }
     
     var missions: [MissionModel]

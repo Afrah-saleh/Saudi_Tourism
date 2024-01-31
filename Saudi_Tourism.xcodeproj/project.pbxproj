@@ -31,7 +31,6 @@
 		945E3E9B2B5E436D004DFC98 /* LocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945E3E9A2B5E436D004DFC98 /* LocationViewModel.swift */; };
 		945E3E9E2B5E437C004DFC98 /* LocationsDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945E3E9D2B5E437C004DFC98 /* LocationsDataService.swift */; };
 		945E3EA02B5E4380004DFC98 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945E3E9F2B5E4380004DFC98 /* Location.swift */; };
-		945E3EA22B5E4384004DFC98 /* LocationDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945E3EA12B5E4384004DFC98 /* LocationDetailView.swift */; };
 		945E3EBE2B5E5F5D004DFC98 /* Dropdownmenue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945E3EBD2B5E5F5D004DFC98 /* Dropdownmenue.swift */; };
 		94A38A462B5D08E90012280F /* Saudi_TourismApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A38A452B5D08E90012280F /* Saudi_TourismApp.swift */; };
 		94A38A482B5D08E90012280F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A38A472B5D08E90012280F /* ContentView.swift */; };
@@ -72,7 +71,6 @@
 		945E3E9A2B5E436D004DFC98 /* LocationViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationViewModel.swift; sourceTree = "<group>"; };
 		945E3E9D2B5E437C004DFC98 /* LocationsDataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationsDataService.swift; sourceTree = "<group>"; };
 		945E3E9F2B5E4380004DFC98 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
-		945E3EA12B5E4384004DFC98 /* LocationDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationDetailView.swift; sourceTree = "<group>"; };
 		945E3EBD2B5E5F5D004DFC98 /* Dropdownmenue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dropdownmenue.swift; sourceTree = "<group>"; };
 		94A38A422B5D08E90012280F /* Saudi_Tourism.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Saudi_Tourism.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		94A38A452B5D08E90012280F /* Saudi_TourismApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Saudi_TourismApp.swift; sourceTree = "<group>"; };
@@ -294,7 +292,6 @@
 		945E3E972B5E4356004DFC98 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				945E3EA12B5E4384004DFC98 /* LocationDetailView.swift */,
 				94A38A5F2B5D0A600012280F /* LevelDetailView.swift */,
 			);
 			path = View;
@@ -505,7 +502,6 @@
 				9453ACF62B66ADFC00CCA438 /* MissionsViews.swift in Sources */,
 				945E3EBE2B5E5F5D004DFC98 /* Dropdownmenue.swift in Sources */,
 				353E16A62B60E3DC0023D015 /* PopupView.swift in Sources */,
-				945E3EA22B5E4384004DFC98 /* LocationDetailView.swift in Sources */,
 				18A06E932B60ECC800354C70 /* StampsBoard.swift in Sources */,
 				9453ACFE2B684A9000CCA438 /* InfoSheetView.swift in Sources */,
 				35CF68182B5D80B3001762B9 /* Onboarding3.swift in Sources */,

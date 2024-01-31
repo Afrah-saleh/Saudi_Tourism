@@ -24,9 +24,10 @@ struct InfoSheetView: View {
                     Text(levelTitle) // Display the level title
                         .foregroundColor(.black)
                         .font(.title)
-                        .padding(.trailing)
-                    
-                        .padding(.bottom,60)
+                        .fontWeight(.bold)
+                        .padding(.bottom,50)
+                        .padding(.top,40)
+                        .padding(.trailing,60)
                     Button(action: {
                         showHintsView = true
                     }) {
