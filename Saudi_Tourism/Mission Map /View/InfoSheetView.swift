@@ -12,6 +12,7 @@ struct InfoSheetView: View {
        @Binding var showHintsView: Bool
        var viewModel: MissionMapViewModel
        var level: Level
+    
        
        var body: some View {
            NavigationView {

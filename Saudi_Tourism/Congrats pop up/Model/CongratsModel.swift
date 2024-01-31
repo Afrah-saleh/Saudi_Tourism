@@ -13,7 +13,6 @@ struct CongratsModel: Identifiable {
     let desc: String
     let image: String
     let actionButtonTitle: String
-    var number : Int
     var activeLevel: Int
     var isCompleted: Bool = false
 

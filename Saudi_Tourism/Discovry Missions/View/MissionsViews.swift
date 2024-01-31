@@ -14,6 +14,8 @@ struct MissionsView: View {
     @State private var isShowingDetailSheet = false
     @State private var selectedMission: MissionModel? = nil
     @State private var showingCongratsPopup = false
+    @State private var isShowingStampBoard = false
+    
     let popup: CongratsModel
     
     var body: some View {
