@@ -7,11 +7,33 @@
 
 import Foundation
 import SwiftUI
+import SwiftData
 
 
 
 struct StampsBoard: View {
    
+    @Environment(\.modelContext) private var modelContext
+    @Query private var Stamps: [Stamps]
+    @State private var imageData: Data?
+    
+    //Function to convert img to tupe data
+    func pngImageToData(image: String) -> Data? {
+        //Take the name of the image
+        if let image = UIImage(named: image), let data = image.pngData() {
+            imageData = data
+            print("PNG image converted to data: \(imageData!)")
+            //Add the data img to Swift Data
+            let newItem = Saudi_Tourism.Stamps(id: 1, lvl: "1", img :  imageData)
+            modelContext.insert(newItem)
+            //Retuen value could be used for displau
+            return imageData
+        } else {
+            print("Failed to convert PNG image to data.")
+        }
+         return nil
+     }
+    
     
     var body: some View {
    
@@ -77,6 +99,13 @@ struct StampsBoard: View {
 
 
             
+        }
+        .onAppear{
+            //Call the funcation to pass images
+            let image2 = pngImageToData(image: "Stamp1.png")
+            //Convert Data type to image type
+            let image = UIImage(data: image2!)
+            Image(uiImage: image!)
         }
         .frame(width: 390, height: 844)
         .background(Color(red: 0.92, green: 0.9, blue: 0.84))
