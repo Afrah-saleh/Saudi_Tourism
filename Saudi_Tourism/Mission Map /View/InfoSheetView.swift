@@ -9,50 +9,46 @@ import SwiftUI
 
 struct InfoSheetView: View {
     @Binding var selectedLevel: Level?
-       @Binding var showHintsView: Bool
-       var viewModel: MissionMapViewModel
-       var level: Level
+    @Binding var showHintsView: Bool
+    var viewModel: MissionMapViewModel
+    var level: Level
+    var levelTitle: String
     
-       
-       var body: some View {
-           NavigationView {
-               ZStack{
-                   Color.BB
-                       .ignoresSafeArea()
-                   VStack {
-                       // Add your level information views here
-                       Text("Level \(level.id) Details")
+    var body: some View {
+        NavigationView {
+            ZStack {
+                Color.BB
+                    .ignoresSafeArea()
+                VStack{
+                    
+                    Text(levelTitle) // Display the level title
+                        .foregroundColor(.black)
+                        .font(.title)
+                        .padding(.trailing)
+                    
+                        .padding(.bottom,60)
+                    Button(action: {
+                        showHintsView = true
+                    }) {
+                        ZStack {
+                            Rectangle()
+                                .frame(width: 340, height: 57)
+                                .cornerRadius(13)
+                                .tint(Color("BTCOLOR"))
+                            
+                            Text("Start")
+                                .foregroundColor(.white)
+                                .fontWeight(.semibold)
+                        }
                        
-                       Button(action: {
-                           showHintsView = true
-                       }) {
-                           
-                           ZStack{
-                               Rectangle()
-                                   .frame(width: 340,height: 57)
-                                   .cornerRadius(13)
-                                   .tint(Color("BTCOLOR"))
-                               
-                               Text("Start")
-                                   .foregroundColor(.white)
-                                   .fontWeight(.semibold)
-                           }
-                       }
-                       .padding(.top,150)
-                       .fullScreenCover(isPresented: $showHintsView) {
-                           HintsView(viewModel: HintsViewModel(level: level.id), vm: viewModel)
-                       }
-                       .padding()
-                   }
-                   .toolbar {
-                       ToolbarItem(placement: .cancellationAction) {
-                           Button("Close") {
-                               selectedLevel = nil
-                           }
-                       }
-                   }
-               }
-           }
-       }
-   }
-
+                    }
+                    .fullScreenCover(isPresented: $showHintsView) {
+                        HintsView(viewModel: HintsViewModel(level: level.id), vm: viewModel)
+                    }
+                    .padding()
+                }
+            }
+        }
+    }
+    
+}

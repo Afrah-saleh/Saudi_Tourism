@@ -10,6 +10,8 @@ import SwiftUI
 // Define a wrapper type for your level number that conforms to Identifiable
 struct Level: Identifiable {
     let id: Int // Conformance to Identifiable
+    let title: String // Add the title property
+
 }
 
 struct MissionMapView: View {
@@ -67,7 +69,7 @@ struct MissionMapView: View {
                                    Group {
                                        if viewModel.isLevelUnlocked(level.number) {
                                            Button(action: {
-                                               self.selectedLevel = Level(id: level.number)
+                                               self.selectedLevel = Level(id: level.number, title: "")
                                            }) {
                                                LevelIconView(level: level.number, isUnlocked: true)
                                            }
@@ -84,11 +86,13 @@ struct MissionMapView: View {
                            }
                            .navigationBarBackButtonHidden(true)
                            .sheet(item: $selectedLevel, onDismiss: {
-                                          self.selectedLevel = nil
-                                      }) { level in
-                                          InfoSheetView(selectedLevel: $selectedLevel, showHintsView: $showHintsView, viewModel: viewModel, level: level)
-                                              .presentationDetents([.fraction(0.4)])
-                                      }
+                               self.selectedLevel = nil
+                           }) { level in
+                               // Retrieve the title for the level from the viewModel
+                               let title = viewModel.title(forLevelId: level.id)
+                               InfoSheetView(selectedLevel: $selectedLevel, showHintsView: $showHintsView, viewModel: viewModel, level: level, levelTitle: title)
+                                   .presentationDetents([.fraction(0.3)])
+                           }
                        }
                        .onAppear {
             requestNotificationPermission()
