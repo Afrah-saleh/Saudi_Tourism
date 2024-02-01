@@ -4,11 +4,13 @@
 //
 //  Created by Muna Aiman Al-hajj on 11/07/1445 AH.
 //
+
+
 import SwiftUI
 
 struct HintsView: View {
-    @ObservedObject var viewModel: HintsViewModel
-    @ObservedObject var vm: MissionMapViewModel
+    @ObservedObject var viewModel: HintsViewModel // View model for hints, observed for changes.
+    @ObservedObject var vm: MissionMapViewModel  // View model for the mission map, observed for changes.
 
 
         var body: some View {
@@ -20,9 +22,9 @@ struct HintsView: View {
                         ZStack{
                             ScrollView(.horizontal, showsIndicators: false) {
                                 HStack {
+                                    // Iterate over the hints provided by the view model.
                                     ForEach(viewModel.hints) { place in
                             Image(place.image)
-                               // .cornerRadius(30)
                                 .frame(width: 400, height: 630)
                                 .scrollTransition(topLeading: .interactive,
                                   bottomTrailing: .interactive,
@@ -31,6 +33,7 @@ struct HintsView: View {
                                         .opacity(1 - abs(phase.value))
                                                 }
                                           .onTapGesture {
+                                              // Change the selected hint with an animation when an image is tapped.
                                               withAnimation {
                                                   viewModel.selectedHint = place
                                       }
@@ -39,6 +42,7 @@ struct HintsView: View {
                             }
                                 .scrollTargetLayout()
                             }
+                            // Display the name of the selected hint, if one exists.
                             if let selectedHint = viewModel.selectedHint {
                                 Text(selectedHint.name)
                                     .font(.title)
@@ -53,6 +57,7 @@ struct HintsView: View {
                                     .scrollTargetBehavior(.viewAligned)
                             }
                             Spacer()
+                            // Display the description of the selected hint, or an empty string if none is selected.
                             
                             Text(viewModel.selectedHint?.desc ?? "")
                                 .font(.headline)
@@ -62,6 +67,7 @@ struct HintsView: View {
                                 .offset(y:70)
                             
                             HStack {
+                                // A button to go back to the previous hint.
                                 Button {
                                     withAnimation {
                                         viewModel.selectPreviousHint()
@@ -78,14 +84,18 @@ struct HintsView: View {
                                     }
                                 }
                                 
-                                .disabled(viewModel.selectedHint == viewModel.hints.first)
+                                .disabled(viewModel.selectedHint == viewModel.hints.first) // Disable the button if the current hint is the first one.
+                                
+                                // Conditionally show a navigation link or a button depending on the selected hint.
                                                 if viewModel.selectedHint == viewModel.hints.last {
+                                                    // If it's the last hint, show a navigation link to the doorAnimation view.
                                                     NavigationLink(destination: doorAnimation(sheetShowing: .constant(true), viewModel: HintsViewModel(level: viewModel.level), vm: vm)){
                                                         
 //                                                    NavigationLink(destination: LevelDetailView(viewModel: MissionMapViewModel(), location: LocationsDataService.locations.first { $0.activeLevel == viewModel.level } ?? LocationsDataService.locations.first!, levelNumber: viewModel.level)){
 //                                                    
                                        Image("go")
-                                        
+                                                        
+                            // If it's the last hint, show a navigation link to the doorAnimation view.
                                     } } else{
                                         
                                         Button {
@@ -104,7 +114,8 @@ struct HintsView: View {
                         
                     }
                 }
-               
+                
+                // Set the title for the navigation bar and apply font settings.
                 .navigationTitle("Hints")
                 .font(
                 Font.custom("Source Sans Pro", size: 28)

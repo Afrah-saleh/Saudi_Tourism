@@ -8,14 +8,20 @@
 import SwiftUI
 
 struct LevelIconView: View {
+    // Declare a constant `level` to store the level number
     let level: Int
+    
+    // Declare a constant `isUnlocked` to indicate if the level is accessible
     let isUnlocked: Bool
 
     var body: some View {
+        
+        
         ZStack {
             // Check if the level is 5 and change the image and text accordingly
+            // if for showing the level 5 in mapView
             if level == 5 {
-                // Square image for level 5
+                // If level is 5, use a special image, presumably a gift
                 Image("Gift") // Replace "square_image" with the actual image asset name for level 5
                     .resizable()
                     .frame(width: 130, height: 130)
@@ -26,8 +32,11 @@ struct LevelIconView: View {
                     .foregroundColor(.white)
                     .bold()
                     .padding(.bottom, 10)
+                
+                
+                
             } else {
-                // Default appearance for levels other than 5
+                // For other levels, use a default appearance
                 Image("levels")
                     .resizable()
                     .frame(width: 130, height: 130)
@@ -38,7 +47,10 @@ struct LevelIconView: View {
                     .bold()
                     .padding(.bottom, 10)
             }
-        }
+            
+            
+            
+        }//zstack
         .frame(width: 150, height: 150, alignment: .center)
         .opacity(isUnlocked ? 1 : 0) // Change opacity based on whether the level is unlocked or not
     }

@@ -8,20 +8,33 @@
 
 import SwiftUI
 
+// Define an enumeration to represent the dropdown menu's expanded state.
+
 enum DropDownPickerState {
     case top
     case bottom
 }
+
+
+// Declare a structure for the Dropdownmenue, conforming to the View protocol.
 struct Dropdownmenue: View {
+    // Use a binding to a String optional to represent the selected item in the dropdown.
     @Binding var selection: String?
+    // Specify the initial state of the dropdown menu; default is .bottom.
     var state: DropDownPickerState = .bottom
+    // Hold the options to be displayed in the dropdown.
     var options: [String]
+    // Define the maximum width for the dropdown menu; default is 180.
     var maxWidth: CGFloat = 180
-    
+    // Use a state variable to track whether the dropdown is currently shown.
     @State var showDropdown = false
     
+    // Use SceneStorage to persist the z-index value across app launches.
     @SceneStorage("drop_down_zindex") private var index = 1000.0
     @State var zindex = 1000.0
+    
+  
+    
     
     var body: some View {
         GeometryReader {
@@ -29,10 +42,11 @@ struct Dropdownmenue: View {
             
             VStack(spacing: 0) {
                 
-                
+                // Conditionally show the options view above the dropdown if appropriate.
                 if state == .top && showDropdown {
                     OptionsView()
                 }
+                
                 
                 HStack {
                     Spacer() // Spacer before to push content to center

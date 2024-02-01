@@ -15,5 +15,7 @@ struct CongratsModel: Identifiable {
     let actionButtonTitle: String
     var activeLevel: Int
     var isCompleted: Bool = false
+    var number: Int
 
 }
+

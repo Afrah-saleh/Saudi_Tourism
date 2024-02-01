@@ -20,14 +20,11 @@ class MissionViewModel: ObservableObject {
     }
     
     func isLastMission(_ mission: MissionModel) -> Bool {
-            guard let lastMission = missions.last(where: { $0.activeLevel == mission.activeLevel }) else {
-                
-                return false
-                
-            }
-            return lastMission.id == mission.id
-        
+        guard let lastMissionNumber = missions.filter({ $0.activeLevel == mission.activeLevel }).map({ $0.number }).max() else {
+            return false
         }
+        return mission.number == lastMissionNumber
+    }
     
     var missions: [MissionModel]
     @Published var completedMissionId: UUID? // Add this property
@@ -38,6 +35,7 @@ class MissionViewModel: ObservableObject {
     
     func advanceLevel() {
         activeLevel += 1
+        print("adding 1 for this level!!!!!!!!***")
     }
     
     init() {
@@ -48,6 +46,7 @@ class MissionViewModel: ObservableObject {
         if let index = missions.firstIndex(where: { $0.id == missionId }) {
             missions[index].isCompleted = true
             completedMissionId = missionId // Set the completedMissionId
+            print("complete mission!!!!")
         }
     }
 }

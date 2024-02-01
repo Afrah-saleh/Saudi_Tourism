@@ -8,12 +8,19 @@
 import SwiftUI
 
 struct MissionsView: View {
+    // Declare an observable object for the view model to manage mission map data.
     @ObservedObject var viewModel: MissionMapViewModel
+    // Declare another observable object for the view model to manage individual mission data.
     @ObservedObject var vm: MissionViewModel
+    // An integer representing the current level number.
     var levelNumber: Int
+    // A state variable that determines whether the detail sheet for a mission is visible.
     @State private var isShowingDetailSheet = false
+    // A state variable to hold the currently selected mission, if any.
     @State private var selectedMission: MissionModel? = nil
+    // A state variable that indicates whether a congratulations popup should be shown.
     @State private var showingCongratsPopup = false
+    // A state variable that indicates whether a stamp board is being shown.
     @State private var isShowingStampBoard = false
     
     let popup: CongratsModel
@@ -25,7 +32,6 @@ struct MissionsView: View {
                     .ignoresSafeArea()
                 VStack {
                     ScrollView {
-                        VStack {
                             // Use the filteredMissions property to only show missions for the active level
                             ForEach(vm.filteredMissions) { mission in
                                 if mission.activeLevel == levelNumber {
@@ -42,33 +48,38 @@ struct MissionsView: View {
                                             .fontWeight(.bold)
                                             .padding(.top, 120)
                                         Spacer()
-                                        Button(action: {
+                                        
+                                        
+                                        Button("Start"){
                                             self.selectedMission = mission
                                             self.isShowingDetailSheet = true
-
+                                            
+                                            print("------*** \(mission.isCompleted)")
+                                            print("------ ***\(mission.number)")
                                         }
-                                        ) {
-                                            Text("Start")
-                                                .frame(width: 100, height: 30)
-                                                .bold()
-                                                .foregroundColor(.white)
-                                                .background(Color(red: 0.88, green: 0.29, blue: 0.12))
-                                                .cornerRadius(5)
-                                                .padding(.trailing)
-                                                .padding(.top, 120)
-                                        }
-                                        .buttonStyle(PlainButtonStyle())
-                                        .disabled(!mission.isCompleted && mission.number != vm.filteredMissions.first(where: { !$0.isCompleted })?.number)
+                                            .frame(width: 100, height: 30)
+                                            .bold()
+                                            .foregroundColor(.white)
+                                            .background(Color(red: 0.88, green: 0.29, blue: 0.12))
+                                            .cornerRadius(5)
+                                            .padding(.trailing)
+                                            .padding(.top, 120)
+                                        
                                     }
-                                }
+                                    .buttonStyle(PlainButtonStyle())
+                                   // .disabled(!mission.isCompleted && mission.number != vm.filteredMissions.first(where: { !$0.isCompleted })?.number)
+                                }//zstack
+                                    
                                 .padding(.leading)
                                 .padding(.trailing)
                                 .clipped()
                             }
+                                   
                         }
                                 
-                            }
+                            
                         }
+                    
                     }
                     .navigationTitle("Local Missions \(levelNumber)")
                     .navigationBarBackButtonHidden(false)
@@ -96,7 +107,6 @@ struct MissionsView: View {
                             }
                         }
                     }
-
         }
     }
 

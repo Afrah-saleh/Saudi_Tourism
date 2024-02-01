@@ -9,15 +9,19 @@ import SwiftUI
 import MapKit
 
 struct LevelDetailView: View {
+    // Observe changes to the viewModel and redraw the view as necessary.
     @ObservedObject var viewModel: MissionMapViewModel
+    // The location property contains the details of the location to be displayed.
       let location: Location
+    // Inject an environment object which is an instance of LocationViewModel.
       @EnvironmentObject private var vm: LocationViewModel
+    // An integer representing the level number.
       var levelNumber: Int
     
     var body: some View {
         NavigationView{
-            
             VStack {
+                // Check if the location's active level matches the level number.
                 if location.activeLevel == levelNumber {
                     ScrollView{
                         VStack{
@@ -31,6 +35,7 @@ struct LevelDetailView: View {
                                     .padding(.top,350)
                                     .padding(.trailing,160)
                             }
+                            
                             VStack (alignment: .leading, spacing: 16){
                                 titleSection
                                 descriptionSection
@@ -63,6 +68,8 @@ struct LevelDetailView: View {
         .navigationBarBackButtonHidden(true)
 
     }
+    
+    // Define a function to schedule a local notification.
     func sendNotification() {
         let content = UNMutableNotificationContent()
         content.title = "Embark on a new mission! 🌍"
@@ -90,10 +97,13 @@ struct LevelDetailView: View {
 
 
 
-
+// Extensions to the LevelDetailView struct to organize the code.
 extension LevelDetailView{
+    // Define the imageSection, which is a view for displaying images in a tab view.
     private var imageSection: some View{
+        // Use a TabView to allow swiping through images.
         TabView{
+            // Loop through the location's image names and create an image view for each.
             ForEach(location.imageNames, id: \.self){
                 Image($0)
                     .resizable()
@@ -106,6 +116,7 @@ extension LevelDetailView{
         .tabViewStyle(PageTabViewStyle())
     }
     
+    // Define the titleSection, which displays the location's title and pin image.
     private var titleSection: some View{
         VStack(alignment: .leading,spacing: 8) {
             Text("Where I am going ?")
@@ -121,6 +132,8 @@ extension LevelDetailView{
         .padding(.leading,10)
     }
     
+    
+    // Define the descriptionSection, which displays the location's description text.
     private var descriptionSection: some View{
         VStack(alignment: .leading,spacing: 8) {
             Text(location.description)
@@ -129,6 +142,8 @@ extension LevelDetailView{
             }
         }
     
+    
+    // Define the mapLayer, which is a view for displaying the map with the location marker.
     private var mapLayer: some View {
         VStack{
             Text("Location")
