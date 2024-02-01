@@ -15,8 +15,6 @@ struct LevelIconView: View {
     let isUnlocked: Bool
 
     var body: some View {
-        
-        
         ZStack {
             // Check if the level is 5 and change the image and text accordingly
             // if for showing the level 5 in mapView
@@ -50,7 +48,7 @@ struct LevelIconView: View {
             
             
             
-        }//zstack
+        }//
         .frame(width: 150, height: 150, alignment: .center)
         .opacity(isUnlocked ? 1 : 0) // Change opacity based on whether the level is unlocked or not
     }

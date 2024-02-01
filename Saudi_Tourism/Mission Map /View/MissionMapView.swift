@@ -65,20 +65,36 @@ struct MissionMapView: View {
                  
                 // Loop through each level position provided by the view model.
                 ForEach(viewModel.levelPositions, id: \.number) { level in
-                                   Group {
-                                       // Check if the level is unlocked and provide interactive behavior.
-                                       if viewModel.isLevelUnlocked(level.number) {
-                                               Button(action: {
-                                                   self.selectedLevel = Level(id: level.number, title: "")
-                                               }) {
-                                                   LevelIconView(level: level.number, isUnlocked: true)
-                                               }
-                                           } else {
-                                           LevelIconView(level: level.number, isUnlocked: false)
-                                       }
-                                   }
-                                   .position(x: level.position.x, y: level.position.y)
-                               }
+                                    Group {
+                                        // Check if the level is unlocked and provide interactive behavior.
+                                        if viewModel.isLevelUnlocked(level.number) {
+                                            Button(action: {
+                                                self.selectedLevel = Level(id: level.number, title: "")
+                                            }) {
+                                                LevelIconView(level: level.number, isUnlocked: true)
+                                            }
+                                        } else {
+                                            LevelIconView(level: level.number, isUnlocked: false)
+                                        }
+                                    }
+                                    .position(x: level.position.x, y: level.position.y)
+                                }
+
+                                // Conditional NavigationLink for Level 5
+                                if let selectedLevel = selectedLevel, selectedLevel.id == 5 {
+                                    NavigationLink(destination: ContentView(), isActive: .constant(true)) {
+                                        EmptyView()
+                                    }
+                                } else {
+                                    // NavigationLink for other levels to HintsView
+                                    NavigationLink(destination: HintsView(viewModel: HintsViewModel(level: viewModel.activeLevel), vm: viewModel), isActive: Binding<Bool>(
+                                        get: { self.selectedLevel != nil && self.selectedLevel?.id != 5 },
+                                        set: { if !$0 { self.selectedLevel = nil } }
+                                    )) {
+                                        EmptyView()
+                                    }
+                                }
+
                 
                 // Show popup view if `showPopup` is true.
                                if showPopup {
