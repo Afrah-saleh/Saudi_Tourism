@@ -41,8 +41,7 @@ struct MissionDetailSheetView: View {
                 Spacer()
 
                 Text(mission.description)
-                    .font(Font.custom("Source Sans Pro", size: 17))
-                    .foregroundColor(Color(red: 0.18, green: 0.23, blue: 0.31))
+                    .foregroundColor(.gray)
                     .font(.body)
                     .padding([.leading, .trailing, .bottom])
 
