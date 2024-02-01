@@ -166,6 +166,7 @@ struct PopupView: View {
             .background(Color(red: 0.98, green: 0.96, blue: 0.9))
             .cornerRadius(20)
             .shadow(radius: 20)
+            .foregroundColor(.dark)
         }
     }
 }

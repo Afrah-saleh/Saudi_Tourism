@@ -18,18 +18,19 @@ struct Onboarding2: View {
                     .offset(y:30)
                     .shadow(color: Color(red: 0.16, green: 0.09, blue: 0.06).opacity(0.25), radius: 19, x: 0, y: 0)
                 
-                Text("Merge\nin\nculture")
+                Text("Merge\n in\n culture")
                   .font(
                     Font.custom("Source Sans Pro", size: 32)
                       .weight(.semibold)
                   )
+                  .foregroundColor(.dark)
                   .multilineTextAlignment(.center)
             }
             
             NavigationLink(destination: MissionMapView(viewModel: MissionMapViewModel()) .navigationBarBackButtonHidden()){
                 Text("Skip")
             }
-            .offset(x:154,y:-320)
+            .offset(x:154,y:-350)
             .foregroundColor(.BTCOLOR)
 
             
@@ -58,6 +59,7 @@ struct Onboarding2: View {
         }//Zstack
     }
         .navigationBarBackButtonHidden(true)
+
     }
 }
 

@@ -52,7 +52,6 @@ struct HintsView: View {
                                     .multilineTextAlignment(.center)
                                     .offset(y: -20)
                                     .bold()
-                                    .foregroundColor(.black)
 
                                 Spacer()
                                     .frame(height: 200)
@@ -69,7 +68,6 @@ struct HintsView: View {
                                 .multilineTextAlignment(.center)
                                 .padding()
                                 .offset(y:70)
-                                .foregroundColor(.black)
                             
                             HStack {
                                 // A button to go back to the previous hint.
@@ -107,12 +105,16 @@ struct HintsView: View {
                             }
                             .padding(22)
                             .offset(x:10,y:283)
+                            
                         }
+                        .foregroundColor(.dark)
+
                 }
                 .navigationTitle("About")
                 .font(
                 Font.custom("Source Sans Pro", size: 28)
                 .weight(.semibold)
+                
                 
                 )
             }

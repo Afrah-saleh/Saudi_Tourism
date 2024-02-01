@@ -20,6 +20,7 @@ struct Onboarding3: View {
                         Font.custom("Source Sans Pro", size: 28)
                             .weight(.semibold)
                     )
+                
                     .multilineTextAlignment(.center)
                     .frame(width: 353, alignment: .top)
                     .offset(y:180)

@@ -91,9 +91,6 @@ struct Dropdownmenue: View {
         }
         .frame(width: maxWidth, height: 30)
         .zIndex(zindex)
-      //  .shadow(color: .gray, radius: 5, x: 0, y: 0.5)
-        .shadow(color: Color.black.opacity(0.2), radius: 5, x: 3, y: 5)
-        .shadow(color: Color.white.opacity(0.7), radius: 5, x: -5, y: -5)
         
     }
     

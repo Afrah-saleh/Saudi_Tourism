@@ -139,20 +139,17 @@ struct StampsBoard: View {
             ZStack {
                 Color.BB
                     .ignoresSafeArea()
-                
                 Rectangle()
-                    .foregroundColor(.clear)
-                    .frame(width: 369, height: 712)
-                    .background(Color(red: 0.98, green: 0.98, blue: 0.98))
-                    .cornerRadius(13)
-                    .padding( .top, 93)
-                    .padding( .bottom, 39)
-                    .padding( .leading, 21)
+                .frame(width: 369, height: 712)
+                .foregroundColor(Color(red: 0.98, green: 0.96, blue: 0.9))
+                .cornerRadius(13)
+                .padding( .top, 93)
+                .padding( .bottom, 39)
+                .padding( .leading, 21)
                 
                     Rectangle()
-                        .foregroundColor(.clear)
+                        .foregroundColor(Color(red: 0.16, green: 0.09, blue: 0.06))
                         .frame(width: 36.10798, height: 85.9714)
-                        .background(Color(red: 0.16, green: 0.09, blue: 0.06))
                         .padding( .top, 93)
                         .padding( .bottom, 665)
                         .padding( .leading, 57)
@@ -182,15 +179,14 @@ struct StampsBoard: View {
                 
                 
                 
-                Button("Unlock Next Level") {
-                    
-                  //  viewModel.unlockNextLevel()
-                    
-                    // Show map view
+                Button("X") {
                     showMap = true
                     
                 }
-                
+                .foregroundColor(.BTCOLOR)
+                .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+                .bold()
+                .offset(x:165,y:-370)
             }
             .fullScreenCover(isPresented: $showMap) {
                 MissionMapView(viewModel: viewModel)
