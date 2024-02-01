@@ -22,102 +22,90 @@ struct MissionMapView: View {
     
     
     var body: some View {
-        NavigationView {
-            ZStack(alignment: .top) { 
-                           Image("Map")
-                                .resizable()
-                               .scaledToFill()
-                               .ignoresSafeArea()
+        NavigationStack {
+            ZStack(alignment: .top) {
+                Image("Map")
+                    .resizable()
+                    .scaledToFill()
+                    .ignoresSafeArea()
                 
-                    HStack {
-                        Dropdownmenue(
-                            selection: $selection1,
-                            options: [
-                                "Riyadh",
-                                "Jeddah",
-                                "AlUla",
-                                "Abha"
-                            ]
-                        ).padding(.trailing,30)
-                        
-                        //button 1
-                        Button(action: {
-                            //  self.action2()
-                        }) {
-                            Image(systemName: "gift")
-                                .foregroundColor(Color("BTCOLOR"))
-                                .font(.title)
-                        }
-                        .padding(15)
-                        
-                                                
-                        //Button
-                        Button(action: {
-                             showPopup = true
-                                }) {
-                                    Image(systemName: "info.square")
-                                        .foregroundColor(Color("BTCOLOR"))
-                                        .font(.title)
-                                }
+                HStack {
+                    Dropdownmenue(
+                        selection: $selection1,
+                        options: [
+                            "Riyadh",
+                      
+                        ]
+                    ).padding(.trailing,30)
+                    
+                    //button 1
+                    Button(action: {
+                        //  self.action2()
+                    }) {
+                        Image(systemName: "gift")
+                            .foregroundColor(Color("BTCOLOR"))
+                            .font(.title)
                     }
-                    .padding(.top, 35)
-                        .offset(x:5)
-                 
+                    .padding(15)
+                    
+                    
+                    //Button
+                    Button(action: {
+                        showPopup = true
+                    }) {
+                        Image(systemName: "info.square")
+                            .foregroundColor(Color("BTCOLOR"))
+                            .font(.title)
+                    }
+                }
+                .padding(.top, 35)
+                .offset(x:5)
+                
                 // Loop through each level position provided by the view model.
                 ForEach(viewModel.levelPositions, id: \.number) { level in
-                                    Group {
-                                        // Check if the level is unlocked and provide interactive behavior.
-                                        if viewModel.isLevelUnlocked(level.number) {
-                                            Button(action: {
-                                                self.selectedLevel = Level(id: level.number, title: "")
-                                            }) {
-                                                LevelIconView(level: level.number, isUnlocked: true)
-                                            }
-                                        } else {
-                                            LevelIconView(level: level.number, isUnlocked: false)
-                                        }
-                                    }
-                                    .position(x: level.position.x, y: level.position.y)
-                                }
-
-                                // Conditional NavigationLink for Level 5
-                                if let selectedLevel = selectedLevel, selectedLevel.id == 5 {
-                                    NavigationLink(destination: ContentView(), isActive: .constant(true)) {
-                                        EmptyView()
-                                    }
-                                } else {
-                                    // NavigationLink for other levels to HintsView
-                                    NavigationLink(destination: HintsView(viewModel: HintsViewModel(level: viewModel.activeLevel), vm: viewModel), isActive: Binding<Bool>(
-                                        get: { self.selectedLevel != nil && self.selectedLevel?.id != 5 },
-                                        set: { if !$0 { self.selectedLevel = nil } }
-                                    )) {
-                                        EmptyView()
-                                    }
-                                }
+                    Group {
+                        // Check if the level is unlocked and provide interactive behavior.
+                        if viewModel.isLevelUnlocked(level.number) {
+                            Button(action: {
+                                self.selectedLevel = Level(id: level.number, title: "")
+                                showHintsView = true
+                  
+                            }) {
+                                
+                                LevelIconView(level: level.number, isUnlocked: true)
+                            }
+                        } else {
+                            LevelIconView(level: level.number, isUnlocked: false)
+                        }
+                    }
+                    .position(x: level.position.x, y: level.position.y)
+                }
+                
+                // Conditional NavigationLink for Level 5
+                         if let selectedLevel = selectedLevel, selectedLevel.id == 5 {
+                             NavigationStack {
+                                 ContentView()
+                             }
+                             
+                         } else if showHintsView {
+                             NavigationStack {
+                                 HintsView(viewModel: HintsViewModel(level: viewModel.activeLevel), vm: viewModel)
+                             }
+                         }
 
                 
                 // Show popup view if `showPopup` is true.
-                               if showPopup {
-                                   PopupView(showPopup: $showPopup)
-                               }
-                NavigationLink(
-                    destination: HintsView(viewModel: HintsViewModel(level: viewModel.activeLevel), vm: viewModel)
-,
-                                    isActive: Binding<Bool>(
-                                        get: { self.selectedLevel != nil },
-                                        set: { if !$0 { self.selectedLevel = nil } }
-                                    ),
-                                    label: { EmptyView() }
-                                )
-                           }
-
-                       }
+                if showPopup {
+                    PopupView(showPopup: $showPopup)
+                }
+            }
+}
+        
         .navigationBarBackButtonHidden(true)
         
                        .onAppear {
             requestNotificationPermission()
         }
-        
        
     }
     
@@ -130,6 +118,9 @@ struct MissionMapView: View {
                 print("Notification permission denied")
             }
         }
+    }
+    func toggleHints() {
+      showHintsView.toggle()
     }
 }
 

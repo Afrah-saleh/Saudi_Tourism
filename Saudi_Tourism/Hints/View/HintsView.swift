@@ -44,15 +44,11 @@ struct HintsView: View {
                             // Display the name of the selected hint, if one exists.
                             if let selectedHint = viewModel.selectedHint {
                                 Text(selectedHint.name)
-                                    .font(
-                                    Font.custom("Source Sans Pro", size: 28)
-                                    .weight(.semibold)
-                                    )
+                                    .font(.title)
                                     .frame(width: 350)
                                     .multilineTextAlignment(.center)
-                                    .offset(y: -20)
                                     .bold()
-
+                                    .padding()
                                 Spacer()
                                     .frame(height: 200)
                                     .safeAreaPadding(.horizontal, 32)
@@ -111,12 +107,6 @@ struct HintsView: View {
 
                 }
                 .navigationTitle("About")
-                .font(
-                Font.custom("Source Sans Pro", size: 28)
-                .weight(.semibold)
-                
-                
-                )
             }
             .navigationBarBackButtonHidden(true)
             

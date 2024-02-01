@@ -18,32 +18,32 @@ struct MissionDetailSheetView: View {
                 .ignoresSafeArea()
             VStack {
                 HStack {
-                    Text("\(mission.number)")
-                        .font(.largeTitle)
-                        .bold()
-                        .foregroundColor(.white)
-                        .background(Color.brown)
-
+                    ZStack{
+                        Image("MissNum")
+                        Text("\(mission.number)")
+                            .font(.largeTitle)
+                            .bold()
+                            .foregroundColor(.white)
+                    }
                     Text(mission.title)
                         .font(.title2)
                         .bold()
 
-                    Spacer()
-
+                        .padding()
                 }
-                .padding()
+                
 
                 Image(mission.image)
                     .resizable()
                     .scaledToFit()
                     .cornerRadius(10)
 
-                Spacer()
+                    .padding([.leading, .trailing])
 
                 Text(mission.description)
-                    .foregroundColor(.gray)
+                    .foregroundColor(.black)
                     .font(.body)
-                    .padding([.leading, .trailing, .bottom])
+                    .padding([.leading, .trailing, .top])
 
                 Spacer()
 
@@ -65,7 +65,7 @@ struct MissionDetailSheetView: View {
                         .bold()
                         .frame(minWidth: 0, maxWidth: .infinity)
                         .padding()
-                        .background(Color.red)
+                        .background(Color("BTCOLOR"))
                         .foregroundColor(.white)
                         .cornerRadius(10)
                 }

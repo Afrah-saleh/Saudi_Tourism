@@ -67,13 +67,7 @@ struct MissionsView: View {
                             }
                                    
                         }
-                                
-                            
-                        
-                    
                     }
-                    .navigationTitle("Local Missions \(levelNumber)")
-                    .navigationBarBackButtonHidden(true)
                 
                 
                     .onAppear {
@@ -89,7 +83,7 @@ struct MissionsView: View {
                                     // This closure will be called when the last mission is completed
                                     self.showingCongratsPopup = true
                                 })
-                                .presentationDetents([.medium])
+                                .presentationDetents([.medium,.large])
                             }
 
                             // Add this part to show the CongratsPopupView
@@ -97,7 +91,13 @@ struct MissionsView: View {
                                 CongratsPopupView(isShowing: $showingCongratsPopup, popupModel: popup, missionMapViewModel: viewModel)
                             }
                         }
+            .navigationBarTitleDisplayMode(.inline)
+            .navigationTitle("Local Missions")
+
                     }
+        
+        .navigationBarBackButtonHidden(true)
+
         }
     }
 

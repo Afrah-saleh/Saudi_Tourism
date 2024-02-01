@@ -24,18 +24,14 @@ struct LevelDetailView: View {
                                 Image(location.imageNames)
                                         .resizable()
                                         .scaledToFill()
-                                        .frame(width: 400, height: 400)
                                         .clipped()
-                                        .frame(height: 150)
                                 Text(location.name)
                                     .foregroundColor(.white)
-                                    .font(
-                                    Font.custom("Source Sans Pro", size: 28)
-                                    .weight(.semibold)
-                                    )
                                     .fontWeight(.bold)
-                                    .padding(.top,330)
-                                    .padding(.leading,-100)
+                                    .font(.title)
+                                    .frame(maxWidth: .infinity, alignment: .leading)
+                                    .padding(.top,250)
+                                    .padding()
                             }
                             
                             VStack (alignment: .leading, spacing: 16){
@@ -44,7 +40,6 @@ struct LevelDetailView: View {
                                 Divider()
                                 mapLayer
                             }
-                            .frame(maxWidth: .infinity, alignment: .leading)
                             .padding()
                         }
                     }
@@ -63,8 +58,16 @@ struct LevelDetailView: View {
                     }
                 }
             }
-            .navigationBarTitle(("Place Info"), displayMode: .inline)
-            
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem(placement: .principal) {
+                    VStack {
+                        Text("Place Info")
+                            .bold()
+                            .foregroundColor(.white)
+                    }
+                }
+            }.toolbarBackground(.hidden, for: .navigationBar)
         }
         .navigationBarBackButtonHidden(true)
     }
