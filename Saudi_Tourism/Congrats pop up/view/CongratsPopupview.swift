@@ -17,22 +17,28 @@ struct CongratsPopupView: View {
     @State private var showmap = false
 
     var body: some View {
-
         VStack {
             Spacer()
-            
-            VStack(spacing: 20) {
-                Text(popupModel.desc)
-                    .font(.body)
-                    .multilineTextAlignment(.center)
-                    .padding()
+            VStack(spacing: 10) {
+                Text("Congrats!")
+                    .font(.title2)
+                .bold()
+                .multilineTextAlignment(.center)
+                .padding(20)
+                
+                Text("You’ve got your Basic Saudi Stamp!")
+                  .font(
+                    Font.custom("Source Sans Pro", size: 17)
+                      .weight(.semibold)
+                  )
+                  .multilineTextAlignment(.center)
                 
                 Image(popupModel.image)
                     .resizable()
                     .scaledToFit()
                     .frame(width: 150, height: 150)
-                Button(popupModel.actionButtonTitle.uppercased()){
-                    //  self.isShowing = false
+                
+                Button("Collect"){
                     missionMapViewModel.unlockNextLevel()
                     showstamp = true
                 }
@@ -46,15 +52,13 @@ struct CongratsPopupView: View {
                     StampsBoard(viewModel: missionMapViewModel)
                 }
                 
-                
-                
                 .padding([.leading, .trailing, .bottom])
             }
             .background(Color("BB"))
             .cornerRadius(20)
             .shadow(radius: 10)
             .padding(.horizontal)
-            .navigationTitle("Congrats!")
+           // .navigationTitle("Congrats!")
             
             Spacer()
             

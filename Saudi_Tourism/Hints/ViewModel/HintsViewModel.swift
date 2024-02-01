@@ -27,15 +27,21 @@ class HintsViewModel: ObservableObject {
 
         // Populate allHints with hints for all levels
         allHints = [
-            Place(level: 1, name: "Muna", image: "Hint", desc: "Hint 1 Description for Level 1"),
-            Place(level: 1, name: "Nada", image: "Hint", desc: "Hint 2 Description for Level 1"),
-            Place(level: 1, name: "Noo", image: "Hint", desc: "Hint 3 Description for Level 1"),
-            Place(level: 2, name: "Ntty", image: "Hint", desc: "Hint 1 Description for Level 2"),
-            Place(level: 2, name: "IOOP", image: "Hint", desc: "Hint 2 Description for Level 2"),
-            Place(level: 2, name: "Dont", image: "Hint", desc: "Hint 3 Description for Level 2"),
-            Place(level: 3, name: "IOOP", image: "Hint", desc: "Hint 2 Description for Level 3"),
-            Place(level: 3, name: "Dont", image: "Hint", desc: "Hint 3 Description for Level 3"),
-            // ... Add more hints for additional levels
+            Place(level: 1, name: "About \n Live it as it is before \n 297", image: "Hint", desc: "Years Ago"),
+            Place(level: 1, name: "About \n Feel the Saudi Rhythms", image: "Hint", desc: ""),
+            
+            
+            Place(level: 2, name: "Where \n Local Saudi Stylish \n Fabric", image: "Hint", desc: ""),
+            Place(level: 2, name: "Where \n Local Flair Meets Touch \n of Expensive Gold!", image: "Hint", desc: ""),
+            
+            
+            
+            Place(level: 3, name: "Where\n  Each Sand Dune Weaves a local Tale", image: "Hint", desc: ""),
+            Place(level: 3, name: "About \n Dune Drifts & Desert Dreams", image: "Hint", desc: ""),
+            
+            Place(level: 4, name: "Where\n Cave mystique merges with the heartbeat of our community.", image: "Hint", desc: ""),
+            Place(level: 4, name: "Where \n the Flame of the Desert Illuminates Hearts and Traditions.", image: "Hint", desc: ""),
+            
         ]
         // Set the selected hint to the first hint of the current level.
         selectedHint = hints.first

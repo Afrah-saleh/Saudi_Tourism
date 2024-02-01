@@ -26,14 +26,21 @@ struct LevelDetailView: View {
                     ScrollView{
                         VStack{
                             ZStack{
-                                imageSection
-                                    .shadow(color: .black.opacity(0.3), radius: 20, x:0, y:10)
+                                Image(location.imageNames)
+                                        .resizable()
+                                        .scaledToFill()
+                                        .frame(width: 400, height: 400)
+                                        .clipped()
+                                        .frame(height: 150)
                                 Text(location.name)
                                     .foregroundColor(.white)
-                                    .font(.largeTitle)
+                                    .font(
+                                    Font.custom("Source Sans Pro", size: 28)
+                                    .weight(.semibold)
+                                    )
                                     .fontWeight(.bold)
-                                    .padding(.top,350)
-                                    .padding(.trailing,160)
+                                    .padding(.top,330)
+                                    .padding(.leading,-100)
                             }
                             
                             VStack (alignment: .leading, spacing: 16){
@@ -49,8 +56,6 @@ struct LevelDetailView: View {
                     .ignoresSafeArea()
                 }
                 NavigationLink(destination: MissionsView(viewModel: viewModel, vm: MissionViewModel(), levelNumber: levelNumber, popup: popupDataService.Congrats.first!)) {
-                  //  NavigationLink(destination: test_button(viewModel: viewModel)){
-
                     ZStack{
                         Rectangle()
                             .frame(width: 340,height: 57)
@@ -99,22 +104,7 @@ struct LevelDetailView: View {
 
 // Extensions to the LevelDetailView struct to organize the code.
 extension LevelDetailView{
-    // Define the imageSection, which is a view for displaying images in a tab view.
-    private var imageSection: some View{
-        // Use a TabView to allow swiping through images.
-        TabView{
-            // Loop through the location's image names and create an image view for each.
-            ForEach(location.imageNames, id: \.self){
-                Image($0)
-                    .resizable()
-                    .scaledToFill()
-                    .frame(width: UIScreen.main.bounds.width)
-                    .clipped()
-            }
-        }
-        .frame(height: 500)
-        .tabViewStyle(PageTabViewStyle())
-    }
+
     
     // Define the titleSection, which displays the location's title and pin image.
     private var titleSection: some View{

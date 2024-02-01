@@ -45,8 +45,11 @@ struct HintsView: View {
                             // Display the name of the selected hint, if one exists.
                             if let selectedHint = viewModel.selectedHint {
                                 Text(selectedHint.name)
-                                    .font(.title)
-                                    .frame(width: 200)
+                                    .font(
+                                    Font.custom("Source Sans Pro", size: 28)
+                                    .weight(.semibold)
+                                    )
+                                    .frame(width: 350)
                                     .multilineTextAlignment(.center)
                                     .offset(y: -20)
                                     .bold()

@@ -82,7 +82,7 @@ struct MissionsView: View {
                     
                     }
                     .navigationTitle("Local Missions \(levelNumber)")
-                    .navigationBarBackButtonHidden(false)
+                    .navigationBarBackButtonHidden(true)
                 
                 
                     .onAppear {
