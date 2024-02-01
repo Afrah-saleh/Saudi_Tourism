@@ -9,8 +9,8 @@
 import SwiftUI
 
 struct HintsView: View {
-    @ObservedObject var viewModel: HintsViewModel // View model for hints, observed for changes.
-    @ObservedObject var vm: MissionMapViewModel  // View model for the mission map, observed for changes.
+    @ObservedObject var viewModel: HintsViewModel
+    @ObservedObject var vm: MissionMapViewModel
 
 
         var body: some View {
@@ -18,7 +18,6 @@ struct HintsView: View {
                 ZStack{
                     Color.BB
                         .ignoresSafeArea()
-                    VStack(alignment: .leading) {
                         ZStack{
                             ScrollView(.horizontal, showsIndicators: false) {
                                 HStack {
@@ -86,21 +85,13 @@ struct HintsView: View {
                                             .foregroundColor(.black)
                                     }
                                 }
+                                .disabled(viewModel.selectedHint == viewModel.hints.first)
                                 
-                                .disabled(viewModel.selectedHint == viewModel.hints.first) // Disable the button if the current hint is the first one.
-                                
-                                // Conditionally show a navigation link or a button depending on the selected hint.
                                                 if viewModel.selectedHint == viewModel.hints.last {
-                                                    // If it's the last hint, show a navigation link to the doorAnimation view.
                                                     NavigationLink(destination: doorAnimation(sheetShowing: .constant(true), viewModel: HintsViewModel(level: viewModel.level), vm: vm)){
-                                                        
-//                                                    NavigationLink(destination: LevelDetailView(viewModel: MissionMapViewModel(), location: LocationsDataService.locations.first { $0.activeLevel == viewModel.level } ?? LocationsDataService.locations.first!, levelNumber: viewModel.level)){
-//                                                    
-                                       Image("go")
-                                                        
-                            // If it's the last hint, show a navigation link to the doorAnimation view.
+                                                   
+                                       Image("Next")
                                     } } else{
-                                        
                                         Button {
                                             withAnimation {
                                                 viewModel.selectNextHint()
@@ -114,11 +105,7 @@ struct HintsView: View {
                             .padding(22)
                             .offset(x:10,y:283)
                         }
-                        
-                    }
                 }
-                
-                // Set the title for the navigation bar and apply font settings.
                 .navigationTitle("Hints")
                 .font(
                 Font.custom("Source Sans Pro", size: 28)

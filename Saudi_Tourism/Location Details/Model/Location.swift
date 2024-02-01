@@ -9,7 +9,6 @@ import Foundation
 import MapKit
 
 struct Location: Identifiable {
-  //  let id = UUID().uuidString
     let name: String
     let cityName: String
     let coordinates: CLLocationCoordinate2D
@@ -18,10 +17,7 @@ struct Location: Identifiable {
     let link: String
     var activeLevel: Int
     
-    var id: String{  //identifibale
-        //name = "Colosseum"
-        //cityName = "Rome"
-        //id = "ColosseumRome"
+    var id: String{
         name + cityName
     }
 }

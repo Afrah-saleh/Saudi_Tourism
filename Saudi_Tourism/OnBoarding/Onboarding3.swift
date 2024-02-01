@@ -12,12 +12,10 @@ struct Onboarding3: View {
         NavigationView{
             ZStack{
                 Color.BB
-                Image("Onboarding33")
-                    .offset(x:-50)
                 Image("Onboarding3")
-                    .offset(x:40,y:-100)
+                    .offset(y:-60)
                 
-                Text("And collect your Memory Stamps!")
+                Text("Collect your stamps \n to keep the memory in the mind!")
                     .font(
                         Font.custom("Source Sans Pro", size: 28)
                             .weight(.semibold)
@@ -34,11 +32,10 @@ struct Onboarding3: View {
                       )
                       .kerning(1.98)
                       .multilineTextAlignment(.center)
-                      .foregroundColor(Color(red: 0.91, green: 0.9, blue: 0.84))
+                      .foregroundColor(.white)
                       .frame(width: 300 , height: 60)
-                      .background(Color(red: 0.88, green: 0.29, blue: 0.12))
+                      .background(.BTCOLOR)
                       .cornerRadius(13)
-                      .shadow(color: Color(red: 0.16, green: 0.09, blue: 0.06).opacity(0.25), radius: 19, x: 0, y: 0)
             }
                         .offset(y:310)
                 
@@ -46,6 +43,7 @@ struct Onboarding3: View {
             }//Zstack
             .edgesIgnoringSafeArea(.all)
         }
+        .navigationBarBackButtonHidden(true)
     }
 }
 

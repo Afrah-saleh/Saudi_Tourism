@@ -340,14 +340,14 @@
 		94A38A442B5D08E90012280F /* Saudi_Tourism */ = {
 			isa = PBXGroup;
 			children = (
+				945E3E932B5E42AE004DFC98 /* OnBoarding */,
 				9453AD0C2B69368500CCA438 /* Mission Map  */,
-				945E3E942B5E42B8004DFC98 /* Animation */,
 				9453AD0E2B6936CB00CCA438 /* Hints */,
+				945E3E942B5E42B8004DFC98 /* Animation */,
 				9453AD152B6937C000CCA438 /* Location Details */,
 				9453AD0F2B6936E600CCA438 /* Discovry Missions */,
 				9453AD102B69370700CCA438 /* Congrats pop up */,
 				18A06E902B60EC8800354C70 /* StampsBoard */,
-				945E3E932B5E42AE004DFC98 /* OnBoarding */,
 				94A38A452B5D08E90012280F /* Saudi_TourismApp.swift */,
 				94A38A472B5D08E90012280F /* ContentView.swift */,
 				94A38A492B5D08EB0012280F /* Assets.xcassets */,

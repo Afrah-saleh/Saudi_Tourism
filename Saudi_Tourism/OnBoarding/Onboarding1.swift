@@ -19,15 +19,15 @@ struct Onboarding1: View {
                         Text("Skip")
                     }
                     .offset(x:154,y:-320)
-                    .foregroundColor(.black)
+                    .foregroundColor(.BTCOLOR)
                     
-                    Text("Unlcok the beatuy of the local life")
+                    Text(" Saudi Arabia \n Live it Local, Live it as It Is")
                         .font(
-                            Font.custom("Source Sans Pro", size: 34)
-                                .weight(.semibold)
-                        )
+                            Font.custom("Source Sans Pro", size: 27)
+                            .weight(.semibold)
+                            )
                         .multilineTextAlignment(.center)
-                        .frame(width: 310, alignment: .top)
+                        .frame(width: 410, alignment: .top)
                         .offset(y:-130)
                 }
                 
@@ -39,11 +39,10 @@ struct Onboarding1: View {
                       )
                       .kerning(1.98)
                       .multilineTextAlignment(.center)
-                      .foregroundColor(Color(red: 0.91, green: 0.9, blue: 0.84))
+                      .foregroundColor(.white)
                       .frame(width: 300 , height: 60)
-                      .background(Color(red: 0.88, green: 0.29, blue: 0.12))
+                      .background(.BTCOLOR)
                       .cornerRadius(13)
-                      .shadow(color: Color(red: 0.16, green: 0.09, blue: 0.06).opacity(0.25), radius: 19, x: 0, y: 0)
                 }
                     .offset(y:310)
                 
@@ -51,7 +50,6 @@ struct Onboarding1: View {
             .edgesIgnoringSafeArea(.all)
         }
         .navigationBarBackButtonHidden(true)
-        
         
     }
 }

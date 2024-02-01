@@ -9,19 +9,14 @@ import SwiftUI
 import MapKit
 
 struct LevelDetailView: View {
-    // Observe changes to the viewModel and redraw the view as necessary.
     @ObservedObject var viewModel: MissionMapViewModel
-    // The location property contains the details of the location to be displayed.
       let location: Location
-    // Inject an environment object which is an instance of LocationViewModel.
       @EnvironmentObject private var vm: LocationViewModel
-    // An integer representing the level number.
       var levelNumber: Int
     
     var body: some View {
         NavigationView{
             VStack {
-                // Check if the location's active level matches the level number.
                 if location.activeLevel == levelNumber {
                     ScrollView{
                         VStack{
@@ -69,10 +64,11 @@ struct LevelDetailView: View {
                 }
             }
             .navigationBarTitle(("Place Info"), displayMode: .inline)
+            
         }
         .navigationBarBackButtonHidden(true)
-
     }
+    
     
     // Define a function to schedule a local notification.
     func sendNotification() {

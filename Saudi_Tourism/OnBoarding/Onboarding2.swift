@@ -12,15 +12,25 @@ struct Onboarding2: View {
         NavigationView{
         ZStack{
             Color.BB
-            Image("hintOnboarding")
-                .offset(y:30)
-                .shadow(color: Color(red: 0.16, green: 0.09, blue: 0.06).opacity(0.25), radius: 19, x: 0, y: 0)
+                .ignoresSafeArea()
+            ZStack{
+                Image("hintOnboarding")
+                    .offset(y:30)
+                    .shadow(color: Color(red: 0.16, green: 0.09, blue: 0.06).opacity(0.25), radius: 19, x: 0, y: 0)
+                
+                Text("Merge\nin\nculture")
+                  .font(
+                    Font.custom("Source Sans Pro", size: 32)
+                      .weight(.semibold)
+                  )
+                  .multilineTextAlignment(.center)
+            }
             
             NavigationLink(destination: MissionMapView(viewModel: MissionMapViewModel()) .navigationBarBackButtonHidden()){
                 Text("Skip")
             }
-            .offset(x:154,y:-353)
-            .foregroundColor(.black)
+            .offset(x:154,y:-320)
+            .foregroundColor(.BTCOLOR)
 
             
             Text("By the Hints")
@@ -39,17 +49,15 @@ struct Onboarding2: View {
                   )
                   .kerning(1.98)
                   .multilineTextAlignment(.center)
-                  .foregroundColor(Color(red: 0.91, green: 0.9, blue: 0.84))
+                  .foregroundColor(.white)
                   .frame(width: 300 , height: 60)
-                  .background(Color(red: 0.88, green: 0.29, blue: 0.12))
+                  .background(.BTCOLOR)
                   .cornerRadius(13)
-                  .shadow(color: Color(red: 0.16, green: 0.09, blue: 0.06).opacity(0.25), radius: 19, x: 0, y: 0)
             }
             .offset(y:310)
         }//Zstack
-        .edgesIgnoringSafeArea(.all)
     }
-            
+        .navigationBarBackButtonHidden(true)
     }
 }
 
