@@ -10,6 +10,7 @@
 		18A06E932B60ECC800354C70 /* StampsBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A06E922B60ECC800354C70 /* StampsBoard.swift */; };
 		3500B5E92B66BA4F003C8607 /* MissionDetailSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3500B5E82B66BA4F003C8607 /* MissionDetailSheetView.swift */; };
 		353E16A62B60E3DC0023D015 /* PopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353E16A52B60E3DC0023D015 /* PopupView.swift */; };
+		35CA7D122B6D2C33009ADFE3 /* Logo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CA7D112B6D2C33009ADFE3 /* Logo.swift */; };
 		35CF68182B5D80B3001762B9 /* Onboarding3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CF68142B5D80B3001762B9 /* Onboarding3.swift */; };
 		35CF68192B5D80B3001762B9 /* Onboarding1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CF68152B5D80B3001762B9 /* Onboarding1.swift */; };
 		35CF681A2B5D80B3001762B9 /* Onboarding2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CF68162B5D80B3001762B9 /* Onboarding2.swift */; };
@@ -51,6 +52,7 @@
 		18A06E922B60ECC800354C70 /* StampsBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StampsBoard.swift; sourceTree = "<group>"; };
 		3500B5E82B66BA4F003C8607 /* MissionDetailSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionDetailSheetView.swift; sourceTree = "<group>"; };
 		353E16A52B60E3DC0023D015 /* PopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupView.swift; sourceTree = "<group>"; };
+		35CA7D112B6D2C33009ADFE3 /* Logo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logo.swift; sourceTree = "<group>"; };
 		35CF68142B5D80B3001762B9 /* Onboarding3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Onboarding3.swift; sourceTree = "<group>"; };
 		35CF68152B5D80B3001762B9 /* Onboarding1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Onboarding1.swift; sourceTree = "<group>"; };
 		35CF68162B5D80B3001762B9 /* Onboarding2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Onboarding2.swift; sourceTree = "<group>"; };
@@ -345,6 +347,7 @@
 				18A06E902B60EC8800354C70 /* StampsBoard */,
 				94A38A452B5D08E90012280F /* Saudi_TourismApp.swift */,
 				94A38A472B5D08E90012280F /* ContentView.swift */,
+				35CA7D112B6D2C33009ADFE3 /* Logo.swift */,
 				94A38A492B5D08EB0012280F /* Assets.xcassets */,
 				94A38A4B2B5D08EB0012280F /* Preview Content */,
 			);
@@ -479,6 +482,7 @@
 				35CF681A2B5D80B3001762B9 /* Onboarding2.swift in Sources */,
 				35CF68192B5D80B3001762B9 /* Onboarding1.swift in Sources */,
 				35CF681B2B5D80B3001762B9 /* doorAnimation.swift in Sources */,
+				35CA7D122B6D2C33009ADFE3 /* Logo.swift in Sources */,
 				3500B5E92B66BA4F003C8607 /* MissionDetailSheetView.swift in Sources */,
 				9453AD092B68ED9400CCA438 /* popupDataService.swift in Sources */,
 				94A38A622B5D3BCB0012280F /* LevelIconView.swift in Sources */,
