@@ -11,9 +11,6 @@
 		3500B5E92B66BA4F003C8607 /* MissionDetailSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3500B5E82B66BA4F003C8607 /* MissionDetailSheetView.swift */; };
 		353E16A62B60E3DC0023D015 /* PopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353E16A52B60E3DC0023D015 /* PopupView.swift */; };
 		35CA7D122B6D2C33009ADFE3 /* Logo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CA7D112B6D2C33009ADFE3 /* Logo.swift */; };
-		35CF68182B5D80B3001762B9 /* Onboarding3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CF68142B5D80B3001762B9 /* Onboarding3.swift */; };
-		35CF68192B5D80B3001762B9 /* Onboarding1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CF68152B5D80B3001762B9 /* Onboarding1.swift */; };
-		35CF681A2B5D80B3001762B9 /* Onboarding2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CF68162B5D80B3001762B9 /* Onboarding2.swift */; };
 		35CF681B2B5D80B3001762B9 /* doorAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CF68172B5D80B3001762B9 /* doorAnimation.swift */; };
 		9453ACDE2B663DDA00CCA438 /* sound1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9453ACD92B663DD900CCA438 /* sound1.mp3 */; };
 		9453ACDF2B663DDA00CCA438 /* sound2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9453ACDA2B663DD900CCA438 /* sound2.mp3 */; };
@@ -53,9 +50,6 @@
 		3500B5E82B66BA4F003C8607 /* MissionDetailSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionDetailSheetView.swift; sourceTree = "<group>"; };
 		353E16A52B60E3DC0023D015 /* PopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupView.swift; sourceTree = "<group>"; };
 		35CA7D112B6D2C33009ADFE3 /* Logo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logo.swift; sourceTree = "<group>"; };
-		35CF68142B5D80B3001762B9 /* Onboarding3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Onboarding3.swift; sourceTree = "<group>"; };
-		35CF68152B5D80B3001762B9 /* Onboarding1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Onboarding1.swift; sourceTree = "<group>"; };
-		35CF68162B5D80B3001762B9 /* Onboarding2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Onboarding2.swift; sourceTree = "<group>"; };
 		35CF68172B5D80B3001762B9 /* doorAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = doorAnimation.swift; sourceTree = "<group>"; };
 		9453ACD92B663DD900CCA438 /* sound1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sound1.mp3; sourceTree = "<group>"; };
 		9453ACDA2B663DD900CCA438 /* sound2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sound2.mp3; sourceTree = "<group>"; };
@@ -74,7 +68,7 @@
 		945E3E9D2B5E437C004DFC98 /* LocationsDataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationsDataService.swift; sourceTree = "<group>"; };
 		945E3E9F2B5E4380004DFC98 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		945E3EBD2B5E5F5D004DFC98 /* Dropdownmenue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dropdownmenue.swift; sourceTree = "<group>"; };
-		94A38A422B5D08E90012280F /* Saudi_Tourism.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Saudi_Tourism.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		94A38A422B5D08E90012280F /* WeMerge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeMerge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		94A38A452B5D08E90012280F /* Saudi_TourismApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Saudi_TourismApp.swift; sourceTree = "<group>"; };
 		94A38A472B5D08E90012280F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		94A38A492B5D08EB0012280F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -261,9 +255,6 @@
 		945E3E932B5E42AE004DFC98 /* OnBoarding */ = {
 			isa = PBXGroup;
 			children = (
-				35CF68152B5D80B3001762B9 /* Onboarding1.swift */,
-				35CF68162B5D80B3001762B9 /* Onboarding2.swift */,
-				35CF68142B5D80B3001762B9 /* Onboarding3.swift */,
 				94AD01EF2B6D030800042903 /* Walkthrough.swift */,
 				94AD01F12B6D143C00042903 /* Mainview.swift */,
 				35CA7D112B6D2C33009ADFE3 /* Logo.swift */,
@@ -330,7 +321,7 @@
 		94A38A432B5D08E90012280F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				94A38A422B5D08E90012280F /* Saudi_Tourism.app */,
+				94A38A422B5D08E90012280F /* WeMerge.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -407,9 +398,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		94A38A412B5D08E90012280F /* Saudi_Tourism */ = {
+		94A38A412B5D08E90012280F /* WeMerge */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 94A38A502B5D08EB0012280F /* Build configuration list for PBXNativeTarget "Saudi_Tourism" */;
+			buildConfigurationList = 94A38A502B5D08EB0012280F /* Build configuration list for PBXNativeTarget "WeMerge" */;
 			buildPhases = (
 				94A38A3E2B5D08E90012280F /* Sources */,
 				94A38A3F2B5D08E90012280F /* Frameworks */,
@@ -419,9 +410,9 @@
 			);
 			dependencies = (
 			);
-			name = Saudi_Tourism;
+			name = WeMerge;
 			productName = Saudi_Tourism;
-			productReference = 94A38A422B5D08E90012280F /* Saudi_Tourism.app */;
+			productReference = 94A38A422B5D08E90012280F /* WeMerge.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -439,7 +430,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 94A38A3D2B5D08E90012280F /* Build configuration list for PBXProject "Saudi_Tourism" */;
+			buildConfigurationList = 94A38A3D2B5D08E90012280F /* Build configuration list for PBXProject "WeMerge" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -452,7 +443,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				94A38A412B5D08E90012280F /* Saudi_Tourism */,
+				94A38A412B5D08E90012280F /* WeMerge */,
 			);
 		};
 /* End PBXProject section */
@@ -479,8 +470,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				9453AD1C2B69432800CCA438 /* CongratsPopupview.swift in Sources */,
-				35CF681A2B5D80B3001762B9 /* Onboarding2.swift in Sources */,
-				35CF68192B5D80B3001762B9 /* Onboarding1.swift in Sources */,
 				35CF681B2B5D80B3001762B9 /* doorAnimation.swift in Sources */,
 				35CA7D122B6D2C33009ADFE3 /* Logo.swift in Sources */,
 				3500B5E92B66BA4F003C8607 /* MissionDetailSheetView.swift in Sources */,
@@ -505,7 +494,6 @@
 				353E16A62B60E3DC0023D015 /* PopupView.swift in Sources */,
 				18A06E932B60ECC800354C70 /* StampsBoard.swift in Sources */,
 				9453ACFE2B684A9000CCA438 /* InfoSheetView.swift in Sources */,
-				35CF68182B5D80B3001762B9 /* Onboarding3.swift in Sources */,
 				94F973302B60F14200F6B395 /* HintsViewModel.swift in Sources */,
 				94A38A5C2B5D09E70012280F /* MissionMapView.swift in Sources */,
 				9453ACF02B66AB9900CCA438 /* MissionModel.swift in Sources */,
@@ -701,7 +689,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		94A38A3D2B5D08E90012280F /* Build configuration list for PBXProject "Saudi_Tourism" */ = {
+		94A38A3D2B5D08E90012280F /* Build configuration list for PBXProject "WeMerge" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				94A38A4E2B5D08EB0012280F /* Debug */,
@@ -710,7 +698,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		94A38A502B5D08EB0012280F /* Build configuration list for PBXNativeTarget "Saudi_Tourism" */ = {
+		94A38A502B5D08EB0012280F /* Build configuration list for PBXNativeTarget "WeMerge" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				94A38A512B5D08EB0012280F /* Debug */,
