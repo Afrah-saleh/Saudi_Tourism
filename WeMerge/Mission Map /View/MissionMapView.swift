@@ -59,7 +59,7 @@ struct MissionMapView: View {
                     }
                 }
                 .padding(.bottom, 708)
-                .padding(.leading,8)
+                .padding(.leading,5)
                // .offset(x:5)
                 
                 // Loop through each level position provided by the view model.
