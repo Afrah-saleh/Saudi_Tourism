@@ -7,7 +7,7 @@
 
 import SwiftUI
 class MissionMapViewModel: ObservableObject {
-    @Published var activeLevel: Int = 4
+    @Published var activeLevel: Int = 1
     var locations: [Location] = LocationsDataService.locations
     let maxLevel: Int = 10 // Set this to the maximum number of levels in your game
     
