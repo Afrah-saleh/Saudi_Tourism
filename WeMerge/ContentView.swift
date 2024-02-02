@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var showmap = false
+    @ObservedObject var viewModel: MissionMapViewModel
+
     var body: some View {
         ZStack{
             Image("TheEnd")
@@ -15,7 +18,8 @@ struct ContentView: View {
                 .edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
             
             Button("I Rock!"){
-                
+                showmap = true
+
             }
             .padding(.horizontal, 10)
             .padding(.vertical, 16)
@@ -24,11 +28,15 @@ struct ContentView: View {
             .cornerRadius(13)
             .offset(y:340)
             .foregroundColor(.white)
+            .fullScreenCover(isPresented: $showmap) {
+                MissionMapView(viewModel: MissionMapViewModel())
+            }
+            
         }
     }
 }
 
 
 #Preview {
-    ContentView()
+    ContentView(viewModel: MissionMapViewModel())
 }

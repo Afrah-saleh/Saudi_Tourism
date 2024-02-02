@@ -85,7 +85,7 @@ struct MissionMapView: View {
                 // Conditional NavigationLink for Level 5
                          if let selectedLevel = selectedLevel, selectedLevel.id == 5 {
                              NavigationStack {
-                                 ContentView()
+                                 ContentView(viewModel: viewModel)
                              }
                              
                          } else if showHintsView {
