@@ -9,28 +9,23 @@ import SwiftUI
 
 struct Onboarding3: View {
     var body: some View {
-        NavigationView{
             ZStack{
                 Color.BB
                 Image("Onboarding3")
                     .offset(y:-60)
                 
                 Text("Collect your stamps \n to keep the memory in the mind!")
-                    .font(
-                        Font.custom("Source Sans Pro", size: 28)
-                            .weight(.semibold)
-                    )
-                
-                    .multilineTextAlignment(.center)
+                    .font(.title)
+                    .fontWeight(.bold)
+                  .foregroundColor(.dark)
+                  .multilineTextAlignment(.center)
                     .frame(width: 353, alignment: .top)
                     .offset(y:180)
                 
                 NavigationLink(destination:MissionMapView(viewModel: MissionMapViewModel()).navigationBarBackButtonHidden()){
                     Text("Get Started")
-                      .font(
-                        Font.custom("Inter", size: 22)
-                          .weight(.medium)
-                      )
+                        .fontWeight(.semibold)
+                        .font(.title2)
                       .kerning(1.98)
                       .multilineTextAlignment(.center)
                       .foregroundColor(.white)
@@ -43,7 +38,7 @@ struct Onboarding3: View {
                 
             }//Zstack
             .edgesIgnoringSafeArea(.all)
-        }
+        
         .navigationBarBackButtonHidden(true)
     }
 }

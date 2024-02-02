@@ -31,6 +31,7 @@ struct MissionsView: View {
                                     Image(mission.image)
                                         .resizable()
                                         .cornerRadius(10)
+                                        .scaledToFit()
                                     HStack{
                                         Text(mission.title)
                                             .font(.headline)

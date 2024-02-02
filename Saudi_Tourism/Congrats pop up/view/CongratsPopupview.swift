@@ -41,6 +41,7 @@ struct CongratsPopupView: View {
                 Button("Collect"){
                     missionMapViewModel.unlockNextLevel()
                     showstamp = true
+                    
                 }
                 .bold()
                 .frame(minWidth: 0, maxWidth: .infinity)

@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		181242882B6A225600A93D44 /* Stamps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181242872B6A225600A93D44 /* Stamps.swift */; };
 		18A06E932B60ECC800354C70 /* StampsBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A06E922B60ECC800354C70 /* StampsBoard.swift */; };
 		3500B5E92B66BA4F003C8607 /* MissionDetailSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3500B5E82B66BA4F003C8607 /* MissionDetailSheetView.swift */; };
 		353E16A62B60E3DC0023D015 /* PopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353E16A52B60E3DC0023D015 /* PopupView.swift */; };
@@ -47,7 +46,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		181242872B6A225600A93D44 /* Stamps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stamps.swift; sourceTree = "<group>"; };
 		18A06E922B60ECC800354C70 /* StampsBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StampsBoard.swift; sourceTree = "<group>"; };
 		3500B5E82B66BA4F003C8607 /* MissionDetailSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionDetailSheetView.swift; sourceTree = "<group>"; };
 		353E16A52B60E3DC0023D015 /* PopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupView.swift; sourceTree = "<group>"; };
@@ -98,18 +96,9 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		181242862B6A222200A93D44 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				181242872B6A225600A93D44 /* Stamps.swift */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
 		18A06E902B60EC8800354C70 /* StampsBoard */ = {
 			isa = PBXGroup;
 			children = (
-				181242862B6A222200A93D44 /* Model */,
 				18A06E912B60EC9C00354C70 /* View */,
 			);
 			path = StampsBoard;
@@ -510,7 +499,6 @@
 				9453ACF02B66AB9900CCA438 /* MissionModel.swift in Sources */,
 				94A38A462B5D08E90012280F /* Saudi_TourismApp.swift in Sources */,
 				94F9732C2B60F12A00F6B395 /* Place.swift in Sources */,
-				181242882B6A225600A93D44 /* Stamps.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

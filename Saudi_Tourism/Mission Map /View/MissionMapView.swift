@@ -23,7 +23,7 @@ struct MissionMapView: View {
     
     var body: some View {
         NavigationStack {
-            ZStack(alignment: .top) {
+            ZStack {
                 Image("Map")
                     .resizable()
                     .scaledToFill()
@@ -58,8 +58,9 @@ struct MissionMapView: View {
                             .font(.title)
                     }
                 }
-                .padding(.top, 35)
-                .offset(x:5)
+                .padding(.bottom, 725)
+                .padding(.leading,8)
+               // .offset(x:5)
                 
                 // Loop through each level position provided by the view model.
                 ForEach(viewModel.levelPositions, id: \.number) { level in

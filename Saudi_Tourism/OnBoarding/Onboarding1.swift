@@ -17,15 +17,15 @@ struct Onboarding1: View {
                 VStack{
                     NavigationLink(destination: MissionMapView(viewModel: MissionMapViewModel()) .navigationBarBackButtonHidden()){
                         Text("Skip")
+                            .fontWeight(.semibold)
+                            .font(.headline)
                     }
                     .offset(x:154,y:-320)
                     .foregroundColor(.BTCOLOR)
                     
                     Text(" Saudi Arabia \n Live it Local, Live it as It Is")
-                        .font(
-                            Font.custom("Source Sans Pro", size: 27)
-                            .weight(.semibold)
-                            )
+                        .font(.title)
+                        .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
                         .multilineTextAlignment(.center)
                         .frame(width: 410, alignment: .top)
                         .offset(y:-130)
@@ -33,10 +33,8 @@ struct Onboarding1: View {
                 
                 NavigationLink(destination:Onboarding2().navigationBarBackButtonHidden()){
                     Text("Get Started")
-                      .font(
-                        Font.custom("Inter", size: 22)
-                          .weight(.medium)
-                      )
+                        .fontWeight(.semibold)
+                        .font(.title2)
                       .kerning(1.98)
                       .multilineTextAlignment(.center)
                       .foregroundColor(.white)
