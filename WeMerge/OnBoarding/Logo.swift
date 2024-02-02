@@ -13,7 +13,7 @@ struct Logo: View {
     @State private var size = 1.0
     @State private var opacity = 0.2
     @State private var animatedText = ""
-    let textToAnimate = "MerG" // Replace with your text
+    let textToAnimate = "MerGe" // Replace with your text
     
     var body: some View {
         ZStack {
