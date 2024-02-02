@@ -12,7 +12,7 @@ class MissionMapViewModel: ObservableObject {
     let maxLevel: Int = 10 // Set this to the maximum number of levels in your game
     
     let levelPositions = [ //representing level numbers and their positions
-        (number: 1, position: CGPoint(x: 265, y: 515)),
+        (number: 1, position: CGPoint(x: 260, y: 515)),
         (number: 2, position: CGPoint(x: 100, y: 490)),
         (number: 3, position: CGPoint(x: 145, y: 325)),
         (number: 4, position: CGPoint(x: 295, y: 310)),

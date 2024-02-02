@@ -58,7 +58,7 @@ struct MissionMapView: View {
                             .font(.title)
                     }
                 }
-                .padding(.bottom, 725)
+                .padding(.bottom, 708)
                 .padding(.leading,8)
                // .offset(x:5)
                 
