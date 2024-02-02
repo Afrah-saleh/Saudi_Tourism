@@ -313,7 +313,7 @@
 		94A38A392B5D08E90012280F = {
 			isa = PBXGroup;
 			children = (
-				94A38A442B5D08E90012280F /* Saudi_Tourism */,
+				94A38A442B5D08E90012280F /* WeMerge */,
 				94A38A432B5D08E90012280F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -326,7 +326,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		94A38A442B5D08E90012280F /* Saudi_Tourism */ = {
+		94A38A442B5D08E90012280F /* WeMerge */ = {
 			isa = PBXGroup;
 			children = (
 				945E3E932B5E42AE004DFC98 /* OnBoarding */,
@@ -342,7 +342,7 @@
 				94A38A492B5D08EB0012280F /* Assets.xcassets */,
 				94A38A4B2B5D08EB0012280F /* Preview Content */,
 			);
-			path = Saudi_Tourism;
+			path = WeMerge;
 			sourceTree = "<group>";
 		};
 		94A38A4B2B5D08EB0012280F /* Preview Content */ = {
@@ -631,7 +631,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Saudi_Tourism/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"WeMerge/Preview Content\"";
 				DEVELOPMENT_TEAM = ZM4ARX928Z;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -662,7 +662,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Saudi_Tourism/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"WeMerge/Preview Content\"";
 				DEVELOPMENT_TEAM = ZM4ARX928Z;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;

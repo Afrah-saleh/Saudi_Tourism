@@ -22,6 +22,9 @@ static let Congrats: [CongratsModel] = [
     
     
     CongratsModel(image: "Congrats4", activeLevel: 4),
+    
+    CongratsModel(image: "", activeLevel: 5),
+
 ]
 
 }
