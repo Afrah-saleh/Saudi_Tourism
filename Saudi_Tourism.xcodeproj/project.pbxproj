@@ -266,6 +266,7 @@
 				35CF68142B5D80B3001762B9 /* Onboarding3.swift */,
 				94AD01EF2B6D030800042903 /* Walkthrough.swift */,
 				94AD01F12B6D143C00042903 /* Mainview.swift */,
+				35CA7D112B6D2C33009ADFE3 /* Logo.swift */,
 			);
 			path = OnBoarding;
 			sourceTree = "<group>";
@@ -347,7 +348,6 @@
 				18A06E902B60EC8800354C70 /* StampsBoard */,
 				94A38A452B5D08E90012280F /* Saudi_TourismApp.swift */,
 				94A38A472B5D08E90012280F /* ContentView.swift */,
-				35CA7D112B6D2C33009ADFE3 /* Logo.swift */,
 				94A38A492B5D08EB0012280F /* Assets.xcassets */,
 				94A38A4B2B5D08EB0012280F /* Preview Content */,
 			);

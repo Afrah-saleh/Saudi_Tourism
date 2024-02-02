@@ -15,7 +15,7 @@ struct MissionsView: View {
     @State private var selectedMission: MissionModel? = nil
     @State private var showingCongratsPopup = false
     @State private var isShowingStampBoard = false
-    let popup: CongratsModel
+    //let popup: CongratsModel
     
     var body: some View {
         NavigationView {
@@ -88,9 +88,9 @@ struct MissionsView: View {
                             }
 
                             // Add this part to show the CongratsPopupView
-                            if showingCongratsPopup {
-                                CongratsPopupView(isShowing: $showingCongratsPopup, popupModel: popup, missionMapViewModel: viewModel)
-                            }
+                if showingCongratsPopup, let congratsPopupModel = popupDataService.Congrats.first(where: { $0.activeLevel == viewModel.activeLevel }) {
+                         CongratsPopupView(isShowing: $showingCongratsPopup, popupModel: congratsPopupModel, missionMapViewModel: viewModel)
+                     }
                         }
             .navigationBarTitleDisplayMode(.inline)
             .navigationTitle("Local Missions")
@@ -104,5 +104,5 @@ struct MissionsView: View {
 
 
 #Preview {
-    MissionsView(viewModel: MissionMapViewModel(), vm: MissionViewModel(), levelNumber: 1, popup: popupDataService.Congrats.first!)
+    MissionsView(viewModel: MissionMapViewModel(), vm: MissionViewModel(), levelNumber: 1)
 }

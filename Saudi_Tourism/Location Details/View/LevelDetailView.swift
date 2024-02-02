@@ -45,7 +45,7 @@ struct LevelDetailView: View {
                     }
                     .ignoresSafeArea()
                 }
-                NavigationLink(destination: MissionsView(viewModel: viewModel, vm: MissionViewModel(), levelNumber: levelNumber, popup: popupDataService.Congrats.first!)) {
+                NavigationLink(destination: MissionsView(viewModel: viewModel, vm: MissionViewModel(), levelNumber: viewModel.activeLevel)) {
                     ZStack{
                         Rectangle()
                             .frame(width: 340,height: 57)
@@ -145,7 +145,7 @@ extension LevelDetailView{
             }
             .aspectRatio(1, contentMode: .fit)
             .cornerRadius(30)
-            // .mapStyle(.hybrid(elevation: .realistic))
+             .mapStyle(.hybrid(elevation: .realistic))
             .onTapGesture {
                 let destination = MKMapItem(placemark: MKPlacemark(coordinate: location.coordinates))
                 destination.name = location.name

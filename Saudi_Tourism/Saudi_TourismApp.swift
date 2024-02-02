@@ -12,7 +12,7 @@ import SwiftData
 struct Saudi_TourismApp: App {
     var body: some Scene {
         WindowGroup {
-            Mainview()
+            Logo()
            // MissionMapView(viewModel: MissionMapViewModel())
         }
         
