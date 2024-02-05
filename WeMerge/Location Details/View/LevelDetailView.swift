@@ -16,15 +16,18 @@ struct LevelDetailView: View {
     
     var body: some View {
         NavigationView{
+            ZStack{
+                Color.BB
+                    .ignoresSafeArea()
             VStack {
                 if location.activeLevel == levelNumber {
                     ScrollView{
                         VStack{
                             ZStack{
                                 Image(location.imageNames)
-                                        .resizable()
-                                        .scaledToFill()
-                                        .clipped()
+                                    .resizable()
+                                    .scaledToFill()
+                                    .clipped()
                                 Text(location.name)
                                     .foregroundColor(.white)
                                     .fontWeight(.bold)
@@ -58,6 +61,7 @@ struct LevelDetailView: View {
                     }
                 }
             }
+        }
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .principal) {
