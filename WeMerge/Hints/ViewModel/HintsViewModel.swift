@@ -21,20 +21,20 @@ class HintsViewModel: ObservableObject {
         self.level = level
 
         allHints = [
-            Place(level: 1, name: "About \n Live it as it is before \n 297", image: "Hint", desc: "Years Ago"),
-            Place(level: 1, name: "About \n Feel the Saudi Rhythms", image: "Hint", desc: ""),
+            Place(level: 1, name: "About \n Live it as it is before \n 297", image: "Hint1", desc: "Years Ago"),
+            Place(level: 1, name: "About \n Feel the Saudi Rhythms", image: "Hint1", desc: ""),
             
             
-            Place(level: 2, name: "Where \n Local Saudi Stylish \n Fabric", image: "Hint", desc: ""),
-            Place(level: 2, name: "Where \n Local Flair Meets Touch \n of Expensive Gold!", image: "Hint", desc: ""),
+            Place(level: 2, name: "Where \n Local Saudi Stylish \n Fabric", image: "Hint1", desc: ""),
+            Place(level: 2, name: "Where \n Local Flair Meets Touch \n of Expensive Gold!", image: "Hint1", desc: ""),
             
             
             
-            Place(level: 3, name: "Where\n  Each Sand Dune Weaves a local Tale", image: "Hint", desc: ""),
-            Place(level: 3, name: "About \n Dune Drifts & Desert Dreams", image: "Hint", desc: ""),
+            Place(level: 3, name: "Where\n  Each Sand Dune Weaves a local Tale", image: "Hint1", desc: ""),
+            Place(level: 3, name: "About \n Dune Drifts & Desert Dreams", image: "Hint1", desc: ""),
             
-            Place(level: 4, name: "Where\n Cave mystique merges with the heartbeat of our community.", image: "Hint", desc: ""),
-            Place(level: 4, name: "Where \n the Flame of the Desert Illuminates Hearts and Traditions.", image: "Hint", desc: ""),
+            Place(level: 4, name: "Where\n Cave mystique merges with the heartbeat of our community.", image: "Hint1", desc: ""),
+            Place(level: 4, name: "Where \n the Flame of the Desert Illuminates Hearts and Traditions.", image: "Hint1", desc: ""),
             
         ]
         selectedHint = hints.first

@@ -74,9 +74,10 @@ struct StampsBoard: View {
             .navigationDestination(isPresented: $showMap) {
                 MissionMapView(viewModel: viewModel)
             }
+            .navigationBarHidden(true)
         }
       
-        .navigationBarBackButtonHidden(true)
+      //  .navigationBarBackButtonHidden(true)
                
                 
             }

@@ -66,5 +66,7 @@ struct CongratsPopupView: View {
             
             
         }
+        .navigationBarHidden(true)
+        .navigationBarBackButtonHidden(true)
     }
 }

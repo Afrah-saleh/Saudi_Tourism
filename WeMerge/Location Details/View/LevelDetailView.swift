@@ -68,6 +68,7 @@ struct LevelDetailView: View {
                     }
                 }
             }.toolbarBackground(.hidden, for: .navigationBar)
+                .navigationBarBackButtonHidden(true)
         }
         .navigationBarBackButtonHidden(true)
     }

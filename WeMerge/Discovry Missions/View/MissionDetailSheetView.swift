@@ -72,6 +72,8 @@ struct MissionDetailSheetView: View {
                 .padding()
             }
         }
+        .navigationBarHidden(true)
+        .navigationBarBackButtonHidden(true)
         .onTapGesture {
             withAnimation {
                 // Close the sheet when tapping outside the sheet content

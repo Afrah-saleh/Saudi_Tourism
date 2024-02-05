@@ -94,6 +94,7 @@ struct MissionsView: View {
                         }
             .navigationBarTitleDisplayMode(.inline)
             .navigationTitle("Local Missions")
+            .navigationBarBackButtonHidden(true)
 
                     }
         

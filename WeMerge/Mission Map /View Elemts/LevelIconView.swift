@@ -22,7 +22,7 @@ struct LevelIconView: View {
                 // If level is 5, use a special image, presumably a gift
                 Image("Gift") // Replace "square_image" with the actual image asset name for level 5
                     .resizable()
-                    .frame(width: 130, height: 130)
+                    .frame(width: 100, height: 150)
                 
                 // Text "?" for level 5
                 Text("?")
@@ -50,7 +50,7 @@ struct LevelIconView: View {
             
         }//
         .frame(width: 150, height: 150, alignment: .center)
-        .opacity(isUnlocked ? 1 : 0) // Change opacity based on whether the level is unlocked or not
+        .opacity(isUnlocked ? 1 : 1) // Change opacity based on whether the level is unlocked or not
     }
 }
 

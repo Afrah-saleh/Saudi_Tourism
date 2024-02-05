@@ -1,7 +1,7 @@
 {
   "images" : [
     {
-      "filename" : "Group 572.svg",
+      "filename" : "LocaMap.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
@@ -12,7 +12,7 @@
           "value" : "dark"
         }
       ],
-      "filename" : "MapMain View.svg",
+      "filename" : "MapMain View.png",
       "idiom" : "universal",
       "scale" : "1x"
     },

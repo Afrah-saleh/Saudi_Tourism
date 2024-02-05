@@ -12,7 +12,7 @@ struct Level: Identifiable {
     let id: Int
     let title: String
 }
-
+//showHintsView = true
 struct MissionMapView: View {
     @ObservedObject var viewModel: MissionMapViewModel
     @State var selection1: String? = "Riyadh"
@@ -23,85 +23,93 @@ struct MissionMapView: View {
     
     var body: some View {
         NavigationStack {
-            ZStack {
+            ZStack (alignment: .center){
                 Image("Map")
                     .resizable()
                     .scaledToFill()
                     .ignoresSafeArea()
                 
-                HStack {
-                    Dropdownmenue(
-                        selection: $selection1,
-                        options: [
-                            "Riyadh",
-                      
-                        ]
-                    ).padding(.trailing,30)
-                    
-                    //button 1
-                    Button(action: {
-                        //  self.action2()
-                    }) {
-                        Image(systemName: "gift")
-                            .foregroundColor(Color("BTCOLOR"))
-                            .font(.title)
-                    }
-                    .padding(15)
-                    
-                    
-                    //Button
-                    Button(action: {
-                        showPopup = true
-                    }) {
-                        Image(systemName: "info.square")
-                            .foregroundColor(Color("BTCOLOR"))
-                            .font(.title)
-                    }
-                }
-                .padding(.bottom, 708)
-                .padding(.leading,5)
-               // .offset(x:5)
-                
-                // Loop through each level position provided by the view model.
-                ForEach(viewModel.levelPositions, id: \.number) { level in
-                    Group {
-                        // Check if the level is unlocked and provide interactive behavior.
-                        if viewModel.isLevelUnlocked(level.number) {
-                            Button(action: {
-                                self.selectedLevel = Level(id: level.number, title: "")
-                                showHintsView = true
-                  
-                            }) {
+                VStack{
+                    HStack{
+                        Dropdownmenue(
+                            selection: $selection1,
+                            options: [
+                                "Riyadh",
                                 
-                                LevelIconView(level: level.number, isUnlocked: true)
+                            ]
+                        )
+                        Spacer()
+                        //button 1
+                        Button(action: {
+                            //  self.action2()
+                        }) {
+                            Image(systemName: "gift")
+                                .foregroundColor(Color("BTCOLOR"))
+                                .font(.title)
+                        }.frame(width: 44,height: 44)
+                            .background(
+                               RoundedRectangle(cornerRadius: 10)
+                                   .foregroundColor(Color(red: 0.98, green: 0.96, blue: 0.9))
+                           )
+                        
+                        //Button
+                        Button(action: {
+                            showPopup = true
+                        }) {
+                            Image(systemName: "info.square")
+                                .foregroundColor(Color("BTCOLOR"))
+                                .font(.title)
+                        }.frame(width: 44,height: 44)
+                    .background(
+                       RoundedRectangle(cornerRadius: 10)
+                           .foregroundColor(Color(red: 0.98, green: 0.96, blue: 0.9))
+                   )
+                       }
+                    .padding(.horizontal)
+                        .padding(.top,40)
+                    
+                    Spacer()
+                }
+                    // Loop through each level position provided by the view model.
+                    ForEach(viewModel.levelPositions, id: \.number) { level in
+                        Group {
+                            // Check if the level is unlocked and provide interactive behavior.
+                            if viewModel.isLevelUnlocked(level.number) {
+                                Button(action: {
+                                    self.selectedLevel = Level(id: level.number, title: "")
+                                    showHintsView = true
+                                    
+                                }) {
+                                    
+                                    LevelIconView(level: level.number, isUnlocked: true)
+                                }
+                            } else {
+                                LevelIconView(level: level.number, isUnlocked: false)
                             }
-                        } else {
-                            LevelIconView(level: level.number, isUnlocked: false)
+                        }
+                        .position(x: level.position.x, y: level.position.y)
+                    }
+                    
+                    // Conditional NavigationLink for Level 5
+                    if let selectedLevel = selectedLevel, selectedLevel.id == 5 {
+                        NavigationStack {
+                            ContentView(viewModel: viewModel)
+                        }
+                        
+                    } else if showHintsView {
+                        NavigationStack {
+                            HintsViews(viewModel: HintsViewModel(level: viewModel.activeLevel), vm: viewModel)
                         }
                     }
-                    .position(x: level.position.x, y: level.position.y)
-                }
-                
-                // Conditional NavigationLink for Level 5
-                         if let selectedLevel = selectedLevel, selectedLevel.id == 5 {
-                             NavigationStack {
-                                 ContentView(viewModel: viewModel)
-                             }
-                             
-                         } else if showHintsView {
-                             NavigationStack {
-                                 HintsView(viewModel: HintsViewModel(level: viewModel.activeLevel), vm: viewModel)
-                             }
-                         }
-
-                
-                // Show popup view if `showPopup` is true.
-                if showPopup {
-                    PopupView(showPopup: $showPopup)
+                    
+                    
+                    // Show popup view if `showPopup` is true.
+                    if showPopup {
+                        PopupView(showPopup: $showPopup)
+                    }
                 }
             }
-}
-        
+
         .navigationBarBackButtonHidden(true)
         
                        .onAppear {

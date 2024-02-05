@@ -16,7 +16,7 @@ class MissionMapViewModel: ObservableObject {
         (number: 2, position: CGPoint(x: 100, y: 490)),
         (number: 3, position: CGPoint(x: 145, y: 325)),
         (number: 4, position: CGPoint(x: 295, y: 310)),
-        (number: 5, position: CGPoint(x: 200, y: 395)),
+        (number: 5, position: CGPoint(x: 200, y: 398)),
         // we can add more levels
     ]
     var levelTitles: [Int: String] = [
