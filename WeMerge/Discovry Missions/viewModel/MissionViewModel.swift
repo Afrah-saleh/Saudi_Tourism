@@ -10,14 +10,16 @@ import SwiftUI
 
 
 class MissionViewModel: ObservableObject {
-    @Published var activeLevel: Int = 1
-    {
+    @Published var activeLevel: Int = 1 {
         didSet {
             if activeLevel > missions.count {
                 activeLevel = missions.count // Prevent it from going beyond available missions
             }
         }
     }
+    
+
+    @Published var unlockedMissionNumber: Int = 1 // Add this property
     
     func isLastMission(_ mission: MissionModel) -> Bool {
         guard let lastMissionNumber = missions.filter({ $0.activeLevel == mission.activeLevel }).map({ $0.number }).max() else {
@@ -35,7 +37,7 @@ class MissionViewModel: ObservableObject {
     
     func advanceLevel() {
         activeLevel += 1
-        print("adding 1 for this level!!!!!!!!***")
+        unlockedMissionNumber += 1 // Unlock the next mission
     }
     
     init() {

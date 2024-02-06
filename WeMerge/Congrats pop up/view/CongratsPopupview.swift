@@ -39,7 +39,7 @@ struct CongratsPopupView: View {
                     .frame(width: 150, height: 150)
                 
                 Button("Collect"){
-                    missionMapViewModel.unlockNextLevel()
+                   missionMapViewModel.unlockNextLevel()
                     showstamp = true
                     
                 }
@@ -49,9 +49,12 @@ struct CongratsPopupView: View {
                 .background(Color("BTCOLOR"))
                 .foregroundColor(.white)
                 .cornerRadius(10)
-                .fullScreenCover(isPresented: $showstamp) {
-                    StampsBoard(viewModel: missionMapViewModel)
-                }
+//                .fullScreenCover(isPresented: $showstamp) {
+//                    StampsBoard(viewModel: missionMapViewModel)
+//                }
+                                .fullScreenCover(isPresented: $showstamp) {
+                                    Stamps(viewModel: missionMapViewModel, popupModel: popupModel, levelNumber: missionMapViewModel.activeLevel)
+                                }
                 
                 .padding([.leading, .trailing, .bottom])
             }

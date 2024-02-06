@@ -24,42 +24,48 @@ struct MissionsView: View {
                     .ignoresSafeArea()
                 VStack {
                             // Use the filteredMissions property to only show missions for the active level
-                            ForEach(vm.filteredMissions) { mission in
-                                if mission.activeLevel == levelNumber {
+                    ForEach(vm.filteredMissions) { mission in
+                        if mission.activeLevel == levelNumber {
 
                                 ZStack {
                                     Image(mission.image)
                                         .resizable()
                                         .cornerRadius(10)
                                         .scaledToFit()
+                                        .overlay(
+                                           mission.number > vm.unlockedMissionNumber ?
+                                               Color.black.opacity(0.7) : Color.clear // Darken the image for locked missions
+                                               )
                                     HStack{
                                         Text(mission.title)
                                             .font(.headline)
                                             .padding()
-                                            .foregroundColor(.white)
+                                            .foregroundColor(
+                                                mission.number > vm.unlockedMissionNumber ?
+                                                    .gray : .white // Darken the text for locked missions
+                                            )
                                             .fontWeight(.bold)
                                             .padding(.top, 120)
                                         Spacer()
-                                        
-                                        
-                                        Button("Start"){
-                                            self.selectedMission = mission
-                                            self.isShowingDetailSheet = true
-                                            
-                                            print("------*** \(mission.isCompleted)")
-                                            print("------ ***\(mission.number)")
-                                        }
-                                            .frame(width: 100, height: 30)
-                                            .bold()
-                                            .foregroundColor(.white)
-                                            .background(Color(red: 0.88, green: 0.29, blue: 0.12))
-                                            .cornerRadius(5)
-                                            .padding(.trailing)
-                                            .padding(.top, 120)
-                                        
-                                    }
-                                    .buttonStyle(PlainButtonStyle())
-                                   // .disabled(!mission.isCompleted && mission.number != vm.filteredMissions.first(where: { !$0.isCompleted })?.number)
+
+                                      Button("Start") {
+                                          if mission.number <= vm.unlockedMissionNumber {
+                                              self.selectedMission = mission
+                                              self.isShowingDetailSheet = true
+                                          }
+                                      }
+                                      .frame(width: 100, height: 30)
+                                      .bold()
+                                      .foregroundColor(.white)
+                                      .background(mission.number <= vm.unlockedMissionNumber ? Color("BTCOLOR") : Color.gray) // Disable button if mission number is greater than unlockedMissionNumber
+                                      .cornerRadius(5)
+                                      .padding(.trailing)
+                                      .padding(.top, 120)
+                                      .disabled(mission.number > vm.unlockedMissionNumber) // Disable button if mission number is greater than unlockedMissionNumber
+                                  }
+                                              
+                                  .buttonStyle(PlainButtonStyle())
+                                
                                 }//zstack
                                     
                                 .padding(.leading)

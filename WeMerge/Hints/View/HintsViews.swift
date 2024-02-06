@@ -57,7 +57,7 @@ struct HintsViews: View {
                                     .foregroundColor(Color(red: 0.98, green: 0.96, blue: 0.9))
                                 
                                 Text("Back")
-                                    .font(.system(size: 32))
+                                    .font(.system(size: 24))
                                     .foregroundColor(.black)
                             }
                         }
