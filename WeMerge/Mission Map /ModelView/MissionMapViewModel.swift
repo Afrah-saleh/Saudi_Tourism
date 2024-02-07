@@ -7,7 +7,18 @@
 
 import SwiftUI
 class MissionMapViewModel: ObservableObject {
-    @Published var activeLevel: Int = 1
+    @Published var activeLevel: Int {
+           didSet {
+               UserDefaults.standard.set(activeLevel, forKey: "ActiveLevel")
+           }
+       }
+    init() {
+        // Initialize activeLevel from UserDefaults or set to 1 if not found
+        self.activeLevel = UserDefaults.standard.integer(forKey: "ActiveLevel")
+        if self.activeLevel == 0 { // UserDefaults returns 0 if the key doesn't exist
+            self.activeLevel = 1
+        }
+    }
     var locations: [Location] = LocationsDataService.locations
     let maxLevel: Int = 10 // Set this to the maximum number of levels in your game
     
@@ -50,6 +61,7 @@ class MissionMapViewModel: ObservableObject {
         func location(for levelNumber: Int) -> Location? {
             return locations.first { $0.activeLevel == levelNumber }
         }
+    
     }
     
     

@@ -13,7 +13,6 @@ struct Saudi_TourismApp: App {
     var body: some Scene {
         WindowGroup {
             Logo()
-           // MissionMapView(viewModel: MissionMapViewModel())
         }
         
     }

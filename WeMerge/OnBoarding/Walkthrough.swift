@@ -13,18 +13,19 @@ struct Walkthrough: View {
     var body: some View {
         ZStack{
             if currentPage == 1 {
-                ScreenView(baseImageName: "On Bording1", btntitlte: "Next")
+                ScreenView(baseImageName: "onboarding1", title: " Saudi Arabia \n Live it Local, Live it as It Is", detail: "", btntitlte: "Next")
                     .transition(.scale)
+                
             }
             
             if currentPage == 2 {
-                ScreenView(baseImageName: "On Bording2",btntitlte: "Next")
+                ScreenView(baseImageName: "onboarding2", title: "Merge \n in \n culture ", detail: "",btntitlte: "Next")
          
                     .transition(.scale)
             }
             
             if currentPage == 3 {
-                ScreenView(baseImageName: "On Bording3", btntitlte: "Get Started")
+                ScreenView(baseImageName: "Onboarding3", title: "Collect your stamps \n To keep the memory in the mind!", detail: "", btntitlte: "Get Started")
             
                     .transition(.scale)
             }
@@ -36,107 +37,162 @@ struct Walkthrough: View {
     Walkthrough()
 }
 struct ScreenView: View {
-  //  var image: String
     var baseImageName: String
-   // var title: String
-    //var detail: String
+    var title: String
+    var detail: String
     var btntitlte: String
-     @AppStorage("currentPage") var currentPage = 1
+    @AppStorage("currentPage") var currentPage = 1
     @Environment(\.layoutDirection) var layoutDirection
-
+    
     var body: some View {
         ZStack{
-            Image(baseImageName)
-                .resizable()
-                .aspectRatio(contentMode: .fill)
+            Color.BB
                 .ignoresSafeArea()
-        
-            VStack(spacing: 20){
-                HStack{
-                    if currentPage == 1{
-                        Text("")
-                            .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
-                            .fontWeight(.bold)
-                            .kerning(1.4)
-                            .foregroundColor(Color.black)
-                            .padding(.all)
-                    }
-                    else{
+            if currentPage == 1 {
+                GeometryReader { geometry in
+                    Image(baseImageName)
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: geometry.size.width, height: geometry.size.height)
+                        .clipped()
+                        .padding(.top,200)
+                        .alignmentGuide(.bottom) { d in
+                            d[VerticalAlignment.bottom]
+                        }
+                }
+            } else if currentPage == 2{
+                GeometryReader { geometry in
+                    Image(baseImageName)
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: geometry.size.width, height: geometry.size.height)
+                        .clipped()
+                        //.padding(.top,200)
+                        .alignmentGuide(.bottom) { d in
+                            d[VerticalAlignment.bottom]
+                        }
+                }
+            }
+            else{
+                GeometryReader { geometry in
+                    Image(baseImageName)
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: geometry.size.width * 0.6, height: geometry.size.height * 0.6) // Adjust the scale as needed
+                        .clipped()
+                        .padding(.top,50)
+                        .padding(.leading,80)
+                        .alignmentGuide(.bottom) { d in
+                            d[VerticalAlignment.bottom]
+                        }
+                }
+            }
+                VStack(spacing: 20){
+                    HStack{
+                        if currentPage == 1{
+                            Text("")
+                                .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+                                .fontWeight(.bold)
+                                .kerning(1.4)
+                                .foregroundColor(Color.black)
+                                .padding(.all)
+                                .multilineTextAlignment(.center)
+                        }
+                        else{
+                            Button(action: {
+                                withAnimation(.easeInOut){
+                                    currentPage -= 1
+                                }
+                            }, label: {
+                                Image(systemName: layoutDirection == .rightToLeft ? "chevron.right" : "chevron.left")
+                                    .foregroundColor(Color("BTCOLOR"))
+                                    .padding(.vertical, 10)
+                                    .padding(.horizontal)
+                                //.background(Color("BTCOLOR").opacity(0.4))
+                                    .cornerRadius(10)
+                            }).padding(.top,40)
+                        }
+                        Spacer()
+                        
                         Button(action: {
                             withAnimation(.easeInOut){
-                                currentPage -= 1
+                                currentPage = 4
                             }
                         }, label: {
-                            Image(systemName: layoutDirection == .rightToLeft ? "chevron.right" : "chevron.left")
+                            Text("Skip")
+                                .fontWeight(.semibold)
                                 .foregroundColor(Color("BTCOLOR"))
-                                .padding(.vertical, 10)
-                                .padding(.horizontal)
-                                //.background(Color("BTCOLOR").opacity(0.4))
-                                .cornerRadius(10)
-                        }).padding(.top,40)
+                                .padding(.top,40)
+                            //  .padding(.leading,300)
+                        })
                     }
+                    .foregroundColor(.black)
+                    .padding()
+                    // Spacer(minLength: 100)
                     Spacer()
                     
-                    Button(action: {
-                        withAnimation(.easeInOut){
-                            currentPage = 4
-                        }
-                    }, label: {
-                        Text("Skip")
-                            .fontWeight(.semibold)
-                            .foregroundColor(Color("BTCOLOR"))
-                            .padding(.top,40)
-                          //  .padding(.leading,300)
-                    })
+                    if currentPage == 1{
+                        Text(NSLocalizedString(title, comment: ""))
+                            .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+                            .fontWeight(.bold)
+                            .foregroundColor(.black)
+                            .padding(.top)
+                            .padding(.bottom,300)
+                            .multilineTextAlignment(.center)
+                        Spacer(minLength: 5)
+                    }
+                    else if currentPage == 2{
+                        Text(NSLocalizedString(title, comment: ""))
+                            .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+                            .fontWeight(.bold)
+                            .foregroundColor(.black)
+                            .padding(.top)
+                            .padding(.bottom,200)
+                            .multilineTextAlignment(.center)
+                        Spacer(minLength: 5)
+                    }
+                    else {
+                        Text(NSLocalizedString(title, comment: ""))
+                            .font(.title)
+                            .fontWeight(.bold)
+                            .foregroundColor(.black)
+                            .padding(.top,180)
+                            .multilineTextAlignment(.center)
+                        Spacer(minLength: 5)
+                    }
+
+                    
                 }
-                .foregroundColor(.black)
-                .padding()
-               // Spacer(minLength: 100)
                 Spacer()
-                
-                //Text(title)
-//                Text(NSLocalizedString(title, comment: ""))
-//                    .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
-//                    .fontWeight(.bold)
-//                    .foregroundColor(.black)
-                   // .padding(.top)
-                    .padding(.bottom,300)
-                  // .multilineTextAlignment(.center)
-               Spacer(minLength: 5)
-                
+                Button(action: {
+                    withAnimation(.easeInOut){
+                        //checking
+                        if currentPage < totalPages{
+                            currentPage += 1
+                        }
+                        else{
+                            //for app test
+                            currentPage = 4
+                            
+                        }
+                    }
+                }, label: {
+                    Text(btntitlte)
+                        .fontWeight(.semibold)
+                        .font(.title2)
+                        .kerning(1.98)
+                        .multilineTextAlignment(.center)
+                        .foregroundColor(.white)
+                        .frame(width: 300 , height: 60)
+                        .background(Color("BTCOLOR"))
+                        .cornerRadius(13)
+                }).padding(.top,600)
+                    .transition(.scale)
                 
             }
-            Spacer()
-            Button(action: {
-                withAnimation(.easeInOut){
-                    //checking
-                    if currentPage < totalPages{
-                        currentPage += 1
-                    }
-                    else{
-                        //for app test
-                        currentPage = 4
-                        
-                    }
-                }
-            }, label: {
-                Text(btntitlte)
-                    .fontWeight(.semibold)
-                    .font(.title2)
-                    .kerning(1.98)
-                    .multilineTextAlignment(.center)
-                    .foregroundColor(.white)
-                    .frame(width: 300 , height: 60)
-                    .background(Color("BTCOLOR"))
-                    .cornerRadius(13)
-            }).padding(.top,600)
-            .transition(.scale)
-            
         }
+        
     }
-
- 
-}
 
 //total pages
 var totalPages = 3

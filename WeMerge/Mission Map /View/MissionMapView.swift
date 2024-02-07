@@ -14,6 +14,7 @@ struct Level: Identifiable {
 }
 //showHintsView = true
 struct MissionMapView: View {
+    
     @ObservedObject var viewModel: MissionMapViewModel
     @State var selection1: String? = "Riyadh"
     @State private var showPopup = false
@@ -31,15 +32,7 @@ struct MissionMapView: View {
                 
                 VStack{
                     HStack{
-                        Dropdownmenue(
-                            selection: $selection1,
-                            options: [
-                                "Riyadh",
-                                
-                            ]
-                        )
                         Spacer()
-                        //button 1
                         Button(action: {
                             showStamp = true
                         }) {
@@ -51,7 +44,6 @@ struct MissionMapView: View {
                                RoundedRectangle(cornerRadius: 10)
                                    .foregroundColor(Color(red: 0.98, green: 0.96, blue: 0.9))
                            )
-                        
                         //Button
                         Button(action: {
                             showPopup = true
@@ -74,17 +66,17 @@ struct MissionMapView: View {
                     ForEach(viewModel.levelPositions, id: \.number) { level in
                         Group {
                             // Check if the level is unlocked and provide interactive behavior.
+                            // Check if the level is unlocked and provide interactive behavior.
                             if viewModel.isLevelUnlocked(level.number) {
                                 Button(action: {
                                     self.selectedLevel = Level(id: level.number, title: "")
                                     showHintsView = true
-                                    
                                 }) {
-                                    
-                                    LevelIconView(level: level.number, isUnlocked: true)
+                                    LevelIconView(level: level.number, isUnlocked: true, isActiveLevel: level.number == viewModel.activeLevel)
                                 }
                             } else {
-                                LevelIconView(level: level.number, isUnlocked: false)
+                                LevelIconView(level: level.number, isUnlocked: false, isActiveLevel: level.number == viewModel.activeLevel)
+                            
                             }
                         }
                         .position(x: level.position.x, y: level.position.y)
@@ -108,12 +100,12 @@ struct MissionMapView: View {
                         PopupView(showPopup: $showPopup)
                     }
                 if showStamp {
-                   // stampsMap(viewModel: viewModel, popupModel: CongratsModel(image: "", activeLevel: viewModel.activeLevel), levelNumber: viewModel.activeLevel, showStamp: $showStamp)
-                    stampsMap(showPopup: $showStamp, viewModel: viewModel, popupModel: CongratsModel(image: "", activeLevel: viewModel.activeLevel), levelNumber: viewModel.activeLevel)
+                    stampsMap(viewModel: viewModel, popupModel: CongratsModel(image: "", activeLevel: viewModel.activeLevel), levelNumber: viewModel.activeLevel, showStamp: $showStamp)
                 }
                 }
-            }
 
+            }
+        
         .navigationBarBackButtonHidden(true)
         
                        .onAppear {

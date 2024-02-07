@@ -6,10 +6,10 @@
 //
 
 import SwiftUI
-
 struct LevelIconView: View {
     let level: Int
     let isUnlocked: Bool
+    let isActiveLevel: Bool // Add a new property to determine if it's the active level
 
     var body: some View {
         ZStack {
@@ -33,9 +33,11 @@ struct LevelIconView: View {
         }
         .frame(width: 150, height: 150, alignment: .center)
         .opacity(isUnlocked ? 1 : 0.5)
+        .shadow(color: isActiveLevel ? Color("BTCOLOR") : .clear, radius: 1) // Add a shadow with red color for the active level
     }
 }
 
+
 #Preview {
-    LevelIconView(level: Int(), isUnlocked: Bool())
+    LevelIconView(level: Int(), isUnlocked: Bool(), isActiveLevel: Bool())
 }

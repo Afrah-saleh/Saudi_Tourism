@@ -21,8 +21,8 @@ class HintsViewModel: ObservableObject {
         self.level = level
 
         allHints = [
-            Place(level: 1, name: "About \n Live it as it is before \n 297", image: "Hint1", desc: "Years Ago"),
-            Place(level: 1, name: "About \n Feel the Saudi Rhythms", image: "Hint1", desc: ""),
+            Place(level: 1, name: "Live it as it is before \n 297", image: "Hint1", desc: "Years Ago"),
+            Place(level: 1, name: "Feel the Saudi Rhythms", image: "Hint1", desc: ""),
             
             
             Place(level: 2, name: "Where \n Local Saudi Stylish \n Fabric", image: "Hint1", desc: ""),

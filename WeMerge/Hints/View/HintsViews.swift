@@ -10,7 +10,8 @@ import SwiftUI
 struct HintsViews: View {
     @ObservedObject var viewModel: HintsViewModel
     @ObservedObject var vm: MissionMapViewModel
-    
+    @Environment(\.presentationMode) var presentationMode
+
     var body: some View {
         NavigationView {
             ZStack {
@@ -33,7 +34,7 @@ struct HintsViews: View {
                     VStack {
                         if let selectedHint = viewModel.selectedHint {
                             Text(selectedHint.name)
-                                .frame(width: 350)
+                                .frame(width: 300)
                                 .font(.title)
                                 .multilineTextAlignment(.center)
                                 .bold()
@@ -61,7 +62,7 @@ struct HintsViews: View {
                                     .foregroundColor(.black)
                             }
                         }
-                        .disabled(viewModel.selectedHint == viewModel.hints.first)
+                        .opacity(viewModel.selectedHint != viewModel.hints.first ? 1 : 0) // Hide the button if it's the first hint
                         
                         
                         if viewModel.selectedHint == viewModel.hints.last {
@@ -91,14 +92,12 @@ struct HintsViews: View {
             }
             .navigationBarTitleDisplayMode(.inline)
             .navigationTitle("About")
+            .navigationBarBackButtonHidden(false)
+
         }
-        .navigationBarBackButtonHidden(true)
    
     }
-  
-        
-
 }
 #Preview {
-    HintsViews(viewModel: HintsViewModel(level: 1), vm: MissionMapViewModel())
+    HintsViews(viewModel: HintsViewModel(level: 4), vm: MissionMapViewModel())
 }
