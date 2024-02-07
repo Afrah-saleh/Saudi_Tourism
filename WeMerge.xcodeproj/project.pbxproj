@@ -30,6 +30,7 @@
 		945E3E9E2B5E437C004DFC98 /* LocationsDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945E3E9D2B5E437C004DFC98 /* LocationsDataService.swift */; };
 		945E3EA02B5E4380004DFC98 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945E3E9F2B5E4380004DFC98 /* Location.swift */; };
 		945E3EBE2B5E5F5D004DFC98 /* Dropdownmenue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945E3EBD2B5E5F5D004DFC98 /* Dropdownmenue.swift */; };
+		946E59EC2B72B5A30039200D /* stampsMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946E59EB2B72B5A30039200D /* stampsMap.swift */; };
 		94A38A462B5D08E90012280F /* Saudi_TourismApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A38A452B5D08E90012280F /* Saudi_TourismApp.swift */; };
 		94A38A482B5D08E90012280F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A38A472B5D08E90012280F /* ContentView.swift */; };
 		94A38A4A2B5D08EB0012280F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94A38A492B5D08EB0012280F /* Assets.xcassets */; };
@@ -70,6 +71,7 @@
 		945E3E9D2B5E437C004DFC98 /* LocationsDataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationsDataService.swift; sourceTree = "<group>"; };
 		945E3E9F2B5E4380004DFC98 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		945E3EBD2B5E5F5D004DFC98 /* Dropdownmenue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dropdownmenue.swift; sourceTree = "<group>"; };
+		946E59EB2B72B5A30039200D /* stampsMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = stampsMap.swift; sourceTree = "<group>"; };
 		94A38A422B5D08E90012280F /* WeMerge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeMerge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		94A38A452B5D08E90012280F /* Saudi_TourismApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Saudi_TourismApp.swift; sourceTree = "<group>"; };
 		94A38A472B5D08E90012280F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 			children = (
 				18A06E922B60ECC800354C70 /* StampsBoard.swift */,
 				944FF8082B71230F0010E9D6 /* Stamps.swift */,
+				946E59EB2B72B5A30039200D /* stampsMap.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -472,6 +475,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				946E59EC2B72B5A30039200D /* stampsMap.swift in Sources */,
 				9453AD1C2B69432800CCA438 /* CongratsPopupview.swift in Sources */,
 				35CF681B2B5D80B3001762B9 /* doorAnimation.swift in Sources */,
 				94EE42BA2B70C3C200E4D113 /* HintsViews.swift in Sources */,

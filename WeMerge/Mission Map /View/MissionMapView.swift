@@ -19,7 +19,7 @@ struct MissionMapView: View {
     @State private var showPopup = false
     @State private var selectedLevel: Level?
     @State private var showHintsView = false
-    
+    @State private var showStamp = false
     
     var body: some View {
         NavigationStack {
@@ -41,7 +41,7 @@ struct MissionMapView: View {
                         Spacer()
                         //button 1
                         Button(action: {
-                            //  self.action2()
+                            showStamp = true
                         }) {
                             Image(systemName: "gift")
                                 .foregroundColor(Color("BTCOLOR"))
@@ -107,6 +107,10 @@ struct MissionMapView: View {
                     if showPopup {
                         PopupView(showPopup: $showPopup)
                     }
+                if showStamp {
+                   // stampsMap(viewModel: viewModel, popupModel: CongratsModel(image: "", activeLevel: viewModel.activeLevel), levelNumber: viewModel.activeLevel, showStamp: $showStamp)
+                    stampsMap(showPopup: $showStamp, viewModel: viewModel, popupModel: CongratsModel(image: "", activeLevel: viewModel.activeLevel), levelNumber: viewModel.activeLevel)
+                }
                 }
             }
 
