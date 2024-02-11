@@ -40,6 +40,7 @@ struct PopupView: View {
                 TabView {
                     // Page 1 content
                     VStack(alignment: .leading, spacing: 5) {
+                        Spacer()
                         Text("Community Guidelines for a Positive and Stylish Experience")
                             .bold()
 
