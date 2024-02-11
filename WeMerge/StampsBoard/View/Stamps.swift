@@ -22,10 +22,7 @@ struct Stamps: View {
                     Image("Board")
 
                     VStack {
-                        // Button at the top-right corner
-
                         Spacer()
-                        
                         // Bottom button
                         HStack {
                             Spacer()
@@ -61,7 +58,7 @@ struct Stamps: View {
                             }
                         }
                     }
-                    .padding() // Adjust the padding as needed
+                    .padding(.bottom,150) // Adjust the padding as needed
                     
                }
                   .navigationTitle("Your Stamps")
