@@ -110,7 +110,7 @@ struct ScreenView: View {
                                     .padding(.horizontal)
                                 //.background(Color("BTCOLOR").opacity(0.4))
                                     .cornerRadius(10)
-                            }).padding(.top,40)
+                            }).padding(.top,-10)
                         }
                         Spacer()
                         
@@ -123,13 +123,13 @@ struct ScreenView: View {
                                 Text("Skip")
                                     .fontWeight(.semibold)
                                     .foregroundColor(Color("BTCOLOR"))
-                                    .padding(.top,40)
+                                    .padding(.top,-10)
                             }
                             else           if currentPage == 2{
                                 Text("Skip")
                                     .fontWeight(.semibold)
                                     .foregroundColor(Color("BTCOLOR"))
-                                    .padding(.top,40)
+                                    .padding(.top,-10)
                             }
                            else if currentPage == 3{
                                 Text("")
