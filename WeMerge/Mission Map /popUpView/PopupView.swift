@@ -16,7 +16,7 @@ struct PopupView: View {
     var body: some View {
         ZStack {
             // Dimmed background
-            Color.black.opacity(0.4)
+            Color.black.opacity(0.6)
                 .edgesIgnoringSafeArea(.all)
                 .onTapGesture {
                     showPopup = false
@@ -60,7 +60,7 @@ struct PopupView: View {
                         Text("• Keep it classy and fabulous.")
                         Text("• Reveal just enough to stay effortlessly cool.")
                         
-                        Spacer()
+                            .padding(.top,-10)
                     }
                     .fixedSize(horizontal: false, vertical: true)
                     .padding(.horizontal, 20)
@@ -70,7 +70,6 @@ struct PopupView: View {
                         Text("Locality Phrases you could use with local people")
                             .bold()
                         Text("Warm Welcoming")
-                        
                         
                         HStack{
                             Text("Locality Phrase")
@@ -164,7 +163,7 @@ struct PopupView: View {
                 .offset(x:145,y:-650)
             }
             .frame(width: 350, height: 700)
-            .background(Color(red: 0.98, green: 0.96, blue: 0.9))
+            .background(Color.BB)
             .cornerRadius(20)
             .shadow(radius: 20)
             .foregroundColor(.dark)
