@@ -119,16 +119,28 @@ struct ScreenView: View {
                                 currentPage = 4
                             }
                         }, label: {
-                            Text("Skip")
-                                .fontWeight(.semibold)
-                                .foregroundColor(Color("BTCOLOR"))
-                                .padding(.top,40)
-                            //  .padding(.leading,300)
+                            if currentPage == 1{
+                                Text("Skip")
+                                    .fontWeight(.semibold)
+                                    .foregroundColor(Color("BTCOLOR"))
+                                    .padding(.top,40)
+                            }
+                            else           if currentPage == 2{
+                                Text("Skip")
+                                    .fontWeight(.semibold)
+                                    .foregroundColor(Color("BTCOLOR"))
+                                    .padding(.top,40)
+                            }
+                           else if currentPage == 3{
+                                Text("")
+                                    .fontWeight(.semibold)
+                                    .foregroundColor(Color("BTCOLOR"))
+                                    .padding(.top,40)
+                            } 
                         })
                     }
                     .foregroundColor(.black)
                     .padding()
-                    // Spacer(minLength: 100)
                     Spacer()
                     
                     if currentPage == 1{
