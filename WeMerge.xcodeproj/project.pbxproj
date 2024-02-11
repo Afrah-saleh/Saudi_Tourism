@@ -44,7 +44,6 @@
 		94EE42BA2B70C3C200E4D113 /* HintsViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EE42B92B70C3C200E4D113 /* HintsViews.swift */; };
 		94F9732C2B60F12A00F6B395 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F9732B2B60F12A00F6B395 /* Place.swift */; };
 		94F973302B60F14200F6B395 /* HintsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F9732F2B60F14200F6B395 /* HintsViewModel.swift */; };
-		94F973352B623C2A00F6B395 /* test button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F973342B623C2A00F6B395 /* test button.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -86,7 +85,6 @@
 		94EE42B92B70C3C200E4D113 /* HintsViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HintsViews.swift; sourceTree = "<group>"; };
 		94F9732B2B60F12A00F6B395 /* Place.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
 		94F9732F2B60F14200F6B395 /* HintsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HintsViewModel.swift; sourceTree = "<group>"; };
-		94F973342B623C2A00F6B395 /* test button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "test button.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -372,7 +370,6 @@
 			isa = PBXGroup;
 			children = (
 				94A38A5D2B5D0A0F0012280F /* MissionMapViewModel.swift */,
-				94F973342B623C2A00F6B395 /* test button.swift */,
 			);
 			path = ModelView;
 			sourceTree = "<group>";
@@ -492,7 +489,6 @@
 				94AD01F02B6D030800042903 /* Walkthrough.swift in Sources */,
 				94A38A5E2B5D0A0F0012280F /* MissionMapViewModel.swift in Sources */,
 				9453AD072B68ED2A00CCA438 /* CongratsModel.swift in Sources */,
-				94F973352B623C2A00F6B395 /* test button.swift in Sources */,
 				9453ACF42B66AC4900CCA438 /* MissionDataService.swift in Sources */,
 				944FF8092B71230F0010E9D6 /* Stamps.swift in Sources */,
 				94A38A482B5D08E90012280F /* ContentView.swift in Sources */,

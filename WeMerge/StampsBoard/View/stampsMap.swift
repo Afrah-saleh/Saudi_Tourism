@@ -21,8 +21,8 @@ struct stampsMap: View {
                         .ignoresSafeArea()
                     Image("Board")
 
-                    VStack {
-                        HStack {
+                  //  VStack {
+                     //   HStack {
                             Spacer()
                             Button(action: {
                                 showStamp = false
@@ -34,14 +34,16 @@ struct stampsMap: View {
                                     .font(.title)
                             }
                             .accessibilityLabel("Close")
-                            .offset(x: -20)
+                            //.background(Color.red)
+                            .padding(.bottom,720)
+                            .padding(.leading,320)
                             
-                            .zIndex(1) // Ensure the button is above other content
-                        }
-                        Spacer()
+                            //.zIndex(1) // Ensure the button is above other content
+                        //}
+                       // Spacer()
                         
                         
-                    }
+                 //   }
                     
                     
                     let columns: [GridItem] = [

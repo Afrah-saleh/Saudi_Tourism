@@ -23,21 +23,7 @@ struct Stamps: View {
 
                     VStack {
                         // Button at the top-right corner
-                        HStack {
-                            Spacer()
-                            Button(action: {
-                                showMap = true
-                            }) {
-                                Image(systemName: "xmark") // SF Symbols 'xmark'
-                                    .foregroundColor(Color("BTCOLOR"))
-                                      .bold()
-                                      .font(.title)
-                            }
-                            .accessibilityLabel("Close")
-                            .offset(x: -20)
-
-                            .zIndex(1) // Ensure the button is above other content
-                        }
+//                  
                         Spacer()
                         
                         // Bottom button
