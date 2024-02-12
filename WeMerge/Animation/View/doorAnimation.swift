@@ -14,7 +14,7 @@ struct doorAnimation: View {
     @State private var size = 1.0
     @State private var opacity = 0.2
     @Binding var sheetShowing : Bool
-    @ObservedObject var viewModel: HintsViewModel
+   // @ObservedObject var viewModel: HintsViewModel
     @ObservedObject var vm: MissionMapViewModel
 
      var body: some View {

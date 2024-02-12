@@ -90,10 +90,10 @@ struct MissionMapView: View {
                         
                     } else if showHintsView {
                         NavigationStack {
-                            HintsViews(viewModel: HintsViewModel(level: viewModel.activeLevel), vm: viewModel)
+                            doorAnimation(sheetShowing: .constant(true), vm: viewModel)
+                            
                         }
                     }
-                    
                     
                     // Show popup view if `showPopup` is true.
                     if showPopup {
